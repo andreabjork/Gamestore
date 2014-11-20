@@ -43,3 +43,8 @@ Temporary Items
 
 
 .metadata
+*.snap
+*.index
+*.resources
+*.prefs
+*.xmi
