@@ -5,16 +5,16 @@
  */
 class Registration
 {
-	private $username;
-	private $password;
-	private $email;
-	private $name;
-	private $addr1;
-	private $addr2;
-	private $country;
-	private $city;
-	private $zip;
-	private $errors;
+	public $username;
+	public $password;
+	public $email;
+	public $name;
+	public $addr1;
+	public $addr2;
+	public $country;
+	public $city;
+	public $zip;
+	public $errors;
 	/**
 	 * Forskilyrði: $data er fylki með lykill => gögn úr formi
 	 * Eftirskilyrði: Registration hlutur er útfylltur með gögnum úr $data
@@ -41,19 +41,35 @@ class Registration
 		$this->errors = array();
 		$validity = TRUE;
 		if(preg_match("^[a-zA-Z0-9]{1,12}$", $this->username) !== 1){
-			$this->errors += array("username"=>"Your username must be between 1 and 12 characters long and may only contain alpha-numeric characters (a-z),(A-Z) and (0-9).");
+			$this->errors += array("username"=>"Invalid username. Your username must be between 1 and 12 characters long and may only contain alpha-numeric characters.");
 			$validity = False;
 		}
 		if(preg_match("^[a-zA-Z0-9]{1,12}$", $this->password) !== 1){
-			$this->errors += array("password"=>"Your password must be between 1 and 12 characters long and may only contain alpha-numeric characters (a-z),(A-Z) and (0-9).");
+			$this->errors += array("password"=>"Invalid password. Your password must be between 1 and 12 characters long and may only contain alpha-numeric characters.");
 			$validity = False;
 		}
 		if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
-			$this->errors += array("email"=>"Your password must be between 1 and 12 characters long and may only contain alpha-numeric characters (a-z),(A-Z) and (0-9).");
+			$this->errors += array("email"=>"Invalid e-mail.");
 			$validity = False;
 		}
 		if(preg_match("^[\p{L}]+[ \p{L}]*$", $this->name) !== 1){
-			$this->errors += array("name"=>"Your name must be atleast 1 character long and may only contain alphabetical characters.");
+			$this->errors += array("name"=>"Invalid name. Your name must be atleast 1 character long and may only contain alphabetical characters.");
+			$validity = False;
+		}
+		if(preg_match("^[\p{N}\p{L} ,.-]+$", $this->addr1) !== 1){
+			$this->errors += array("addr1"=>"Invalid address. Your address may only contain alphanumerical or ,.- characters");
+			$validity = False;
+		}
+		if(preg_match("^[\p{N}\p{L} ,.-]*$", $this->addr2) !== 1){
+			$this->errors += array("addr2"=>"Invalid address. Your address may only contain alphanumerical or ,.- characters");
+			$validity = False;
+		}
+		if(preg_match("^[\p{L}]+[ \p{L}]*$", $this->city) !== 1){
+			$this->errors += array("city"=>"Invalid city name. Your city name must be atleast 1 character long and may only contain alphabetical characters.");
+			$validity = False;
+		}
+		if(preg_match("^[\p{L}\p{N}-]*[\p{L}\p{N}][\p{L}\p{N}-]*$", $this->zip) !== 1){
+			$this->errors += array("zip"=>"Invalid zip/postal code. Your zip/postal code must contain atleast 1 character and may only contain alphanumericals and hyphens.");
 			$validity = False;
 		}
 		
@@ -71,5 +87,10 @@ class Registration
 	
 	public function info(){
 		return array($this->username,$this->password,$this->email,$this->country,$this->name,$this->addr1,$this->addr2,$this->city,$this->zip);
+	}
+	
+	public function write($cur){
+		$statement = "INSERT INTO CUSTOMERS (username,password,email,country,name,addr_line1,addr_line2,city,zip) VALUES ($this->username,$this->password,$this->email,$this->country,$this->name,$this->addr1,$this->addr2,$this->city,$this->zip)";
+		$cur->exec($statement);
 	}
 }
