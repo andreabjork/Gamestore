@@ -74,7 +74,7 @@ if (count($errors) > 0){
 	</div>
 	<div class="field">
 		<label for="zip">Zip: *</label>
-		<input type="text" name="city" id="city" <?php echo array_key_exists("city", $errors) ? 'class="error"' : '' ?> placeholder="Gotham" value="<?php echo $registration->zip; ?>" />
+		<input type="text" name="zip" id="zip" <?php echo array_key_exists("city", $errors) ? 'class="error"' : '' ?> placeholder="53540" value="<?php echo $registration->zip; ?>" />
 	</div>
 
 	<div class="buttons">
