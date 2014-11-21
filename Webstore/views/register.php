@@ -7,7 +7,8 @@
 	
 	// hér verður haldið utan um gögn og athugað hvort gögn séu gild
 	$registration = new Registration();
-
+	$valid = FALSE;
+	$errors = array();
 	// er verið að post'a formi? Meðhöndlum þá gögn
 	if ($method === 'POST')
 	{
@@ -65,7 +66,7 @@ if (count($errors) > 0){
 	</div>
 	<div class="field">
 		<label for="country">Country: *</label>
-		<?php include("country_selection.php") ?>
+		<?php include("views/country_selection.php") ?>
 	</div>
 	<div class="field">
 		<label for="city">City: *</label>
