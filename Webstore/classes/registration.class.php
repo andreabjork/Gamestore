@@ -40,11 +40,11 @@ class Registration
 	{
 		$this->errors = array();
 		$validity = TRUE;
-		if(preg_match("^[a-zA-Z0-9]{1,12}$", $this->username) !== 1){
+		if(preg_match("/^[a-zA-Z0-9]{1,12}$/", $this->username) !== 1){
 			$this->errors += array("username"=>"Invalid username. Your username must be between 1 and 12 characters long and may only contain alpha-numeric characters.");
 			$validity = False;
 		}
-		if(preg_match("^[a-zA-Z0-9]{1,12}$", $this->password) !== 1){
+		if(preg_match("/^[a-zA-Z0-9]{1,12}$/", $this->password) !== 1){
 			$this->errors += array("password"=>"Invalid password. Your password must be between 1 and 12 characters long and may only contain alpha-numeric characters.");
 			$validity = False;
 		}
@@ -52,23 +52,19 @@ class Registration
 			$this->errors += array("email"=>"Invalid e-mail.");
 			$validity = False;
 		}
-		if(preg_match("^[\p{L}]+[ \p{L}]*$", $this->name) !== 1){
+		if(preg_match("/^[\p{L}]+[ \p{L}]*$/", $this->name) !== 1){
 			$this->errors += array("name"=>"Invalid name. Your name must be atleast 1 character long and may only contain alphabetical characters.");
 			$validity = False;
 		}
-		if(preg_match("^[\p{N}\p{L} ,.-]+$", $this->addr1) !== 1){
+		if(preg_match("/^[\p{N}\p{L} ,.-]+$/", $this->addr1) !== 1){
 			$this->errors += array("addr1"=>"Invalid address. Your address may only contain alphanumerical or ,.- characters");
 			$validity = False;
 		}
-		if(preg_match("^[\p{N}\p{L} ,.-]*$", $this->addr2) !== 1){
-			$this->errors += array("addr2"=>"Invalid address. Your address may only contain alphanumerical or ,.- characters");
-			$validity = False;
-		}
-		if(preg_match("^[\p{L}]+[ \p{L}]*$", $this->city) !== 1){
+		if(preg_match("/^[\p{L}]+[ \p{L}]*$/", $this->city) !== 1){
 			$this->errors += array("city"=>"Invalid city name. Your city name must be atleast 1 character long and may only contain alphabetical characters.");
 			$validity = False;
 		}
-		if(preg_match("^[\p{L}\p{N}-]*[\p{L}\p{N}][\p{L}\p{N}-]*$", $this->zip) !== 1){
+		if(preg_match("/^[\p{L}\p{N}-]*[\p{L}\p{N}][\p{L}\p{N}-]*$/", $this->zip) !== 1){
 			$this->errors += array("zip"=>"Invalid zip/postal code. Your zip/postal code must contain atleast 1 character and may only contain alphanumericals and hyphens.");
 			$validity = False;
 		}

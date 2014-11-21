@@ -1,4 +1,5 @@
 		<select name="country" id="country" <?php echo array_key_exists("country", $errors) ? 'class="error"' : '' ?> placeholder="United States" value="<?php echo $registration->country; ?>">
+			<option value="United States">United States</option>
 			<option value="Afghanistan">Afghanistan</option>
 			<option value="Åland Islands">Åland Islands</option>
 			<option value="Albania">Albania</option>
@@ -229,7 +230,6 @@
 			<option value="Ukraine">Ukraine</option>
 			<option value="United Arab Emirates">United Arab Emirates</option>
 			<option value="United Kingdom">United Kingdom</option>
-			<option value="United States">United States</option>
 			<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
 			<option value="Uruguay">Uruguay</option>
 			<option value="Uzbekistan">Uzbekistan</option>

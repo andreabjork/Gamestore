@@ -36,8 +36,8 @@ if (count($errors) > 0){
 <form id="register" <?php echo $valid ? 'class="hidden"' : '' ?> action="index.php" method="post">
 	<p>Account information:</p>
 	<div class="field">
-		<label for="name">Username: *</label>
-		<input type="text" name="name" id="name" <?php echo array_key_exists("name", $errors) ? 'class="error"' : '' ?> placeholder="Batman" value="<?php echo $registration->name; ?>" />
+		<label for="username">Username: *</label>
+		<input type="text" name="username" id="username" <?php echo array_key_exists("name", $errors) ? 'class="error"' : '' ?> placeholder="Batman" value="<?php echo $registration->username; ?>" />
 	</div>
 	<div class="field">
 		<label for="password">Password: *</label>
