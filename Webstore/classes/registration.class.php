@@ -40,14 +40,17 @@ class Registration
 	{
 		$this->errors = array();
 		$validity = TRUE;
-		if(preg_match("[a-zA-Z0-9]{1,12}", $this->username) !== 1){
+		if(preg_match("^[a-zA-Z0-9]{1,12}$", $this->username) !== 1){
 			$this->errors += array("username"=>"Your username must be between 1 and 12 characters long and may only contain alpha-numeric characters (a-z),(A-Z) and (0-9).");
 		}
-		if(preg_match("[a-zA-Z0-9]{1,12}", $this->password) !== 1){
+		if(preg_match("^[a-zA-Z0-9]{1,12}$", $this->password) !== 1){
 			$this->errors += array("password"=>"Your password must be between 1 and 12 characters long and may only contain alpha-numeric characters (a-z),(A-Z) and (0-9).");
 		}
-		if(preg_match("[a-zA-Z0-9\._-]+@[a-zA-Z0-9\.]+\.[a-z]+", $this->email) !== 1){
+		if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
 			$this->errors += array("email"=>"Your password must be between 1 and 12 characters long and may only contain alpha-numeric characters (a-z),(A-Z) and (0-9).");
+		}
+		if(preg_match("^[\p{L}]+[ \p{L}]*$", $this->name) !== 1){
+			$this->errors += array("name"=>"Your name must be atleast 1 character long and may only contain alphabetical characters.");
 		}
 		
 		return $validity;
