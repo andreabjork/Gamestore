@@ -42,15 +42,19 @@ class Registration
 		$validity = TRUE;
 		if(preg_match("^[a-zA-Z0-9]{1,12}$", $this->username) !== 1){
 			$this->errors += array("username"=>"Your username must be between 1 and 12 characters long and may only contain alpha-numeric characters (a-z),(A-Z) and (0-9).");
+			$validity = False;
 		}
 		if(preg_match("^[a-zA-Z0-9]{1,12}$", $this->password) !== 1){
 			$this->errors += array("password"=>"Your password must be between 1 and 12 characters long and may only contain alpha-numeric characters (a-z),(A-Z) and (0-9).");
+			$validity = False;
 		}
 		if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
 			$this->errors += array("email"=>"Your password must be between 1 and 12 characters long and may only contain alpha-numeric characters (a-z),(A-Z) and (0-9).");
+			$validity = False;
 		}
 		if(preg_match("^[\p{L}]+[ \p{L}]*$", $this->name) !== 1){
 			$this->errors += array("name"=>"Your name must be atleast 1 character long and may only contain alphabetical characters.");
+			$validity = False;
 		}
 		
 		return $validity;
@@ -66,6 +70,6 @@ class Registration
 	}
 	
 	public function info(){
-		return array($this->username,$this->password,$this->email,array($this->country,$this->name,$this->addr1,$this->addr2,$this->city,$this->zip));
+		return array($this->username,$this->password,$this->email,$this->country,$this->name,$this->addr1,$this->addr2,$this->city,$this->zip);
 	}
 }
