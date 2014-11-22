@@ -6,6 +6,7 @@
 		<title>BoardGamer</title>
 		<link rel="stylesheet" href="CSS/header.css">
 		<link rel="stylesheet" href="CSS/main.css">
+		<link rel="stylesheet" href="CSS/form.css">
 		<link rel="stylesheet" href="CSS/footer.css">	
 	</head>
 	<body>
