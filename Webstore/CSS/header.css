@@ -6,7 +6,7 @@ body p {
 }
 
 header {
-    height: 120px;
+    height: 180px;
     width: 85%;
     max-width: 1300px;
     min-width: 320px;
@@ -17,35 +17,74 @@ header {
     border-radius: 3px;
 }
 
-    #navigation {
-        position: fixed;
-        z-index: 1;
-        width: 80%;
+	.main {
+        width: 100%;
+        top: 0px;
         min-width: 320px;
-        max-width: 1200px;
+        max-width: 1300px;
+        height: 150px;
+        opacity: 0.9;
+        border-bottom: 1px solid #cacaca;
+	}
+			.logo {
+				position: relative;
+				top: 15px;
+				left: 20px;
+				width: 370px;
+			}
+
+				#logoImg {
+					width: 100%;
+				}
+				
+			.actions {
+				position: relative;
+				bottom: 20px;
+				right: 15px;
+	            list-style: none;
+	            font-family: 'Roboto', sans-serif;
+	            font-size: 1em;
+	            font-color: white;
+	            margin-left: 30px;
+	        }
+	        
+	        .actions li {
+	            float: right;
+	            padding: 4px 5px 3px;
+	            color: white;
+	        }
+	        
+	        .actions li:hover {
+	            background-color: #cacaca;
+	            padding: 5px 5px 5px;
+	        }
+	
+			#search {
+				position: relative;
+				display: block;
+				right: -100px;
+				top: 3px;
+				width: 200px;
+				height: 15px;
+				background-color: #E6E6E6;
+				border: 2px solid #333333;
+				float: right;
+			}
+
+    .navigation {
+        position: relative;
+        width: 100%;
+        bottom: 0px;
+        min-width: 320px;
+        max-width: 1300px;
         height: 30px;
         opacity: 0.9;
-        background-color: #fff;
-        border-bottom: 2px solid #cacaca;
     }
-    /*
-    h1 {
-        position: relative;
-        background-color: #fff;
-        opacity: 0.9;
-        font-family: 'Niconne', cursive;
-        font-size: 4.5em;
-        text-align: center;
-        max-width: 620px;
-        min-width: 320px;
-        height: auto;
-        margin: auto;
-        top: 100px;
-    }*/
 	
         .buttons {
             list-style: none;
             font-family: 'Roboto', sans-serif;
+            font-color: white;
             font-size: 1em;
             margin-left: 30px;
         }
@@ -53,34 +92,12 @@ header {
         .buttons li {
             float: left;
             padding: 4px 5px 3px;
-            color: #262525;
+            color: white;
         }
         
         .buttons li:hover {
             background-color: #cacaca;
             padding: 5px 5px 5px;
         }
-	        
-		
-		.actions {
-            list-style: none;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1em;
-            margin-left: 30px;
-        }
-        
-        .actions li {
-            float: right;
-            padding: 4px 5px 3px;
-            color: #262525;
-        }
-        
-        .actions li:hover {
-            background-color: #cacaca;
-            padding: 5px 5px 5px;
-        }
 	
-		
-		
-		
         

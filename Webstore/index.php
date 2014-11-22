@@ -6,11 +6,11 @@ const DEBUG = true;
 const CACHE_TIME = 600;
 const CACHE_FS = 'cache/';
 const WS_URL = 'http://apis.is/concerts';
-
+/*
 if (DEBUG) {
 	ini_set('display_errors', 1);
 	error_reporting(~0);
-}
+}*/
 /*
 // Our dependencies
 $logger = require('log.php');
@@ -33,13 +33,14 @@ catch (Exception $e) {
 }
 */
 include('views/header.php');
-include('views/page.php');
+include('views/main.php');
 include('views/footer.php');
 /*
 // How long have been?
 $logger->Log("Finished!");
 */
+/*
 if (DEBUG) {
 	include('views/debug.php');
-}
+}*/
 
