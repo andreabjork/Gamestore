@@ -1,3 +1,4 @@
+<!--þetterkomment-->
 <!doctype html>
 <html lang="is">
 	<head>

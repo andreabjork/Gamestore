@@ -42,29 +42,24 @@ header {
         margin: auto;
         top: 100px;
     }*/
-    
-	    .buttons {
-	        height: 2%;
-	        width: 100%;
-	    }
 	
-	        .buttons ul {
-	            list-style: none;
-	            font-family: 'Roboto', sans-serif;
-	            font-size: 1em;
-	            margin-left: 30px;
-	        }
-	        
-	        .buttons li {
-	            float: left;
-	            padding: 4px 5px 3px;
-	            color: #262525;
-	        }
-	        
-	        .buttons li:hover {
-	            background-color: #cacaca;
-	            padding: 5px 5px 5px;
-	        }
+        .buttons {
+            list-style: none;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1em;
+            margin-left: 30px;
+        }
+        
+        .buttons li {
+            float: left;
+            padding: 4px 5px 3px;
+            color: #262525;
+        }
+        
+        .buttons li:hover {
+            background-color: #cacaca;
+            padding: 5px 5px 5px;
+        }
 	        
 		.actions {
 			height: 2%;
