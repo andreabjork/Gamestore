@@ -1,11 +1,4 @@
 <?php
-const DEBUG = true;
-
-if (DEBUG) {
-	ini_set('display_errors', 1);
-	error_reporting(~0);
-}
-
 // skilum UTF-8 til vafra með header
 header('Content-Type: text/html; charset=utf-8');
 
@@ -38,6 +31,3 @@ if ($method === 'POST')
 include('views/header.php');
 include('views/form.php');
 include('views/footer.php');
-if (DEBUG) {
-	include('views/debug.php');
-}

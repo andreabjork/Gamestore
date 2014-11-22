@@ -6,7 +6,8 @@
 		<title>BoardGamer</title>
 		<link rel="stylesheet" href="CSS/header.css">
 		<link rel="stylesheet" href="CSS/main.css">
-		<link rel="stylesheet" href="CSS/footer.css">	
+		<link rel="stylesheet" href="CSS/footer.css">
+		<script src="libraries/jquery.js"></script>	
 	</head>
 	<body>
 		<header>
@@ -26,4 +27,12 @@
 				</ul>
 				<input id="search"/>
 			</div>
+			<div class="dropDown">
+				<ul class="dropButtons">
+					<li id="trading">Trading Card Games</li>
+					<li id="family">Family Games</li>
+					<li id="boardgames">Boardgames</li>
+				</ul>
+			</div>
 		</header>
+		<script type="text/javascript" src="JS/nav.js"></script>

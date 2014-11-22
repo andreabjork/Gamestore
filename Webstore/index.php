@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 
 // Things we might want to change
-const DEBUG = true;
+const DEBUG = false;
 const CACHE_TIME = 600;
 const CACHE_FS = 'cache/';
 const WS_URL = 'http://apis.is/concerts';
@@ -14,9 +14,7 @@ require('classes/products.class.php');
 try {
     /*** connect to SQLite database ***/
     $prodDB = new PDO("sqlite:SQL/gamestore.db");
-	echo "raging success!";
 } catch(PDOException $e) {
-	echo 'something went wrong!';
     echo $e->getMessage();
 }
 
