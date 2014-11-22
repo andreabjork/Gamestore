@@ -12,7 +12,7 @@
 			
 			?>
 			
-			<form id="register" <?php echo $valid ? 'class="hidden"' : '' ?> action="index.php" method="post">
+			<form id="register" <?php echo $valid ? 'class="hidden"' : '' ?> action="register.php" method="post">
 				<p>Account information:</p>
 				<div class="field">
 					<label for="username">Username: *</label>
