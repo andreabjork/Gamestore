@@ -2,7 +2,7 @@
 
 <?php
 if (count($errors) > 0){
-	echo "<div id=\"errors\"><ul>";
+	echo "<div id=\"errors\">Errors during registration:<ul>";
 	foreach ($errors as $id => $error) {
 		echo "<li>$error</li>";
 	}

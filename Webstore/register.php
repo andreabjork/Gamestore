@@ -17,7 +17,7 @@
 		$valid = $registration->Valid();
 		$errors = $registration->Errors();
 		
-		if($valid){$registration->write($cursor);}
+		//if($valid){$registration->write($cursor);}
 	}
 	
 	include('views/header.php');
