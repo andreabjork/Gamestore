@@ -29,7 +29,7 @@ class Products extends Product
 	 * Eftir: Skilar fylki af Todo hlutum eða tóma fylkinu
 	 */
 	public function Fetch($key) {
-		$db = $this->dpo;
+		$db = $this->pdo;
 		return $db->query("SELECT ".$key." FROM Products");
 	}
 

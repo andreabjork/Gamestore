@@ -1,62 +1,30 @@
-		<?php
-			echo $results;			
-		?>
-		
+
 		<div class="products">
-			<div class="product">
-				<div class="productName">
-					<h2>Ticket to Ride</h2>
-				</div>
-				<div class="productImage">
-					<img src="data/logo.png">
-				</div>
-				<div class="productText">
-					<p>Much fun, such game, wow.</p>
-				</div>
-				<div class="productPage">
-					<p>Click here to know more!</p>
-				</div>
-			</div>
-			<div class="product">
-				<div class="productName">
-					<h2>Game of Thrones</h2>
-				</div>
-				<div class="productImage">
-					<img src="data/logo.png">
-				</div>
-				<div class="productText">
-					<p>Much fun, such game, wow.</p>
-				</div>
-				<div class="productPage">
-					<p>Click here to know more!</p>
-				</div>
-			</div>
-			<div class="product">
-				<div class="productName">
-					<h2>Dominion</h2>
-				</div>
-				<div class="productImage">
-					<img src="data/logo.png">
-				</div>
-				<div class="productText">
-					<p>Much fun, such game, wow.</p>
-				</div>
-				<div class="productPage">
-					<p>Click here to know more!</p>
-				</div>
-			</div>
-			<div class="product">
-				<div class="productName">
-					<h2>Munchkin</h2>
-				</div>
-				<div class="productImage">
-					<img src="data/logo.png">
-				</div>
-				<div class="productText">
-					<p>Much fun, such game, wow.</p>
-				</div>
-				<div class="productPage">
-					<p>Click here to know more!</p>
-				</div>
-			</div>
+			<?php
+				$data = $results->fetchAll();
+				echo sizeof($data);
+				echo $data[0]["description"];
+				echo $data[1]["name"];
+				echo $data[2]["name"];
+				echo $data[3]["name"];
+				echo $data[4]["name"];	
+				foreach($data as $product) {
+					echo '<div class="product">';
+						echo '<div class="productName">';
+							echo '<h2>'.$product["name"].'</h2>';
+						echo '</div>';
+						echo '<div class="productImage">';
+							echo '<img src="'.$product["img_src"].'">';
+						echo '</div>';
+						echo '<div class="productText">';
+							echo '<p>'.$product["description"].'</p>';
+						echo '</div>';
+						echo '<div class="productPage">';
+							echo '<p>Click here to know more!</p>';
+						echo '</div>';
+					echo '</div>';
+					
+					
+				}
+			?>
 		</div>

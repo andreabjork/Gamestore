@@ -13,9 +13,9 @@ require('classes/products.class.php');
 
 try {
     /*** connect to SQLite database ***/
-    $prodDB = new PDO("sqlite:/SQL/gamestore.db");
-    }
-catch(PDOException $e) {
+    $prodDB = new PDO("sqlite:SQL/gamestore.db");
+	echo "raging success!";
+} catch(PDOException $e) {
 	echo 'something went wrong!';
     echo $e->getMessage();
 }
@@ -36,7 +36,7 @@ if ($method === 'GET') {
 }*/
 
 // Sækja færslur svo hægt sé að birta
-$results = $products->Fetch("title");
+$results = $products->Fetch("*");
 
 
 if (DEBUG) {
