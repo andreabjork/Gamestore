@@ -1,5 +1,5 @@
 		<div id="registration">	
-			<h1><?php echo $valid ? "Registration successful!" : "Register" ?></h1>
+			<h1><?php echo $valid ? "Registration successful! Affected lines = $affected" : "Register" ?></h1>
 			
 			<?php
 			if (count($errors) > 0){

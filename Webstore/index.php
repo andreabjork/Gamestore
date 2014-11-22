@@ -59,7 +59,6 @@ include('views/footer.php');
 // How long have been?
 $logger->Log("Finished!");
 */
-/
 if (DEBUG) {
 	include('views/debug.php');
 }

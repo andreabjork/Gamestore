@@ -95,6 +95,8 @@ class Registration
 	
 	public function write($cur){
 		$statement = "INSERT INTO CUSTOMERS (username,password,email,country,name,addr_line1,addr_line2,city,zip) VALUES ('$this->username','$this->password','$this->email','$this->country','$this->name','$this->addr1','$this->addr2','$this->city','$this->zip')";
-		$cur->exec($statement);
+		$affected = $cur->exec($statement);
+		if($affected === FALSE){return "Something went wrong";}
+		return $affected;
 	}
 }
