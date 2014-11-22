@@ -7,6 +7,7 @@ class Registration
 {
 	public $username;
 	public $password;
+	public $re_password;
 	public $email;
 	public $name;
 	public $addr1;
@@ -23,6 +24,7 @@ class Registration
 	{
 		$this->username = $data["username"];
 		$this->password = $data["password"];
+		$this->re_password = $data["re_password"];
 		$this->email = $data["email"];
 		$this->name = $data["name"];
 		$this->addr1 = $data["addr1"];
@@ -40,12 +42,18 @@ class Registration
 	{
 		$this->errors = array();
 		$validity = TRUE;
+		$password_valid = TRUE;
 		if(preg_match("/^[a-zA-Z0-9]{1,12}$/", $this->username) !== 1){
 			$this->errors += array("username"=>"Invalid username. Your username must be between 1 and 12 characters long and may only contain alpha-numeric characters.");
 			$validity = False;
 		}
 		if(preg_match("/^[a-zA-Z0-9]{1,12}$/", $this->password) !== 1){
 			$this->errors += array("password"=>"Invalid password. Your password must be between 1 and 12 characters long and may only contain alpha-numeric characters.");
+			$validity = False;
+			$password_valid = False;
+		}
+		if($password_valid && $this->re_password !== $this->password){
+			$this->errors += array("password"=>"Invalid password. Your password and re-typed password do not match.");
 			$validity = False;
 		}
 		if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
@@ -86,7 +94,7 @@ class Registration
 	}
 	
 	public function write($cur){
-		$statement = "INSERT INTO CUSTOMERS (username,password,email,country,name,addr_line1,addr_line2,city,zip) VALUES ($this->username,$this->password,$this->email,$this->country,$this->name,$this->addr1,$this->addr2,$this->city,$this->zip)";
+		$statement = "INSERT INTO CUSTOMERS (username,password,email,country,name,addr_line1,addr_line2,city,zip) VALUES ('$this->username','$this->password','$this->email','$this->country','$this->name','$this->addr1','$this->addr2','$this->city','$this->zip')";
 		$cur->exec($statement);
 	}
 }
