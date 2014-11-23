@@ -1,25 +1,3 @@
-<?php
-	// krefjumst þess að hafa registration klasann
-	require('classes/registration.class.php');
-	$cursor = new SQLite3("SQL/gamestore.db");
-	// server superglobal er með REQUEST_METHOD sem er HTTP aðferð sem notuð var
-	$method = $_SERVER['REQUEST_METHOD'];
-	
-	// hér verður haldið utan um gögn og athugað hvort gögn séu gild
-	$registration = new Registration();
-	$valid = FALSE;
-	$errors = array();
-	// er verið að post'a formi? Meðhöndlum þá gögn
-	if ($method === 'POST')
-	{
-		$registration->Populate($_POST);
-		$valid = $registration->Valid();
-		$errors = $registration->Errors();
-		
-		if($valid){$registration->write($cursor);}
-	}
-?>
-
 <h1><?php echo $valid ? "Registration successful!" : "Register" ?></h1>
 
 <?php
@@ -81,4 +59,3 @@ if (count($errors) > 0){
 		<input type="submit" value="Register">
 	</div>
 </form>
-
