@@ -1,5 +1,5 @@
 		<div id="registration">	
-			<h1><?php echo $valid ? "Registration successful!" : "Register" ?></h1>
+			<h1><?php echo $valid ? "Registration successful! Affected lines = $affected" : "Register" ?></h1>
 			
 			<?php
 			if (count($errors) > 0){
@@ -12,7 +12,7 @@
 			
 			?>
 			
-			<form id="register" <?php echo $valid ? 'class="hidden"' : '' ?> action="index.php" method="post">
+			<form id="register" <?php echo $valid ? 'class="hidden"' : '' ?> action="register.php" method="post">
 				<p>Account information:</p>
 				<div class="field">
 					<label for="username">Username: *</label>
