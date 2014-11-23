@@ -33,7 +33,7 @@ class Products extends Product
 		if($cond === "") {
 			$res = $db->query('SELECT '.$key.' FROM '.$table);
 		} else {
-			//echo "Executing query: '".'SELECT '.$key.' FROM '.$table.' WHERE '.$attr.'='.$cond."' ";
+			//echo " | Executing query: '".'SELECT '.$key.' FROM '.$table.' WHERE '.$attr.'='.$cond."' | ";
 			$res = $db->query('SELECT '.$key.' FROM '.$table.' WHERE '.$attr.'='.$cond);
 		}
 		return $res;
