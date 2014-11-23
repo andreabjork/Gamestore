@@ -1,73 +1,81 @@
 .cartItem{
+	position: relative;
 	width: 90%;
-	height: 120px;
-	margin: auto;
+	height: 140px;
+	margin: 10px;
+	padding: 5px;
 	box-sizing: border-box;
 	border: 1px solid #cacaca;
 }
-	.cartItem .prodInfo{
-		width: 120px;
+	.prodInfo{
+		position: relative;
+		left: 5px;
+		top: 5px;
+		width: 300px;
 		height: 100px;
 		margin: 10px;
-		float: left;
-		border: 1px solid #cacaca;
-		overflow: auto;
+		overflow: none;
 	}
-		.cartItem .prodInfo h2{
-			width: 90%;
-			top: 10px;
-			margin: auto;
-			border: 1px solid #cacaca;
-			
+		.prodInfo h2{
+			position: absolute;
+			right: 0;
+			font-size: 1em;
+			padding: 2px;
 		}
 		
-		.cartItem .prodInfo img{
-			width: 100px;
-			height: 90px;
-			bottom: 10px;
-			border: 1px solid #cacaca;
+		.prodInfo img{
+			height: 100%;
+			margin-bottom: 0px;
 		}
 	
-	.cartItem .price{
-		width: 100px;
-		height: 50px;
-		bottom: 10px;
-		border: 1px solid #cacaca;
+	.price{
+		position: absolute;
+		bottom: 20px;
+		right: 100px;
+		font-size: 1.5em;
+		font-weight: bold;
+		color: #D47619;
 	}
 	
-	/*.cartBtn{
+	.cartBtn{
 		display: block;
-		width: 20px;
-		margin-top: 15px;
-		margin; 10px;
-	}*/
-	
-	.cartItem .incdec{
 		position: relative;
-		width: 36px;
-		height: 100px;
-		margin: 10px;
-		border: 1px solid #cacaca;
-		float: right;
+		width: 20px;
 	}
-		.cartItem .incdec .increment{
-			width: 40;
-			height: 40;
-			top: 10px;
-			margin: auto;
-			border: 1px solid #cacaca;
+		.remove{
+			position: absolute;
+			top: 0;
+			right: 0;
 		}
-		.cartItem .incdec .quantity{
-			width: 40;
-			height: 40;
-			margin: auto;
-			border: 1px solid #cacaca;
+		
+	.incdec{
+		position: absolute;
+		width: 40px;
+		height: 120px;
+		right: 30px;
+		top: 0;
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex-flow: column wrap;
+	}
+	
+		.increment{
+			width: 30px;
+			height: 30px;
 		}
-		.cartItem .incdec .decrement{
-			width: 40;
-			height: 40;
-			bottom: 10px;
-			margin: auto;
-			border: 1px solid #cacaca;
+		
+		.quantity{
+			display: block;
+			width: 30px;
+			height: 30px;
+			padding: 4px;
+			margin: 4px;
+			font-size: 1.3em;
+			font-weight: bold;
 			
+		}
+		.decrement{
+			width: 30px;
+			height: 30px;
 		}

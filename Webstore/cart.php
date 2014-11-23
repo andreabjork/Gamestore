@@ -21,10 +21,8 @@ $user = "guest";
 if (isset($_GET['user']) && !empty($_GET['user'])){
 	$user = $_GET['user'];
 }
-echo $user;
 $results = $cartProd->Fetch('*','user',"'$user'",'ShoppingCarts');
 $data = $results->fetchAll();
-echo " Made it to assembly! ";
 include('views/header.php');
 if($user === "guest"){
 	//skilaboð um að þú þurfir að logga þig inn til að versla
