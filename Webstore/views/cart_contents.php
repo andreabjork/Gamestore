@@ -25,11 +25,11 @@
 						echo "</div>";
 						echo "<span class='price'>Price: $$totPrice</span>";
 						echo "<div class='incdec'>";
-							echo"<input type='button' class='cartBtn increment' prod_id=$id user='$user'>";
+							echo"<input type='image' src='data/increment.ico' alt='increment' class='cartBtn increment' prod_id=$id user='$user'>";
 							echo"<span class='quantity'>$qty</span>";
-							echo"<input type='button' class='cartBtn decrement' prod_id=$id user='$user'>";
+							echo"<input type='image' src='data/decrement.ico' alt='decrement' class='cartBtn decrement' prod_id=$id user='$user'>";
 						echo "</div>";
-						echo "<input type='button' class='cartBtn remove' prod_id=$id user='$user'>";
+						echo "<input type='image' src='data/remove.ico' alt='remove' class='cartBtn remove' prod_id=$id user='$user'>";
 					echo "</div>";
 				}
 				echo "<p id=subtotal>Subtotal: $$subtotal</p>"
