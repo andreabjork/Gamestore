@@ -1,5 +1,5 @@
 <!--to call cart.js, do all the nice php db things, and render our cart-->
-		<div id='cart'>	
+		<div class='container'>	
 			<h1>Your cart:</h1>
 			<?php
 				foreach ($data as $row) {
@@ -15,9 +15,9 @@
 					}
 					$price = $info['price'];
 					$totPrice = $price*$qty;
-					echo "<div id=$id>";
+					echo "<div id=$id class='cartItem'>";
 						echo "<div class='prodInfo'>";
-							echo "<h1>$title</h1>";
+							echo "<h2>$title</h2>";
 							echo "<img src='$img' />";
 						echo "</div>";
 						echo "<span class='price'>$totPrice</span>";
