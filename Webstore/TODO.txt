@@ -1,9 +1,14 @@
-Útfæra login
 Klára gagnagrunn (setja inn myndir, fleiri spil? etc)
 Útfæra about us page
+Fínstilla útlit -> Velja fonta!
+
+Andrea: 
+Animation á our products dropdownið og signin gluggan?
 Útfæra myndayfirlit þegar tiltekin vara er skoðuð. Hafa margar myndir? Hafa myndaviewer
 Útfæra search
+
+
+Leó:
 Klára my cart
+Útfæra login
 Fá footer til að haldast neðst
-Fínstilla útlit
-Animation á our products dropdownið og signin gluggan?

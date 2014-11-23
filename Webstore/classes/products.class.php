@@ -47,6 +47,13 @@ class Products extends Product
 		return $res;
 	}
 
+	public function FetchResults($searched) {
+		$db = $this->pdo;
+		$q = "SELECT * FROM Products WHERE name LIKE '%$searched%'";
+		$res = $db->query($q);
+		return $res;
+	}
+
 	/**
 	 * Fyrir: Búið er að sækja færslur með Fetch
 	 * Eftir: Skilar heildarfjölda færsla

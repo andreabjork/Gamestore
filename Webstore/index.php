@@ -33,7 +33,9 @@ if ($method === 'GET') {
 }*/
 
 // Sækja færslur svo hægt sé að birta
-if(isset($_GET["genre"])) {
+if(isset($_GET["searchField"])) {
+	$results = $products->FetchResults($_GET["searchField"]);
+}elseif(isset($_GET["genre"])) {
 	$results = $products->FetchGenre($_GET["genre"]);
 } else {
 	$results = $products->Fetch("*");

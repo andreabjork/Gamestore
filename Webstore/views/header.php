@@ -42,7 +42,9 @@
 					<li id="products"><a href="index.php">Our products</a></li>
 					<li id="about"><a href="about.php">About us</a></li>
 				</ul>
-				<input id="search"/>
+				<form>
+					<input id="search" name="searchField" placeholder="Search for a boardgame..." action="index.php" method="POST"/>
+				</form>
 			</div>
 			<div class="dropDown">
 				<ul class="dropButtons">
