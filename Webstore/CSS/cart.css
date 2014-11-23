@@ -1,3 +1,18 @@
+.yourCart{
+	display: block;
+	text-align: left;
+	font-size: 4em;
+	padding: 8px;
+	width: 90%;
+}
+
+#subtotal{
+	display: block;
+	text-align: right;
+	font-size: 3em;
+	padding: 8px;
+	width: 90%;
+}
 .cartItem{
 	position: relative;
 	width: 90%;
@@ -6,21 +21,28 @@
 	padding: 5px;
 	box-sizing: border-box;
 	border: 1px solid #cacaca;
+	border-radius: 3px;
 }
 	.prodInfo{
 		position: relative;
 		left: 5px;
 		top: 5px;
-		width: 300px;
 		height: 100px;
 		margin: 10px;
 		overflow: none;
 	}
 		.prodInfo h2{
 			position: absolute;
-			right: 0;
-			font-size: 1em;
+			left: 200px;
+			font-size: 2em;
 			padding: 2px;
+		}
+		
+		.prodInfo p{
+			position: absolute;
+			left: 200px;
+			bottom: 20px; 
+			font-size: 1em;
 		}
 		
 		.prodInfo img{
@@ -51,9 +73,10 @@
 	.incdec{
 		position: absolute;
 		width: 40px;
-		height: 120px;
 		right: 30px;
 		top: 0;
+		margin-top: 20px;
+		margin-bottom: 20px;
 		display: flex;
 	    align-items: center;
 	    justify-content: center;
@@ -67,6 +90,7 @@
 		
 		.quantity{
 			display: block;
+			text-align: center;
 			width: 30px;
 			height: 30px;
 			padding: 4px;
