@@ -37,6 +37,16 @@ class Products extends Product
 		}
 		return $res;
 	}
+	
+	
+	public function FetchGenre($genre) {
+		$db = $this->pdo;
+		$q = "SELECT * FROM Products INNER JOIN Genres ON Products.id=Genres.id WHERE genre=$genre";
+		echo "this is our query:      -";
+		echo $q;
+		$res = $db->query($q);
+		return $res;
+	}
 
 	/**
 	 * Fyrir: Búið er að sækja færslur með Fetch

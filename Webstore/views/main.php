@@ -1,7 +1,17 @@
 
+
+
+
 		<div class="products">
 			<?php
+				echo "ok at least this prints";
+				echo gettype($results);
+				echo "did that work?";
 				$data = $results->fetchAll();
+				echo gettype($data);
+				echo sizeof($data);
+				echo "this should print";
+				echo $data[0]["name"];
 				foreach($data as $product) {
 					echo '<div class="product">';
 						echo '<div class="productName">';
