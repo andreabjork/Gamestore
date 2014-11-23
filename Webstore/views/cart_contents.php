@@ -1,6 +1,6 @@
 <!--to call cart.js, do all the nice php db things, and render our cart-->
 		<div class='container'>	
-			<h1>Your cart:</h1>
+			<h1 class='yourCart'>Your cart:</h1>
 			<?php
 				$subtotal = 0;
 				foreach ($data as $row) {
@@ -16,7 +16,7 @@
 					}
 					$price = $info['price'];
 					$totPrice = $price*$qty;
-					$subtotal += $totalPrice;
+					$subtotal += $totPrice;
 					echo "<div id=$id class='cartItem'>";
 						echo "<div class='prodInfo'>";
 							echo "<h2>$title</h2>";
