@@ -1,3 +1,7 @@
+		<?php
+			echo $result;			
+		?>
+		
 		<div class="products">
 			<div class="product">
 				<div class="productName">

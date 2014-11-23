@@ -6,6 +6,26 @@ const DEBUG = true;
 const CACHE_TIME = 600;
 const CACHE_FS = 'cache/';
 const WS_URL = 'http://apis.is/concerts';
+
+require('classes/products.class.php');
+
+// TODO búa til gamestore.db
+$products = new Products(new PDO('sqlite:SQL/gamestore.db'));
+
+$errors = array();
+/*
+$method = $_SERVER['REQUEST_METHOD'];
+
+if ($method === 'GET') {
+	// TODO meðhöndla POST frá formi og hugsanlegar villur
+	foreach($_GET as $key => $value) {
+		$products->Insert($title, $key);
+	}
+}*/
+
+// Sækja færslur svo hægt sé að birta
+$results = $products->Fetch($key);
+
 /*
 if (DEBUG) {
 	ini_set('display_errors', 1);
