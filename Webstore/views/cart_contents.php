@@ -1,14 +1,10 @@
 <!--to call cart.js, do all the nice php db things, and render our cart-->
-		<?php
-			$results = $cur->query("SELECT * FROM ShoppingCarts WHERE user=$user");
-			$data = $results->fetchAll();
-		?>
 		<h1>Your cart:</h1>
 		<?php
 			foreach ($data as $row) {
 				$id = $row['prod_id'];
 				$qty = $row['quantity'];
-				$result = $cur->query("SELECT * FROM Products WHERE id=$id");
+				$result = $cartProd->Fetch('*','id',$id);
 				$info = $result->fetchAll(); 
 				$title = $info['name'];
 				$img = $info['img_src'];
