@@ -3,14 +3,26 @@
 		<?php
 			foreach ($data as $row) {
 				$id = $row['prod_id'];
+				echo $id;
+				echo gettype($id);
+				/*
 				$qty = $row['quantity'];
+				*/
+				echo "looking up product<br>";
 				$result = $cartProd->Fetch('*','id',$id);
-				$info = $result->fetchAll(); 
+				$info = $result->fetchAll();
+				echo "product found<br>";
+				echo "$info<br>";
+				foreach ($info as $key => $value) {
+					echo "Key: $key , Value: $value<br>";
+				}
+				/* 
 				$title = $info['name'];
 				$img = $info['img_src'];
 				$price = $info['price'];
 				$totPrice = $price*$qty;
-				echo "<div id=$id>";
+				*/
+				/*echo "<div id=$id>";
 					echo "<div class='prodInfo'>";
 						echo "<h1>$title</h1>";
 						echo "<img src='$img' />";
@@ -22,7 +34,7 @@
 						echo"<input type='button' class='cartBtn decrement' prod_id=$id user='$user'>";
 					echo "</div>";
 					echo "<input type='button' class='cartBtn remove' prod_id=$id user='$user'>";
-				echo "</div>";
+				echo "</div>";*/
 			}
 		?>
 		<!--<script type="text/javascript" src="JS/cart.js"></script>-->
