@@ -48,13 +48,13 @@
 			</div>
 			<div class="dropDown">
 				<ul class="dropButtons">
-					<li id="trading"><a href="index.php?genre=trading">Trading Card Games</a></li>
-					<li id="family"><a href="index.php?genre=family">Family Games</a></li>
-					<li id="boardgames"><a href="index.php?genre=boardgame">Boardgames</a></li>
-					<li id="cardgames"><a href="index.php?genre=cardgame">Cardgames</a></li>
-					<li id="strategy"><a href="index.php?genre=strategy">Strategy games</a></li>
-					<li id="conquer"><a href="index.php?genre=conquering">Conquering games</a></li>
-					<li id="coop"><a href="index.php?genre=coop">Cooperative games</a></li>
+					<a href="index.php?genre=trading"><li id="trading">Trading Card Games</li></a>
+					<a href="index.php?genre=family"><li id="family">Family Games</li></a>
+					<a href="index.php?genre=boardgame"><li id="boardgames">Boardgames</li></a>
+					<a href="index.php?genre=cardgame"><li id="cardgames">Cardgames</li></a>
+					<a href="index.php?genre=strategy"><li id="strategy">Strategy games</li></a>
+					<a href="index.php?genre=conquering"><li id="conquer">Conquering games</li></a>
+					<a href="index.php?genre=coop"><li id="coop">Cooperative games</li></a>
 				</ul>
 			</div>
 		</header>
