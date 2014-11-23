@@ -30,7 +30,7 @@ class Products extends Product
 	 */
 	public function Fetch($key) {
 		$db = $this->dpo;
-		return $db->query("SELECT".$key."FROM Products");
+		return $db->query("SELECT ".$key." FROM Products");
 	}
 
 	/**

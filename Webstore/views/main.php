@@ -1,5 +1,5 @@
 		<?php
-			echo $result;			
+			echo $results;			
 		?>
 		
 		<div class="products">

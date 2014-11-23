@@ -24,13 +24,13 @@ if ($method === 'GET') {
 }*/
 
 // Sækja færslur svo hægt sé að birta
-$results = $products->Fetch($key);
+$results = $products->Fetch("title");
 
-/*
+
 if (DEBUG) {
 	ini_set('display_errors', 1);
 	error_reporting(~0);
-}*/
+}
 /*
 // Our dependencies
 $logger = require('log.php');
@@ -59,8 +59,8 @@ include('views/footer.php');
 // How long have been?
 $logger->Log("Finished!");
 */
-/*
+/
 if (DEBUG) {
 	include('views/debug.php');
-}*/
+}
 
