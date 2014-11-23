@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="CSS/main.css">
 		<link rel="stylesheet" href="CSS/form.css">
 		<link rel="stylesheet" href="CSS/footer.css">
+		<link rel="stylesheet" href="CSS/product.css">
 		<script src="libraries/jquery.js"></script>	
 	</head>
 	<body>
@@ -17,14 +18,14 @@
 					<img id="logoImg" src="data/logo.png"/>
 				</div>
 				<ul class="actions">
-					<li id="signin">Sign in</li>
+					<li id="signin"><a href="register.php">Sign in</a></li>
 					<li id="cart"><a href="cart.php">My cart</a></li>
 				</ul>
 			</div>
 			<div class="navigation">
 				<ul class="buttons">
-					<li id="products">Our products</li>
-					<li id="about">About us</li>
+					<li id="products"><a href="index.php">Our products</a></li>
+					<li id="about"><a href="about.php">About us</a></li>
 				</ul>
 				<input id="search"/>
 			</div>

@@ -1,7 +1,5 @@
 <?php 
 
-/*
-$results = $products->Fetch("*", "id", $prodID);
 $data = $results->fetchAll();
 
 foreach($data as $product) {
@@ -12,7 +10,6 @@ foreach($data as $product) {
 			$imgsrc = "data/notfound.jpg";
 		}
 			echo '<img src="'.$imgsrc.'">';
-			
 		echo '</div>';
 		echo '<div class="textBox">';
 			echo '<h1>'.$product["name"].'</h1>';
@@ -20,10 +17,8 @@ foreach($data as $product) {
 		echo '</div>';
 	echo '</div>';
 }
- * 
- * <script type="text/javascript" src="JS/product.js"></script>
 
-*/
+ 
 ?>
 
 

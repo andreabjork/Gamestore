@@ -5,6 +5,11 @@ body p {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 header {
     height: 180px;
     width: 85%;
@@ -39,7 +44,7 @@ header {
 				
 			.actions {
 				position: relative;
-				bottom: 20px;
+				bottom: 25px;
 				right: 15px;
 	            list-style: none;
 	            font-family: 'Roboto', sans-serif;
@@ -55,7 +60,7 @@ header {
 	        }
 	        
 	        .actions li:hover {
-	            background-color: #cacaca;
+	            background-color: #D47619;
 	            padding: 5px 5px 5px;
 	        }
 	
@@ -129,3 +134,4 @@ header {
 	       padding: 5px 5px 5px;
 	   }
         
+

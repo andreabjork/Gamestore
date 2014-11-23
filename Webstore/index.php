@@ -12,14 +12,13 @@ require('classes/products.class.php');
 
 
 try {
-    /*** connect to SQLite database ***/
     $prodDB = new PDO("sqlite:SQL/gamestore.db");
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
 
 
-// TODO búa til gamestore.db
+
 $products = new Products($prodDB);
 
 $errors = array();

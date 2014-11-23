@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    max-width: 1300px;
+    min-width: 320px;
+    width: 85%;
+    background-color: #f2f2f2;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .imgBox {
+        width: 10%;
+        min-width: 300px;
+        min-height: 200px;
+        height: 8%;
+        margin: 10px;
+    }
+    
+        .imgBox img {
+            width: 100%;
+            height: 100%;
+        }
+    
+    .textBox {
+        width: 65%;
+        min-width: 500px;
+        margin: 10px;
+    }
+    
+        .textBox h1 {
+            
+        }
+        
+        .textBox p {
+            
+        }
