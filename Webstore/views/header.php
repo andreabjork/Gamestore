@@ -18,8 +18,22 @@
 				<div class="logo">
 					<img id="logoImg" src="data/logo.png"/>
 				</div>
+				<div class="signBox">
+					<form>
+						<ul>
+							<li>
+								<label>Username: <input id="nameField"/></label>
+							</li>
+							<li>
+								<label>Password: <input id="passwordField" type="password"/></label>
+							</li>
+							<li><button type="button" id="signBtn">Sign in!</button></li>
+							<li><span>Don't have an account? <a href="register.php">Click here to register!</a></span></li>
+						</ul>
+					</form>
+				</div>
 				<ul class="actions">
-					<li id="signin"><a href="register.php">Sign in</a></li>
+					<li id="signin">Sign in</li>
 					<li id="cart"><a href="cart.php">My cart</a></li>
 				</ul>
 			</div>

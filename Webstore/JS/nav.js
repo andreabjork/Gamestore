@@ -53,3 +53,14 @@ $(".dropDown").hover(function()  {
 	console.log('stopped hovering');
 	$(".dropDown").css("display", "none");
 });
+
+$('#signin').click(function() {
+	$(".signBox").css("display", "block");
+});
+
+
+$('#signBtn').click(function() {
+	
+});
+
+

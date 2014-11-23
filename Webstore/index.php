@@ -33,10 +33,6 @@ if ($method === 'GET') {
 }*/
 
 // Sækja færslur svo hægt sé að birta
-
-echo "this is the genre key";
-echo $_GET["genre"];
-
 if(isset($_GET["genre"])) {
 	$results = $products->FetchGenre($_GET["genre"]);
 } else {

@@ -42,9 +42,7 @@ class Products extends Product
 	
 	public function FetchGenre($genre) {
 		$db = $this->pdo;
-		$q = "SELECT * FROM Products INNER JOIN Genres ON Products.id=Genres.id WHERE genre=$genre";
-		echo "this is our query:      -";
-		echo $q;
+		$q = "SELECT * FROM Products INNER JOIN Genres ON Products.id=Genres.id WHERE genre='$genre'";
 		$res = $db->query($q);
 		return $res;
 	}
