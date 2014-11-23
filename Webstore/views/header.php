@@ -18,7 +18,7 @@
 				</div>
 				<ul class="actions">
 					<li id="signin">Sign in</li>
-					<li id="cart">My cart</li>
+					<li id="cart"><a href="cart.php">My cart</a></li>
 				</ul>
 			</div>
 			<div class="navigation">

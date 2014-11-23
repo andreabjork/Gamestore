@@ -21,11 +21,9 @@
 							echo "<p>$".$product["price"]."</p>";
 						echo '</div>';
 						echo '<div class="productPage">';
-							echo '<p>Click here to know more!</p>';
+							echo '<a href=product.php?id='.$product["id"].'><p>Click here to know more!</p></a>';
 						echo '</div>';
 					echo '</div>';
-					
-					
 				}
 			?>
 		</div>
