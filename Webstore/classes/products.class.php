@@ -28,12 +28,13 @@ class Products extends Product
 	 * Fyrir: $key er lykill sem sækja á færslur fyrir
 	 * Eftir: Skilar fylki af Todo hlutum eða tóma fylkinu
 	 */
-	public function Fetch($key, $attr="", $cond="") {
+	public function Fetch($key, $attr="", $cond="", $table="Products") {
 		$db = $this->pdo;
 		if($cond === "") {
-			$res = $db->query('SELECT '.$key.' FROM Products');
+			$res = $db->query('SELECT '.$key.' FROM '.$table);
 		} else {
-			$res = $db->query('SELECT '.$key.' FROM Products WHERE '.$attr.'='.$cond);
+			//echo "Executing query: '".'SELECT '.$key.' FROM '.$table.' WHERE '.$attr.'='.$cond."' ";
+			$res = $db->query('SELECT '.$key.' FROM '.$table.' WHERE '.$attr.'='.$cond);
 		}
 		return $res;
 	}
