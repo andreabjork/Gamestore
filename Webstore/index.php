@@ -9,8 +9,20 @@ const WS_URL = 'http://apis.is/concerts';
 
 require('classes/products.class.php');
 
+
+
+try {
+    /*** connect to SQLite database ***/
+    $prodDB = new PDO("sqlite:/SQL/gamestore.db");
+    }
+catch(PDOException $e) {
+	echo 'something went wrong!';
+    echo $e->getMessage();
+}
+
+
 // TODO búa til gamestore.db
-$products = new Products(new PDO('sqlite:SQL/gamestore.db'));
+$products = new Products($prodDB);
 
 $errors = array();
 /*
@@ -59,7 +71,7 @@ include('views/footer.php');
 // How long have been?
 $logger->Log("Finished!");
 */
-/
+
 if (DEBUG) {
 	include('views/debug.php');
 }
