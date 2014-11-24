@@ -31,4 +31,5 @@
 				}
 			?>
 		</div>
-		<!--<script type="text/javascript" src="JS/cart.js"></script>-->
+		
+		<script type="text/javascript" src="JS/cart.js"></script>

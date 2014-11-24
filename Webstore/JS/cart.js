@@ -1,16 +1,22 @@
 $('.cartBtn').click(function(e){
 	var id = $(e.target).attr('prod_id');
-	var type = $(e.target).attr('class')[1];
+	var type = $(e.target).attr('class').split(" ");
 	var username = $(e.target).attr('user');
+	console.log("this is the product id "+id);
+	console.log('this is the extra class '+type[1]);
+	console.log(typeof type);
+	console.log('this is the username '+username);
+	
 	$.ajax({
-		url: 'functions/cart_actions.php',
-		data: {action: type, user: username, prod_id: id},
+		url: 'cart_actions.php',
+		data: {action: type[1], user: username, prod_id: id},
 		type: 'post',
 		success: function(output) {
 			console.log(output);
-			updateCart(type,id);
+			//updateCart(type[1], id);
 		}
 	});
+	
 });
 
 function updateCart(type,id){
@@ -32,7 +38,7 @@ function updateCart(type,id){
 	}
 }
 
-function increment(id){
+function increment(id) {
 	var selector = '#'+id+
 	$(divID+'.incdec')[0].childNode;
 }

@@ -54,6 +54,43 @@ class Products extends Product
 		return $res;
 	}
 
+	public function Delete($user, $id) {
+		$db = $this->pdo;
+		$q = "DELETE FROM ShoppingCarts WHERE user='$user' AND prod_id=$id";
+		echo "this is our query ".$q;
+		$res = $db->exec($q);
+	}
+
+	public function Increment($user, $id) {
+		$db = $this->pdo;
+		$q = "SELECT quantity FROM ShoppingCarts WHERE user='$user' AND prod_id=$id";
+		$data = $db->query($q);
+		$finalData = $data->fetchAll();
+		$quantity = $finalData[0]["quantity"];
+		echo intval($quantity);
+		echo gettype(intval($quantity));
+		$incQuantity = intval($quantity)+1;
+		$q2 = "UPDATE ShoppingCarts SET quantity=$incQuantity WHERE user='$user' AND prod_id=$id";
+		$success = $db->exec($q2);
+		echo "this is our query $q2";
+		echo "was there a success? ".$success;
+	}
+		
+	public function Decrement($user, $id) {
+		$db = $this->pdo;
+		$q = "SELECT quantity FROM ShoppingCarts WHERE user='$user' AND prod_id=$id";
+		$data = $db->query($q);
+		$finalData = $data->fetchAll();
+		$quantity = $finalData[0]["quantity"];
+		echo intval($quantity);
+		echo gettype(intval($quantity));
+		$decQuantity = intval($quantity)-1;
+		$q2 = "UPDATE ShoppingCarts SET quantity=$decQuantity WHERE user='$user' AND prod_id=$id";
+		$success = $db->exec($q2);
+		echo "this is our query $q2";
+		echo "was there a success? ".$success;
+	}
+
 	/**
 	 * Fyrir: Búið er að sækja færslur með Fetch
 	 * Eftir: Skilar heildarfjölda færsla
