@@ -15,10 +15,12 @@ foreach($data as $product) {
 			echo '<h1>'.$product["name"].'</h1>';
 			echo '<p>'.$product["description"].'</p>';
 		echo '</div>';
+		echo '<input type=button class="addBtn" value="Add to cart" name='.$product["id"].' />';
 	echo '</div>';
 }
 
  
 ?>
 
+<script type="text/javascript" src="JS/product.js"></script>
 

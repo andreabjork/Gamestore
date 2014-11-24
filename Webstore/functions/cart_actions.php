@@ -1,49 +1,41 @@
+
 <?php
-$cur = new PDO("SQL/gamestore.db");
+echo $_POST["action"];
 
-if(isset($_POST['action']) && !empty($_POST['action']) && isset($_POST['user']) && !empty($_POST['user']) && isset($_POST['prod_id']) && !empty($_POST['prod_id'])){
-	$action = $_POST['action'];
-	$user = $_POST['user'];
-	$prod_id = $_POST['prod_id'];
-	$result = $cur->query("SELECT quantity FROM ShoppingCarts WHERE prod_id=$prod_id AND user='$user'");
-	$qty=$result[0];
-	switch($action){
-		case 'increment' : increment($user,$prod_id);break;
-		case 'decrement' : decrement($user,$prod_id);break;
-		case 'remove' : remove($user,$prod_id);break;
-		case 'add' : add($user,$prod_id);break;
-		case 'exists' : exists($user,$prod_id);break;
+
+echo "something is working";
+// Þurfum products.class hlutinn
+require("classes/products.class.php");
+
+//búum til tengingu við gagnagrunn
+try {
+	$cur = new PDO("sqlite:SQL/gamestore.db");
+} catch(PDOException $e) {
+	echo $e->getMessage();
+}
+
+//búum til products hlut
+$cartProd = new Products($cur); 
+
+if(isset($_POST["action"]) && isset($_POST["prod_id"]) && isset($_POST["user"])) {
+	switch ($_POST["action"]) {
+		case 'remove':
+			echo "we reached the remove part!";
+			$cartProd->Delete($_POST["user"], $_POST["prod_id"]);
+			break;
+		case 'increment':
+			$cartProd->Increment($_POST["user"], $_POST["prod_id"]);
+			break;
+		case 'decrement':
+			$cartProd->Decrement($_POST["user"], $_POST["prod_id"]);
+			break;
+		case 'add':
+			$cartProd->Add($_POST["user"], $_POST["prod_id"]);
+			break;
+		default:
+			echo "nothing was valid";
+			break;
 	}
-}
-
-function increment($user,$id){
-	$qty++;
-	$stmt = "UPDATE ShoppingCarts SET quantity=$qty WHERE prod_id=$prod_id AND user='$user'";
-	return $cur->exec($stmt);
-}
-
-function decrement($user,$id){
-	$qty--;
-	$stmt = "UPDATE ShoppingCarts SET quantity=$qty WHERE prod_id=$prod_id AND user='$user'";
-	return $cur->exec($stmt);
-}
-
-function remove($user,$id){
-	$stmt = "DELETE FROM ShoppingCarts WHERE prod_id=$prod_id AND user='$user'";
-	return $cur->exec($stmt);
-}
-
-function add($user,$id){
-	$stmt = "INSERT INTO ShoppingCarts (user,prod_id,quantity) VALUES ('$user',$prod_id,1)";
-	return $cur->exec($stmt);
-}
-
-function exists($user,$id){
-	$stmt = 'SELECT COUNT(*) FROM ShoppingCarts WHERE prod_id=$prod_id';
-	$row = $stmt->query($stmt);
-	
-	if(!$row){return FALSE;}
-	return TRUE;
 }
 
 ?>
