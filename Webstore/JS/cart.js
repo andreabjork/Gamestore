@@ -49,6 +49,23 @@ function updateCart(type, btn){
 function increment(btn) {
 	var spanEle = btn.parent().children();
 	var quantity = spanEle[1].innerHTML;
+	
+	var container = btn.parent().parent().parent().children();
+	var cartItem = btn.parent().parent().children();
+	var info = cartItem[0];
+	console.log("info:");
+	console.log(info);
+	console.log(":end info.");
+	/*
+	var price = info[1].innerHTML;
+	var total = cartItem[1].innerHTML();
+	var new_total = price+total;
+	cartItem[1].innerHTML() = new_total;
+	var subtotal = container[container.length-1].innerHTML;
+	var new_subtotal = subtotal+price;
+	container[container.length-1].innerHTML = new_subtotal;
+	*/
+	
 	spanEle[1].innerHTML = parseInt(quantity)+1;
 	if(parseInt(quantity)===1) {
 		$(spanEle[2]).css("display", "block");
@@ -73,6 +90,5 @@ function add(id){
 
 function remove(btn){
 	btn.parent().remove();
-	
 }
 
