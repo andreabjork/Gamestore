@@ -60,7 +60,17 @@ $('#signin').click(function() {
 
 
 $('#signBtn').click(function() {
+	var user = $("#nameField").val();
+	var pwd = $("#passwordField").val();
 	
+	$.ajax({
+		url: 'functions/login.php',
+		data: {username: user, password: pwd},
+		type: 'post',
+		success: function(output) {
+			console.log(output);
+		}
+	});
 });
 
 
