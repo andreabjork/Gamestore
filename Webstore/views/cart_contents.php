@@ -20,7 +20,7 @@
 					echo "<div id=$id class='cartItem'>";
 						echo "<div class='prodInfo'>";
 							echo "<h2>$title</h2>";
-							echo "<p>$$price</p>"
+							echo "<p>$$price</p>";
 							echo "<img src='$img' />";
 						echo "</div>";
 						echo "<span class='price'>Price: $$totPrice</span>";
