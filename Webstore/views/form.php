@@ -16,7 +16,7 @@
 				<p>Account information:</p>
 				<div class="field">
 					<label for="username">Username: *</label>
-					<input type="text" name="username" id="username" <?php echo array_key_exists("name", $errors) ? 'class="error"' : '' ?> placeholder="Batman" value="<?php echo $registration->username; ?>" />
+					<input type="text" name="username" id="username" <?php echo array_key_exists("username", $errors) ? 'class="error"' : '' ?> placeholder="Batman" value="<?php echo $registration->username; ?>" />
 				</div>
 				<div class="field">
 					<label for="password">Password: *</label>
