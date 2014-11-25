@@ -13,7 +13,7 @@
 		<script src="libraries/jquery.js"></script>	
 		<script src="libraries/jquery.md5.js"></script>	
 	</head>
-	<body>
+	<body id="body">
 		<header>
 			<div class="main">
 				<div class="logo">

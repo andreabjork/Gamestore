@@ -14,5 +14,6 @@
 				</ul>
 			</section>
 		</footer>
+		<script type="text/javascript" src="JS/justify_height.js"></script>
 	</body>
 </html>
