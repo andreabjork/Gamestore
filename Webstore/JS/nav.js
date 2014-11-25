@@ -37,7 +37,10 @@ $('.logout').click(function() {
 });
 
 
-$('#signBtn').click(function() {
+$('#signBtn').click(login);
+
+function login() {
+	console.log("logging in")
 	var user = $("#nameField").val();
 	var pwd = $("#passwordField").val();
 	var pwdMD5 = $.md5(pwd); 
@@ -59,7 +62,8 @@ $('#signBtn').click(function() {
 			}
 		}
 	});
-});
+	return false;
+}
 
 function setUser(user) {
 	$('.currentUser').show();

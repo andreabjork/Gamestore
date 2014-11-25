@@ -27,7 +27,7 @@
 					</ul>
 				</div>
 				<div class="signBox">
-					<form>
+					<form name="signin" onsubmit="return ">
 						<ul>
 							<li>
 								<label>Username: <input class="inputField" id="nameField"/></label>
@@ -37,11 +37,11 @@
 							</li>
 							<li><span>Don't have an account? <a href="register.php">Click here to register!</a></span></li>
 						</ul>
-						<input type="button" id="signBtn" value="Sign in!" />
+						<input type="submit" id="signBtn" value="Sign in!"  onclick="return login()"/>
 					</form>
 				</div>
 				<ul class="actions">
-					<li id="signin" <?php //echo ($user == 'guest') ? '' : 'class="hidden"' ; ?>>Sign in</li>
+					<li id="signin" <?php echo ($user == 'guest') ? '' : 'class="hidden"' ; ?>>Sign in</li>
 					<li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><a href="cart.php">My cart</a></li>
 				</ul>
 			</div>
