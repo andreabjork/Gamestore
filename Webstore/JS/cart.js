@@ -93,13 +93,16 @@ function add(id){
 }
 
 function remove(btn){
-	btn.parent().remove();
-	
-	var cartItem = btn.parent().parent().children();
+	var cartItem = btn.parent().children();
+	var itemTotPrice = ($(cartItem[1]).children())[0];
 	var oldTotPrice = itemTotPrice.innerHTML;
 	var subtotal = $("#subTot")[0];
 	var oldSubtotal = $("#subTot")[0].innerHTML;
-	
+	console.log(subtotal);
+	console.log(oldSubtotal);
+	console.log(oldTotPrice);
 	subtotal.innerHTML = (parseFloat(oldSubtotal)-parseFloat(oldTotPrice)).toFixed(2);
+	
+	btn.parent().remove();
 }
 
