@@ -62,13 +62,21 @@ $('#signin').click(function() {
 $('#signBtn').click(function() {
 	var user = $("#nameField").val();
 	var pwd = $("#passwordField").val();
+	var pwdMD5 = $.md5(pwd); 
+	
 	
 	$.ajax({
-		url: 'functions/login.php',
-		data: {username: user, password: pwd},
+		url: 'login.php',
+		data: {username: user, password: pwdMD5},
 		type: 'post',
 		success: function(output) {
-			console.log(output);
+			if(output === "success"){
+				console.log("Innskráning tókst!");
+			}else if(output === "failure"){
+				console.log("Innskráning mistókst :(");
+			}else{
+				console.log("Eitthvað fór úrskeiðis :C");				
+			}
 		}
 	});
 });

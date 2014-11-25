@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="CSS/footer.css">
 		<link rel="stylesheet" href="CSS/product.css">
 		<script src="libraries/jquery.js"></script>	
+		<script src="libraries/jquery.md5.js"></script>	
 	</head>
 	<body>
 		<header>

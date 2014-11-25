@@ -20,10 +20,10 @@
 					echo "<div id=$id class='cartItem'>";
 						echo "<div class='prodInfo'>";
 							echo "<h2>$title</h2>";
-							echo "<p>$$price</p>";
+							echo "<p>$<span class='itemPrice'>$price</span></p>";
 							echo "<img src='$img' />";
 						echo "</div>";
-						echo "<span class='price'>Price: $$totPrice</span>";
+						echo "<p class='price'>Price: $<span class='totPrice'>$totPrice</span></p>";
 						echo "<div class='incdec'>";
 							echo"<input type='image' src='data/increment.ico' alt='increment' class='cartBtn increment' prod_id=$id user='$user'>";
 							echo"<span class='quantity'>$qty</span>";
@@ -32,7 +32,7 @@
 						echo "<input type='image' src='data/remove.ico' alt='remove' class='cartBtn remove' prod_id=$id user='$user'>";
 					echo "</div>";
 				}
-				echo "<p id=subtotal>Subtotal: $$subtotal</p>"
+				echo "<p id=subtotal>Subtotal: $<span id='subTot'>$subtotal</span></p>"
 			?>
 		</div>
 		
