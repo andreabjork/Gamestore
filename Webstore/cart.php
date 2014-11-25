@@ -28,7 +28,7 @@ $results = $cartProd->Fetch('*','user',"'$user'",'ShoppingCarts');
 $data = $results->fetchAll();
 include('views/header.php');
 if($user === "guest"){
-	//
+	include('views/cart_unavailable.php');
 }
 else{
 	include('views/cart_contents.php');

@@ -42,7 +42,7 @@
 				</div>
 				<ul class="actions">
 					<li id="signin" <?php echo ($user == 'guest') ? '' : 'class="hidden"' ; ?>>Sign in</li>
-					<li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><a href="cart.php">My cart</a></li>
+					<li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><a href="cart.php">My cart<img src="data/cart.ico" alt="Cart icon" id="cartIcon" /></a></li>
 				</ul>
 			</div>
 			<div class="navigation">

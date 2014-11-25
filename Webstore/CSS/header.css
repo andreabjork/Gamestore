@@ -144,6 +144,12 @@ header {
 	            background-color: #D47619;
 	            padding: 5px 5px 5px;
 	        }
+	        
+	        #cartIcon{
+				height: 1.5em;
+				padding-left: 5px;
+				float: inherit;
+			}	
 	
 			#search {
 				position: absolute;
@@ -156,6 +162,7 @@ header {
 				border: 2px solid #333333;
 				float: right;
 			}
+			
 
     .navigation {
         position: relative;
