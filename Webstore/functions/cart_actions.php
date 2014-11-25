@@ -1,3 +1,4 @@
+
 <?php
 echo $_POST["action"];
 
@@ -27,6 +28,9 @@ if(isset($_POST["action"]) && isset($_POST["prod_id"]) && isset($_POST["user"]))
 			break;
 		case 'decrement':
 			$cartProd->Decrement($_POST["user"], $_POST["prod_id"]);
+			break;
+		case 'add':
+			$cartProd->Add($_POST["user"], $_POST["prod_id"]);
 			break;
 		default:
 			echo "nothing was valid";
