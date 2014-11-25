@@ -2,9 +2,8 @@
 
 body{
 	position: relative;
-	width: 85%;
     max-width: 1300px;
-    min-width: 470px;
+    min-width: 350px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -80,6 +79,7 @@ header {
 				top: 15px;
 				left: 20px;
 				width: 370px;
+				max-width: 60%;
 			}
 
 				#logoImg {
@@ -157,6 +157,7 @@ header {
 				right: 5px;
 				top: 3px;
 				width: 250px;
+				max-width: 35%;
 				height: 20px;
 				background-color: #E6E6E6;
 				border: 2px solid #333333;

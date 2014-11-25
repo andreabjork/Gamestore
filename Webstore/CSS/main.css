@@ -13,7 +13,7 @@
 
 .product {
     width: 15%;
-    min-width: 200px;
+    min-width: 340px;
     background-color: #fff;
     border: 1px solid #cacaca;
     border-radius: 3px;
@@ -37,7 +37,7 @@
     .productImage {
         display: block;
         width: 100%;
-        height: 140px;
+        height: 240px;
     }
     
 	    .productImage img {
