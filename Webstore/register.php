@@ -1,4 +1,10 @@
 <?php
+session_start();
+$user = "guest";
+if (isset($_SESSION['user']) && !empty($_SESSION['user'])){
+	$user = $_SESSION['user'];
+}
+
 // skilum UTF-8 til vafra með header
 header('Content-Type: text/html; charset=utf-8');
 
