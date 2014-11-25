@@ -63,6 +63,8 @@ $('#signBtn').click(function() {
 
 function setUser(user) {
 	$('.currentUser').show();
+	$('#signin').hide();
+	$('#cart').show();
 	$('.userName')[0].innerHTML = user;
 }
 

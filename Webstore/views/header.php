@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="CSS/cart.css">
 		<link rel="stylesheet" href="CSS/footer.css">
 		<link rel="stylesheet" href="CSS/product.css">
+		<link rel="stylesheet" href="CSS/aboutsite.css">
 		<script src="libraries/jquery.js"></script>	
 		<script src="libraries/jquery.md5.js"></script>	
 	</head>
