@@ -1,13 +1,7 @@
 * { margin: 0; padding: 0; }
 #registration {
 	box-sizing: border-box;
-	padding: 8px 100px 16px 100px;
-    max-width: 1300px;
-    min-width: 320px;
-    width: 85%;
-    background-color: #f2f2f2;   
-    margin-left: auto;
-    margin-right: auto;
+	padding: 8px 100px 16px 200px;
 }
 
 	#registration body { font: 12px/2em Verdana, sans-serif; }

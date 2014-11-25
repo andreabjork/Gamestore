@@ -1,5 +1,18 @@
 * {margin: 0; padding: 0;}
 
+html{
+	height: 100%;
+}
+
+body{
+	min-height: 100%;
+	width: 85%;
+    max-width: 1300px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body p {
     color: #262525;
     font-family: 'Roboto', sans-serif;
@@ -12,11 +25,7 @@ a {
 
 header {
     height: 180px;
-    width: 85%;
-    max-width: 1300px;
-    min-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     background-color: #333333;
     border: 2px solid #333333;
     border-radius: 3px;

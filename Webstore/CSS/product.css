@@ -4,12 +4,9 @@
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    max-width: 1300px;
-    min-width: 320px;
-    width: 85%;
-    background-color: #f2f2f2;   
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding-bottom: 100px;
 }
 
     .imgBox {

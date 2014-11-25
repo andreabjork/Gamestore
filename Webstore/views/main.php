@@ -2,7 +2,7 @@
 
 
 
-		<div class="products">
+		<div class="container">
 			<?php
 				$data = $results->fetchAll();
 				foreach($data as $product) {
