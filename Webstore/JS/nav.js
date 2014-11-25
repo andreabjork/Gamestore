@@ -19,6 +19,23 @@ $('#signin').click(function() {
 	$(".signBox").show();
 });
 
+$('.logout').click(function() {
+	console.log("trying to log out here!");
+	$.ajax({
+		url: 'login.php',
+		data: {logout: 1},
+		type: 'post',
+		success: function(output) {
+			if(output === "success"){
+				console.log("Útskráning tókst!");
+				signOut();
+			}else{
+				console.log("Eitthvað fór úrskeiðis :C");				
+			}
+		}
+	});
+});
+
 
 $('#signBtn').click(function() {
 	var user = $("#nameField").val();
@@ -47,4 +64,8 @@ $('#signBtn').click(function() {
 function setUser(user) {
 	$('.currentUser').show();
 	$('.userName')[0].innerHTML = user;
+}
+
+function signOut(){
+	window.location.href = "index.php";
 }

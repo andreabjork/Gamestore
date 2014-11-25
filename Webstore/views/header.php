@@ -19,10 +19,10 @@
 				<div class="logo">
 					<img id="logoImg" src="data/logo.png"/>
 				</div>
-				<div class="currentUser">
+				<div <?php echo ($user == 'guest') ?  'class="hidden currentUser"' : 'class=currentUser' ; ?>>
 					<ul>
 						<li><input type="button" alt="logout" class="logout" value="Logout" /></li>
-						<li>User: <span class="userName">Guest</span></li>
+						<li>User: <span class="userName"><?php echo $user; ?></span></li>
 					</ul>
 				</div>
 				<div class="signBox">
@@ -40,8 +40,8 @@
 					</form>
 				</div>
 				<ul class="actions">
-					<li id="signin">Sign in</li>
-					<li id="cart"><a href="cart.php">My cart</a></li>
+					<li id="signin" <?php //echo ($user == 'guest') ? '' : 'class="hidden"' ; ?>>Sign in</li>
+					<li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><a href="cart.php">My cart</a></li>
 				</ul>
 			</div>
 			<div class="navigation">

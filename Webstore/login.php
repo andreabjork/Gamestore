@@ -13,6 +13,9 @@ if(isset($_POST["username"]) && isset($_POST["password"])) {
 	$user = $_POST["username"];
 	$pwd = $_POST["password"];
 	return exists($user,$pwd,$cur);
+}else if(isset($_POST["logout"])){
+	unset($_SESSION['user']);
+	echo "success";
 }
 
 function exists($user,$pwd,$cur){
