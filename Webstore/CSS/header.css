@@ -42,6 +42,20 @@ header {
         opacity: 0.9;
         border-bottom: 1px solid #cacaca;
 	}
+	
+	.currentUser {
+		display: none;
+		position: absolute;
+		width: 200px;
+		height: 50px;
+		top: 5px;
+		right: 5px;
+	}
+	
+	.currentUser ul {
+		float: right;
+	}
+	
 			.logo {
 				position: relative;
 				top: 15px;

@@ -1,43 +1,3 @@
-$(function() {
-	$("#products").hover(openDropDown(), closeDropDown());
-});
-function openDropDown() {
-	console.log("hovering on it!");
-	$(".dropDown").css("display", "block");
-}
-
-function closeDropDown() {
-	console.log('stopped hovering');
-	$(".dropDown").css("display", "none");
-}
-
-/*
-$("#products").hover(function()  {
-	console.log("hovering on it!");
-	$(".dropDown").animate(
-		{display: "block"},
-		1500);
-}, function() {
-	console.log('stopped hovering');
-	$(".dropDown").animate(
-		{display: "none"},
-		1500);
-});
-
-$(".dropDown").hover(function()  {
-	console.log("hovering on it!");
-	$(".dropDown").animate(
-		{display: "block"},
-		1500);
-}, function() {
-	console.log('stopped hovering');
-	$(".dropDown").animate(
-		{display: "none"},
-		1500);
-});
-*/
-
-
 $("#products").hover(function()  {
 	console.log("hovering on it!");
 	$(".dropDown").css("display", "block");
@@ -53,9 +13,10 @@ $(".dropDown").hover(function()  {
 	console.log('stopped hovering');
 	$(".dropDown").css("display", "none");
 });
+
 
 $('#signin').click(function() {
-	$(".signBox").css("display", "block");
+	$(".signBox").show();
 });
 
 
@@ -71,7 +32,9 @@ $('#signBtn').click(function() {
 		type: 'post',
 		success: function(output) {
 			if(output === "success"){
-				console.log("Innskráning tókst!");
+				$(".signBox").hide();
+				setUser(user);
+				console.log("Innskráning tókst! Reynum að fela");
 			}else if(output === "failure"){
 				console.log("Innskráning mistókst :(");
 			}else{
@@ -81,4 +44,7 @@ $('#signBtn').click(function() {
 	});
 });
 
-
+function setUser(user) {
+	$('.currentUser').show();
+	$('.userName')[0].innerHTML = user;
+}

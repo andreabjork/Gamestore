@@ -19,6 +19,12 @@
 				<div class="logo">
 					<img id="logoImg" src="data/logo.png"/>
 				</div>
+				<div class="currentUser">
+					<ul>
+						<li><span class="userName">Guest</span></li>
+						<li><input class="logout" type="button" value="Logout"></li>
+					</ul>
+				</div>
 				<div class="signBox">
 					<form>
 						<ul>
