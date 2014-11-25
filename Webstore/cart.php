@@ -28,7 +28,7 @@ $results = $cartProd->Fetch('*','user',"'$user'",'ShoppingCarts');
 $data = $results->fetchAll();
 include('views/header.php');
 if($user === "guest"){
-	//skilaboð um að þú þurfir að logga þig inn til að versla
+	//
 }
 else{
 	include('views/cart_contents.php');

@@ -20,7 +20,7 @@ foreach($data as $product) {
 			echo '<h1>'.$product["name"].'</h1>';
 			echo '<p>'.$product["description"].'</p>';
 		echo '</div>';
-		echo '<input type="button" alt="Add to cart" class="addBtn" value="Add to cart" name='.$product["id"].' />';
+		echo '<input type="button" alt="Add to cart" class="addBtn'.(($user==='guest')?' hidden':'').'" value="Add to cart" name='.$product["id"].' />';
 	echo '</div>';
 }
 

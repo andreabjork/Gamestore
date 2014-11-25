@@ -67,6 +67,7 @@ function login() {
 
 function setUser(user) {
 	$('.currentUser').show();
+	$('.addBtn').show();
 	$('#signin').hide();
 	$('#cart').show();
 	$('.userName')[0].innerHTML = user;
