@@ -2,7 +2,7 @@
 
 .product {
     width: 15%;
-    min-width: 250px;
+    min-width: 200px;
     background-color: #fff;
     border: 1px solid #cacaca;
     border-radius: 3px;
@@ -26,7 +26,7 @@
     .productImage {
         display: block;
         width: 100%;
-        height: 120px;
+        height: 140px;
     }
     
 	    .productImage img {

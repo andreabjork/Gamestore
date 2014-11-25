@@ -28,9 +28,9 @@
 							<li>
 								<label>Password: <input id="passwordField" type="password"/></label>
 							</li>
-							<li><button type="button" id="signBtn">Sign in!</button></li>
 							<li><span>Don't have an account? <a href="register.php">Click here to register!</a></span></li>
 						</ul>
+						<input type="button" id="signBtn" value="Sign in!" />
 					</form>
 				</div>
 				<ul class="actions">
