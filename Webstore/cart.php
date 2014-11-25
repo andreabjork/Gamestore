@@ -1,6 +1,13 @@
 <?php
+session_start();
+$user = "guest";
+if (isset($_SESSION['user']) && !empty($_SESSION['user'])){
+	$user = $_SESSION['user'];
+}
+
 // skilum UTF-8 til vafra með header
 header('Content-Type: text/html; charset=utf-8');
+
 
 // Þurfum products.class hlutinn
 require("classes/products.class.php");
@@ -17,10 +24,6 @@ try {
 $cartProd = new Products($cur); 
 
 //skilgreinum notandann sem á körfuna
-$user = "guest";
-if (isset($_GET['user']) && !empty($_GET['user'])){
-	$user = $_GET['user'];
-}
 $results = $cartProd->Fetch('*','user',"'$user'",'ShoppingCarts');
 $data = $results->fetchAll();
 include('views/header.php');

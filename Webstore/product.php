@@ -1,4 +1,10 @@
 <?php
+session_start();
+$user = "guest";
+if (isset($_SESSION['user']) && !empty($_SESSION['user'])){
+	$user = $_SESSION['user'];
+}
+
 header('Content-Type: text/html; charset=utf-8');
 
 // Things we might want to change

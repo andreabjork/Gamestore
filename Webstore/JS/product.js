@@ -1,10 +1,9 @@
 $('.addBtn').click(function() {
-	var user = getUser();
 	var id = $(this).attr('name');
 	var btn = $(this);
 	$.ajax({
 		url: 'cart_actions.php',
-		data: {action: 'add', user: user, prod_id: id},
+		data: {action: 'add', prod_id: id},
 		type: 'post',
 		success: function(output) {
 			console.log(output);

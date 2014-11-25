@@ -1,5 +1,10 @@
 <?php
+session_start();
 header('Content-Type: text/html; charset=utf-8');
+
+if(isset($_SESSION['user'])){
+	$user = $_SESSION['user'];
+}
 
 // Things we might want to change
 const DEBUG = false;
