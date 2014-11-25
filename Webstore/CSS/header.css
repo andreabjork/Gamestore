@@ -1,15 +1,10 @@
 * {margin: 0; padding: 0;}
 
-html{
-	height: 100%;
-}
-
 body{
 	position: relative;
-	min-height: 100%;
 	width: 85%;
     max-width: 1300px;
-    min-width: 320px;
+    min-width: 470px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -27,7 +22,6 @@ a {
 header {
     height: 180px;
     width: 100%;
-    min-width: 470px;
     background-color: #333333;
     border-radius: 3px;
 }
@@ -36,8 +30,6 @@ header {
 	    position: relative;
         width: 100%;
         top: 0px;
-        min-width: 320px;
-        max-width: 1300px;
         height: 150px;
         opacity: 0.9;
         border-bottom: 1px solid #cacaca;
