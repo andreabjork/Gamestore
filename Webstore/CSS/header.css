@@ -5,6 +5,7 @@ html{
 }
 
 body{
+	position: relative;
 	min-height: 100%;
 	width: 85%;
     max-width: 1300px;
@@ -27,7 +28,6 @@ header {
     height: 180px;
     width: 100%;
     background-color: #333333;
-    border: 2px solid #333333;
     border-radius: 3px;
 }
 
@@ -58,7 +58,9 @@ header {
 			    top: 0px;
 			    right: 0px;
 			    width: 30%;
-			    background-color: #cacaca;
+			    border-radius: 6px;
+				background-color: #797979;
+				box-shadow: -3px 3px 8px #FFFFFF;
 			}
 			
 			     .signBox ul {
@@ -73,6 +75,12 @@ header {
 			     
 			     .signBox label {
 			         color: black;
+			     }
+			     
+			     #signBtn {
+			     	position: absolute;
+			     	top: 15px;
+			     	right: 10px;
 			     }
 				
 			.actions {
@@ -129,21 +137,21 @@ header {
         
         .buttons li {
             float: left;
-            padding: 4px 5px 3px;
+            padding: 4px 5px 4px;
             color: white;
         }
         
         .buttons li:hover {
             background-color: #D47619;
-            padding: 5px 5px 5px;
+            padding: 4px 6px 4px;
         }
 	
 	.dropDown {
 	    display: none;
 	    position: absolute;
 	    z-index: 1;
-	    left: 10%;
-	    top: 180px;
+	    left: 0;
+	    top: 177px;
 	}
 	
 	   .dropButtons {
