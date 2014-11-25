@@ -6,16 +6,21 @@
 			<?php
 				$data = $results->fetchAll();
 				foreach($data as $product) {
+					
+					$id = $product["id"];
+					$directory = "data/images/$id";
+					$filenames = glob('./data/images/'.$id.'/*.*', GLOB_BRACE);
+					$mainImage = $filenames[0];
+					if($mainImage == "") {
+						$mainImage = "data/notfound.jpg";
+					}
+	
 					echo '<div class="product">';
 						echo '<div class="productName">';
 							echo '<h2>'.$product["name"].'</h2>';
 						echo '</div>';
 						echo '<div class="productImage">';
-						$imgsrc = $product["img_src"];
-						if($imgsrc == "") {
-							$imgsrc = "data/notfound.jpg";
-						}
-							echo '<img src="'.$imgsrc.'">';
+							echo '<img src="'.$mainImage.'">';
 						echo '</div>';
 						echo '<div class="productText">';
 							echo '<p>'.$product["description"].'</p>';
