@@ -14,6 +14,9 @@
 					if($mainImage == "") {
 						$mainImage = "data/notfound.jpg";
 					}
+					
+					$price = floatval($product["price"]);
+					$formattedPrice = number_format($price, 2, '.', '');
 	
 					echo '<div class="product">';
 						echo '<div class="productName">';
@@ -26,7 +29,7 @@
 							echo '<p>'.$product["description"].'</p>';
 						echo '</div>';
 						echo '<div class="productPrice">';
-							echo "<p>$".$product["price"]."</p>";
+							echo "<p>$".$formattedPrice."</p>";
 						echo '</div>';
 						echo '<div class="productPage">';
 							echo '<a href=product.php?id='.$product["id"].'><p>Click here to know more!</p></a>';

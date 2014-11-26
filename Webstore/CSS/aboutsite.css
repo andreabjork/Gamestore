@@ -1,0 +1,31 @@
+.textContent {
+	padding: 10px;
+	margin-top: 5px;
+}
+
+.textContent h1 {
+	font-size: 1.5em;
+}
+
+.textContent h2 {
+	font-size: 1.2em;
+}
+
+.textContent p {
+	text-align: left;
+	line-height: 140%;
+	margin: 30px;
+}
+
+.textContent ul {
+	list-style: none;
+	padding: 5px;
+	margin-left: 100px;
+}
+
+.textContent li {
+	font-size: 1em;
+	padding: 5px;
+}
+
+
