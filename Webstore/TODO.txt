@@ -1,7 +1,7 @@
 ﻿TÉKKLISTI FYRIR LOKAVERKEFNI
 
 MIÐVIKUDAGUR: LEÓ REYNA AÐ GERA ÞETTA
-		- Láta mús verða að stækkunargleri yfir aðalmynd
+		X Láta mús verða að stækkunargleri yfir aðalmynd
 		- setja takka við search bar sem virkar
 		X láta search virka á hvaða undirsíðu sem er
 		X geta opnað og lokað sign inn glugga
@@ -13,7 +13,7 @@ MIÐVIKUDAGUR: LEÓ REYNA AÐ GERA ÞETTA
 - CSS-a about product síðu
 - Eitthvað bug með flettingar þegar fyrsta mynd er ekki valin til að stækkæa? laga!
 - Láta mús verða að stækkunarglasi þegar hoverað er yfir aðalmynd??
-- setja takka við search bar
+X setja takka við search bar
 X láta search bar virka á hvaða undirsíðu sem er
 - klára about-product síðu -> css a myndir, texta, boardg geek link
 X geta opna og lokað sign in glugga
