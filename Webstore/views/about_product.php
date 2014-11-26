@@ -36,6 +36,7 @@ foreach($data as $product) {
 		echo '<span class="BGG">'.$product["bgg_url"].'</span>';
 		echo '<span class="prodPrice">'.$product["price"].'</span>';
 		echo '<input type="button" alt="Add to cart" class="addBtn" value="Add to cart" name='.$product["id"].' />';
+		echo '<input type="button" alt="Add to cart" class="addBtn'.(($user==='guest')?' hidden':'').'" value="Add to cart" name='.$product["id"].' />';
 	echo '</div>';
 }
  
