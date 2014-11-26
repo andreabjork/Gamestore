@@ -135,9 +135,13 @@ header {
 	        }
 	        
 	        .actions li {
+	        	position: relative;
+	        	width: 80px;
+	        	height: 20px;
 	            float: right;
-	            padding: 4px 5px 3px;
+	            padding: 5px 5px 5px;
 	            color: white;
+	            text-align: center;
 	        }
 	        
 	        .actions li:hover {
@@ -146,9 +150,16 @@ header {
 	        }
 	        
 	        #cartIcon{
+				position: absolute;
 				height: 1.5em;
 				padding-left: 5px;
-				float: inherit;
+				bottom: 3px;
+				right: 4px;
+			}
+			
+	        #cartText{
+	            color: white;
+				float: left;
 			}	
 	
 			#search {
