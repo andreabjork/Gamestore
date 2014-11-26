@@ -21,18 +21,18 @@
 				</div>
 				<div class="currentUser">
 					<ul>
-						<li><span class="userName">Guest</span></li>
-						<li><input class="logout" type="button" value="Logout"></li>
+						<li><input type="button" alt="logout" class="logout" value="Logout" /></li>
+						<li>User: <span class="userName">Guest</span></li>
 					</ul>
 				</div>
 				<div class="signBox">
 					<form>
 						<ul>
 							<li>
-								<label>Username: <input id="nameField"/></label>
+								<label>Username: <input class="inputField" id="nameField"/></label>
 							</li>
 							<li>
-								<label>Password: <input id="passwordField" type="password"/></label>
+								<label>Password: <input class="inputField" id="passwordField" type="password" /></label>
 							</li>
 							<li><span>Don't have an account? <a href="register.php">Click here to register!</a></span></li>
 						</ul>
