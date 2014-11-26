@@ -9,14 +9,18 @@
 					$result = $cartProd->Fetch('*','id',$id);
 					$info = $result->fetchAll();
 					$info = $info[0];
-					$title = $info['name'];
-					$img = $info['img_src'];
+					$title = $info['name'];		
+					
+					$directory = "data/images/$id";
+					$filenames = glob('./data/images/'.$id.'/*.*', GLOB_BRACE);
+					$img = $filenames[0];
 					if($img == "") {
 						$img = "data/notfound.jpg";
 					}
-					$price = $info['price'];
-					$totPrice = $price*$qty;
-					$subtotal += $totPrice;
+					
+					$price = number_format($info['price'], 2, '.', '');
+					$totPrice = number_format($price*$qty, 2, '.', '');
+					$subtotal = number_format($subtotal+$totPrice, 2, '.', '');
 					echo "<div id=$id class='cartItem'>";
 						echo "<div class='prodInfo'>";
 							echo "<h2>$title</h2>";

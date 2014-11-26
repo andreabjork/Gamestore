@@ -9,7 +9,7 @@ X Setja inn content í About US síðu
 - fá logout takka til að virka
 - fylla inn í gagnagrunn
 - klára about-product síðu -> css a myndir, texta, boardg geek link
-- passa að verð sé alltaf með 2 aukastafi á aðalsíðu
+X passa að verð sé alltaf með 2 aukastafi á aðalsíðu
 - láta add to cart ekki verða appelsínugult við klikk
 - setja takka við search bar
 - láta search bar virka á hvaða undirsíðu sem er
@@ -19,10 +19,10 @@ X Setja inn content í About US síðu
 - fá "my cart" til að birtast um leið og maður er loggaður inn
 - setja Cart icon í headerinn
 - í my cart: passa að dec takkki sjáist ekki þegar vara er í 1
-- tvo aukastafi á öll verð í my cart!!
+X tvo aukastafi á öll verð í my cart!!
 - css a my cart
 - implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
-
+- fá myndir til að birtast í cart
 
 * animation á our products dropdown og sign in glugga? (mjög óþarfi samt)
 
