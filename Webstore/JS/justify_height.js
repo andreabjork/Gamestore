@@ -26,5 +26,9 @@ function scaleHeight(){
 	console.log("Available height for content is "+availableHeight);
 	$(".container").height(availableHeight);
 	console.log("Height should be changed now");
+	var newHeight = $(".container").height();
+	console.log("new height is "+newHeight);
+	var diff = newHeight-availableHeight;
+	console.log("difference: "+diff);
 }
 

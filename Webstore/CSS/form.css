@@ -1,27 +1,26 @@
 * { margin: 0; padding: 0; }
 #registration {
-	box-sizing: border-box;
-	padding: 8px 100px 16px 200px;
+	width: 100%;
 }
 
 	#registration body { font: 12px/2em Verdana, sans-serif; }
 	
 	.wrapper { width: 50%; margin: 0 auto; }
 	
-	#registration h1 { font: 4em/1em Trebuchet, serif; margin: 0.5em 0;}
+	#registration h1 { font: 4em/1em Trebuchet, serif; padding: 0.5em 0; margin-left: 10%;}
 	
-	#registration p { margin-bottom: 0.5em; }
+	#registration p { margin-bottom: 0.5em;  margin-left: 10%;}
 	
-	#registration form .field { margin-bottom: 1em; clear: left; }
+	#registration form .field { margin-bottom: 1em; clear: left; margin-left: 10%;}
 	#registration form label, #registration form span.label { width: 100px; float: left; }
 	#registration form input[type=text] { width: 200px; padding: 3px; }
 	#registration form input[type=password] { width: 200px; padding: 3px; }
 	#registration form select { width: 204px; padding: 3px; }
-	#registration form .buttons { margin-left: 100px; margin-top: 1em; }
+	#registration form .buttons { padding-left: 100px; margin-top: 1em; margin-left: 10%;}
 	#registration form .buttons input { padding: 4px; }
 	
 	#registration form .invalid input, form .invalid select, input.error, select.error { border: 1px solid #c66; background: #fee;}
-	#registration div#errors { margin-bottom: 1em; padding: 0.5em; border: 1px solid #c66; background: #fee;  }
+	#registration div#errors { margin-bottom: 1em; padding: 0.5em; border: 1px solid #c66; background: #fee; margin-left: 10%;}
 	#registration div#errors ul { margin-left: 2em; }
 	#registration div#errors li { margin-bottom: 0.5em; }
 
