@@ -9,6 +9,9 @@
     margin: 1em 0;
     margin-left: 30px;
 }
+	.mainImg:hover{
+    	cursor: pointer;;
+	}
 
 	.imgBox .helper {
 		display: inline-block;
@@ -52,6 +55,7 @@
 }
 	.subimg:hover{
     	border: 2px solid #CA7E35;
+    	cursor: pointer;
 	}
 
 .subImgBoxes li img {
@@ -95,6 +99,9 @@
 	border-radius: 5px;
 	text-align: center;
 	line-height: 2;
+}
+.addBtn:hover{
+	cursor: pointer;
 }
 
 .prodPrice {

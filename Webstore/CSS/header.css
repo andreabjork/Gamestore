@@ -73,6 +73,10 @@ header {
 			text-align: center;
 			text-decoration: underline;
 		}
+		
+		.logout:hover{
+			cursor: pointer;
+		}
 	
 			.logo {
 				position: relative;
@@ -121,6 +125,7 @@ header {
 			     	width: 50px;
 			     	top: 20px;
 			     	right: 10px;
+    				cursor: pointer;
 			     }
 				
 			.actions {
@@ -147,6 +152,7 @@ header {
 	        .actions li:hover {
 	            background-color: #D47619;
 	            padding: 5px 5px 5px;
+	            cursor: pointer;
 	        }
 	        
 	        #cartIcon{
@@ -183,6 +189,9 @@ header {
 					top: 2px;
 					border-radius: 2px;
 					background-color: #D47619;	
+				}
+				#searchBtn:hover{
+					cursor: pointer;
 				}
 				
 				#search {
