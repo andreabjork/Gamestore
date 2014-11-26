@@ -10,10 +10,22 @@
     min-width: 300px;
     min-height: 200px;
     margin: 10px;
+    height: 300px;
+    white-space: nowrap;
+    text-align: center; 
+    margin: 1em 0;
+    margin-left: 30px;
 }
+
+	.imgBox .helper {
+		display: inline-block;
+	    height: 100%;
+	    vertical-align: middle;
+	}
 
     .imgBox img {
         width: 100%;
+		vertical-align: middle;
     }
 
 .imgViewer {
@@ -48,12 +60,12 @@
 }
 
 .subImgBoxes li img {
-	width: 100px;
-	height: 120px;
+	width: 100%;
+	height: 100%;
 }
 
 .textBox {
-    width: 70%;
+    width: 60%;
     min-width: 500px;
     margin: 10px;
     position: absolute;
@@ -63,8 +75,12 @@
 }
 
     .textBox h1 {
-        font-size: 1.5em;
-        padding: 10px;
+        font-size: 2em;
+        padding: 5px;
+        font-weight: bold;
+        line-height: 2;
+        position: relative;
+        left: -50px;
     }
     
     .textBox p {
@@ -86,17 +102,26 @@
 	line-height: 2;
 }
 
+.prodPrice {
+	position: absolute;
+	right: 200px;
+	bottom: 35px;
+	font-size: 2em;
+	font-weight: bold;
+	color: #CA7E35;
+}
+
 .BBG {
 	position: absolute;
 	right: 30px;
-	bottom: 120px;
+	bottom: 110px;
 	background-color: #CA7E35;
 	width: 150px;
-	height: 50px;
-	font-size: 1em;
+	height: 40px;
+	font-size: 1.05em;
 	color: white;
 	border: 2px;
 	border-radius: 5px;
 	text-align: center;
-	line-height: 2;
+	line-height: 1.2;
 }

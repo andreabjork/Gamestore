@@ -21,6 +21,19 @@ $('.addBtn').click(function() {
 	
 });
 
+$('.subimg').click(function() {
+	console.log('detecting click!');
+	var buttonClass = $(this).attr('class');
+	console.log(buttonClass);
+	console.log(buttonClass[1]);
+	var imgClass = '.'+(buttonClass.split(" "))[1];
+	console.log(imgClass);
+	var src = $(imgClass).attr('src');
+	console.log(src);
+	$('.mainImg').attr('src', src);
+	
+});
+
 function getID() {
 	var url = window.location.href;
 	var params = ((url.split("?"))[1]).split("&");

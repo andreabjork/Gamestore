@@ -19,13 +19,14 @@ foreach($data as $product) {
 	echo '<div class="containerB">';
 		echo '<div class="imgViewer">';
 			echo '<div class="imgBox">';
+				echo '<span class="helper"></span>';
 				echo '<img class="mainImg" src="'.$mainImage.'">';
 			echo '</div>';
 			echo '<div class="subImgBoxes">';
 				echo '<ul>';
-					echo '<li class="subBox1"><img class="img2" src="'.$mainImage.'"></li>';
-					echo '<li class="subBox2"><img class="img2" src="'.$mainImage.'"></li>';
-					echo '<li class="subBox3"><img class="img2" src="'.$mainImage.'"></li>';
+					echo '<li class="subBox1"><img class="subimg img1" src="'.$mainImage.'"></li>';
+					echo '<li class="subBox2"><img class="subimg img2" src="'.$image2.'"></li>';
+					echo '<li class="subBox3"><img class="subimg img3" src="'.$image3.'"></li>';
 				echo '</ul>';
 			echo '</div>';
 		echo '</div>';
@@ -33,7 +34,7 @@ foreach($data as $product) {
 			echo '<h1>'.$product["name"].'</h1>';
 			echo '<p>'.$product["description"].'</p>';
 		echo '</div>';
-		echo '<span class="prodPrice">'.$product["price"].'</span>';
+		echo '<span class="prodPrice">$ '.$product["price"].'</span>';
 		echo '<a href='.$product["bgg_url"].'><div class="BBG">View item on BoardGameGeek.com!</div></a>';
 		echo '<input type="button" alt="Add to cart" class="addBtn" value="Add to cart" name='.$product["id"].' />';
 		echo '<input type="button" alt="Add to cart" class="addBtn'.(($user==='guest')?' hidden':'').'" value="Add to cart" name='.$product["id"].' />';
