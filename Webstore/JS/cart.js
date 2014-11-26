@@ -1,3 +1,5 @@
+updateDecButton();
+
 $('.cartBtn').click(function(e){
 	var id = $(e.target).attr('prod_id');
 	var type = $(e.target).attr('class').split(" ");
@@ -99,3 +101,13 @@ function remove(btn){
 	btn.parent().remove();
 }
 
+function updateDecButton() {
+	var decbuttons = $('.decrement');
+	var quant = $('.quantity');
+	for (var i=0; i < quant.length; i++) {
+	  if(quant[i].innerHTML < 2) {
+	  		console.log(quant[i].innerHTML);
+	  		$(decbuttons[i]).hide();
+	  }
+	};
+}

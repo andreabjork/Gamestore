@@ -12,14 +12,14 @@
 			
 			<h2>Here are our special opening hours over the holidays:</h2>
 			<ul>
-				<li>Dec 1st-22th:	10AM-9PM</li>
-				<li>Dec 23rd:		12AM-14PM</li>
-				<li>Dec 24th:		CLOSED</li>
-				<li>DEC 25th:		CLOSED</li>
-				<li>DEC 26th:		CLOSED</li>
-				<li>DEC 31st:		12AM-14PM</li>
-				<li>JAN 1st:		CLOSED</li>
-				<li>JAN 2nd:		CLOSED</li>
+				<li>Dec 1st-22th:				10AM-9PM</li>
+				<li>Dec 23rd:					12AM-14PM</li>
+				<li>Dec 24th:					CLOSED</li>
+				<li>DEC 25th:					CLOSED</li>
+				<li>DEC 26th:					CLOSED</li>
+				<li>DEC 31st:					12AM-14PM</li>
+				<li>JAN 1st:					CLOSED</li>
+				<li>JAN 2nd:					CLOSED</li>
 			</ul>
 			
 			<p>If you wish to gift a boardgame to a friend this Christmas, please place your order before December the 15th.</p>
