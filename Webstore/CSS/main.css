@@ -1,13 +1,17 @@
 * {margin: 0; padding: 0;}
 
-.container {
-	position: relative;
+.flex{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
+	
+}
+.container {
+	position: relative;
     width: 100%;
     background-color: #f2f2f2;
+	min-height: 500px;
 }
 
 

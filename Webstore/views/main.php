@@ -2,7 +2,7 @@
 
 
 
-		<div class="container">
+		<div class="container flex">
 			<?php
 				$data = $results->fetchAll();
 				foreach($data as $product) {

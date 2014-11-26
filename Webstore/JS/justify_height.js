@@ -22,7 +22,7 @@ function scaleHeight(){
 	
 	var totalHeight = headerHeight + footerHeight + contentHeight;
 
-	var availableHeight = height-(headerHeight+footerHeight);
+	var availableHeight = height-(headerHeight+footerHeight)-5;
 	console.log("Available height for content is "+availableHeight);
 	$(".container").height(availableHeight);
 	console.log("Height should be changed now");

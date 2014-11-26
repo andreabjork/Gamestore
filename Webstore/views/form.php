@@ -1,4 +1,4 @@
-		<div id="registration" class="container2">	
+		<div id="registration" class="container">	
 			<h1><?php echo $valid ? "Registration successful! Affected lines = $affected" : "Register" ?></h1>
 			
 			<?php
