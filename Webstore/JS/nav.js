@@ -17,6 +17,7 @@ $(".dropDown").hover(function()  {
 
 $('#signin').click(function() {
 	$(".signBox").toggle();
+	$("#nameField").focus();
 });
 
 $('.logout').click(function() {
