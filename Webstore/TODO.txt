@@ -1,7 +1,7 @@
 ﻿TÉKKLISTI FYRIR LOKAVERKEFNI
 
 - Velja fonta og setja þá inn
-- CSS-a register síðu
+X CSS-a register síðu
 X Setja inn content í About US síðu
 - CSS-a about product síðu
 X láta my cart aðeins birtast þegar einhver er loggaður inn
@@ -18,12 +18,17 @@ X fylla út gagnagrunn
 - geta opna og lokað sign in glugga
 - myndayfirlit fyrir spil
 X fá "my cart" til að birtast um leið og maður er loggaður inn
-- setja Cart icon í headerinn
+X setja Cart icon í headerinn
 X í my cart: passa að dec takkki sjáist ekki þegar vara er í 1
 X tvo aukastafi á öll verð í my cart!!
 - css a my cart
 - implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
 X fá myndir til að birtast í cart
+- skilaboð þegar register virkar
+- athuga hvort notendanafn sé frátekið í registration validationinu
+- logga sjálfkrafa inn ef registration tekst og redirecta á index.php (5 sek)
+- laga css á my cart takka
+- laga kommustafi í about_product.php
 
 * animation á our products dropdown og sign in glugga? (mjög óþarfi samt)
 
