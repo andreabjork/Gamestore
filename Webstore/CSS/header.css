@@ -27,6 +27,7 @@ a {
 header {
     height: 180px;
     width: 100%;
+    min-width: 470px;
     background-color: #333333;
     border-radius: 3px;
 }

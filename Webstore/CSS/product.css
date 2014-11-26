@@ -5,8 +5,9 @@
     justify-content: center;
     flex-flow: row wrap;
     width: 100%;
+    min-width: 470px;
     background-color: #f2f2f2;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
 }
 
     .imgBox {

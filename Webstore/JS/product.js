@@ -2,13 +2,12 @@ console.log('running product.js');
 var id = getID();
 console.log('our id:');
 console.log(id);
-getImages(id);
+//getImages(id);
 
 
 $('.addBtn').click(function() {
 	var id = $(this).attr('name');
 	var btn = $(this);
-	imageUrls = getImages(id);
 	$.ajax({
 		url: 'cart_actions.php',
 		data: {action: 'add', prod_id: id},
