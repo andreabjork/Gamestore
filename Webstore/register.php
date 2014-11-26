@@ -27,10 +27,16 @@ $affected = "Null";
 if ($method === 'POST')
 {
 	$registration->Populate($_POST);
-	$valid = $registration->Valid();
+	$valid = $registration->Valid($cursor);
 	$errors = $registration->Errors();
 	
-	if($valid){ $affected = $registration->write($cursor); }
+	if($valid){
+		$affected = $registration->write($cursor);
+		if($affected){
+			$_SESSION['user'] = $_POST['username'];
+			header( "refresh:5;url=index.php" );
+		}
+	}
 }
 
 // púslum saman viðmóti -- hér gæti þurft að hrista eitthvað upp í hlutunum

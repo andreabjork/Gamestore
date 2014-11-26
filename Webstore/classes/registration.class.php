@@ -38,13 +38,20 @@ class Registration
 	 * Forskilyrði: Registration hlutur er útfylltur með gögnum
 	 * Eftirskilyrði: Aðferð skilar true ef registration hlutur uppfyllir kröfur, false ef ekki
 	 */
-	public function Valid()
+	public function Valid($cur)
 	{
 		$this->errors = array();
 		$validity = TRUE;
 		$password_valid = TRUE;
+		$user_available = TRUE;
 		if(preg_match("/^[a-zA-Z0-9]{1,12}$/", $this->username) !== 1){
 			$this->errors += array("username"=>"Invalid username. Your username must be between 1 and 12 characters long and may only contain alpha-numeric characters.");
+			$validity = False;
+		}else{
+			$user_available = $this->available($this->username,$cur);
+		}
+		if(!$user_available){
+			$this->errors += array("username"=>"That username is already taken.");
 			$validity = False;
 		}
 		if(preg_match("/^[a-zA-Z0-9]{1,12}$/", $this->password) !== 1){
@@ -97,7 +104,24 @@ class Registration
 		$password = md5($this->password);
 		$statement = "INSERT INTO CUSTOMERS (username,password,email,country,name,addr_line1,addr_line2,city,zip) VALUES ('$this->username','$password','$this->email','$this->country','$this->name','$this->addr1','$this->addr2','$this->city','$this->zip')";
 		$affected = $cur->exec($statement);
-		if($affected === FALSE){return "Something went wrong";}
 		return $affected;
+	}
+	
+	public function available($user,$cur){
+		$exists = $cur->query("SELECT COUNT(*) FROM Customers WHERE username='$user'");
+		if($exists){
+			$data = $exists->fetchAll();
+			$row = $data[0];
+			if($row[0]>0){
+				return False;
+			}
+			else{
+				return True;
+			}
+		}
+		else{
+			echo "Something went wrong, if you see this message please contact the webpage's administrator. Thank you.";
+			return False;
+		}
 	}
 }
