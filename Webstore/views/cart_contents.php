@@ -1,5 +1,4 @@
-<!--to call cart.js, do all the nice php db things, and render our cart-->
-		<div class='container'>	
+		<div class='container flex'>	
 			<h1 class='yourCart'>Your cart:</h1>
 			<?php
 				$subtotal = 0;
