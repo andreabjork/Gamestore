@@ -18,7 +18,7 @@
 		<header>
 			<div class="main">
 				<div class="logo">
-					<img id="logoImg" src="data/logo.png"/>
+					<a href="index.php"><img id="logoImg" src="data/logo.png"/></a>
 				</div>
 				<div <?php echo ($user == 'guest') ?  'class="hidden currentUser"' : 'class=currentUser' ; ?>>
 					<ul>
@@ -42,13 +42,13 @@
 				</div>
 				<ul class="actions">
 					<li id="signin" <?php echo ($user == 'guest') ? '' : 'class="hidden"' ; ?>>Sign in</li>
-					<li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><a href="cart.php"><p id="cartText">My cart</p><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /></a></li>
+					<a href="cart.php"><li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><p id="cartText">My cart</p><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /></li></a>
 				</ul>
 			</div>
 			<div class="navigation">
 				<ul class="buttons">
-					<li id="products"><a href="index.php">Our products</a></li>
-					<li id="about"><a href="about.php">About us</a></li>
+					<a href="index.php"><li id="products">Our products</li></a>
+					<a href="about.php"><li id="about">About us</li></a>
 				</ul>
 				<form id="searchArea" action="index.php" method="GET">
 					<label for="searchField"><input id="searchBtn" type="submit" value="" ></label>
