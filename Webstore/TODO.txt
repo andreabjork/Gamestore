@@ -2,7 +2,7 @@
 
 MIÐVIKUDAGUR: LEÓ REYNA AÐ GERA ÞETTA
 		X Láta mús verða að stækkunargleri yfir aðalmynd
-		- setja takka við search bar sem virkar
+		X setja takka við search bar sem virkar
 		X láta search virka á hvaða undirsíðu sem er
 		X geta opnað og lokað sign inn glugga
 		X skilaboð þegar register virkar
