@@ -38,9 +38,6 @@ function updateCart(type, btn){
 		case 'remove':
 			remove(btn);
 			break;
-		case 'add':
-			add(btn);
-			break;
 		default:
 			break;
 	}
@@ -86,10 +83,6 @@ function decrement(btn){
 		btn.css("display", "none");
 	}
 
-}
-
-function add(id){
-	return "";
 }
 
 function remove(btn){

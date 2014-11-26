@@ -36,10 +36,7 @@ function getID() {
 
 function updateButton(btn) {
 	console.log('current value');
-	console.log(btn.val());
 	btn.val("Item added to cart!");
-	console.log("new value");
-	console.log(btn.val());
 	btn.css("background-color", "#D47619");
 	btn.css("width", "250px");
 }

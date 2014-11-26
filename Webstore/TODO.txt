@@ -4,25 +4,26 @@ TÉKKLISTI FYRIR LOKAVERKEFNI
 - CSS-a register síðu
 X Setja inn content í About US síðu
 - CSS-a about product síðu
-- láta my cart aðeins birtast þegar einhver er loggaður inn
-- láta sign in aðeins birtast þegar enginn er loggaður inn
-- fá logout takka til að virka
-- fylla inn í gagnagrunn
+X láta my cart aðeins birtast þegar einhver er loggaður inn
+X láta sign in aðeins birtast þegar enginn er loggaður inn
+X láta enter virka til þess að logga sig inn
+X fá logout takka til að virka
+X fylla inn í gagnagrunn
 - klára about-product síðu -> css a myndir, texta, boardg geek link
 X passa að verð sé alltaf með 2 aukastafi á aðalsíðu
-- láta add to cart ekki verða appelsínugult við klikk
+X láta add to cart ekki verða appelsínugult við klikk
 - setja takka við search bar
 - láta search bar virka á hvaða undirsíðu sem er
 - fylla út gagnagrunn
 - geta opna og lokað sign in glugga
 - myndayfirlit fyrir spil
-- fá "my cart" til að birtast um leið og maður er loggaður inn
+X fá "my cart" til að birtast um leið og maður er loggaður inn
 - setja Cart icon í headerinn
 - í my cart: passa að dec takkki sjáist ekki þegar vara er í 1
 X tvo aukastafi á öll verð í my cart!!
 - css a my cart
 - implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
-- fá myndir til að birtast í cart
+X fá myndir til að birtast í cart
 
 * animation á our products dropdown og sign in glugga? (mjög óþarfi samt)
 
