@@ -16,7 +16,7 @@ $(".dropDown").hover(function()  {
 
 
 $('#signin').click(function() {
-	$(".signBox").show();
+	$(".signBox").toggle();
 });
 
 $('.logout').click(function() {
@@ -40,7 +40,7 @@ $('.logout').click(function() {
 $('#signBtn').click(login);
 
 function login() {
-	console.log("logging in")
+	console.log("logging in");
 	var user = $("#nameField").val();
 	var pwd = $("#passwordField").val();
 	var pwdMD5 = $.md5(pwd); 

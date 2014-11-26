@@ -50,8 +50,8 @@
 					<li id="products"><a href="index.php">Our products</a></li>
 					<li id="about"><a href="about.php">About us</a></li>
 				</ul>
-				<form>
-					<input id="search" name="searchField" placeholder="Search for a boardgame..." action="index.php" method="POST"/>
+				<form action="index.php" method="GET">
+					<input id="search" name="searchField" placeholder="Search for a boardgame..."/>
 				</form>
 			</div>
 			<div class="dropDown">

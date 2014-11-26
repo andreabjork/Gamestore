@@ -3,25 +3,25 @@
 MIÐVIKUDAGUR: LEÓ REYNA AÐ GERA ÞETTA
 		- Láta mús verða að stækkunargleri yfir aðalmynd
 		- setja takka við search bar sem virkar
-		- láta search virka á hvaða undirsíðu sem er
-		- geta opnað og lokað sign inn glugga
-		- skilaboð þegar register virkar
-		- athuga hvort notendanafn sé frátekið í registration validationinu
-		- logga sjálfkrafa inn ef registration tekst og redirecta á index.php (5 sek)
+		X láta search virka á hvaða undirsíðu sem er
+		X geta opnað og lokað sign inn glugga
+		X skilaboð þegar register virkar
+		X athuga hvort notendanafn sé frátekið í registration validationinu
+		X logga sjálfkrafa inn ef registration tekst og redirecta á index.php (5 sek)
 
 - Velja fonta og setja þá inn
 - CSS-a about product síðu
 - Eitthvað bug með flettingar þegar fyrsta mynd er ekki valin til að stækkæa? laga!
 - Láta mús verða að stækkunarglasi þegar hoverað er yfir aðalmynd??
 - setja takka við search bar
-- láta search bar virka á hvaða undirsíðu sem er
+X láta search bar virka á hvaða undirsíðu sem er
 - klára about-product síðu -> css a myndir, texta, boardg geek link
-- geta opna og lokað sign in glugga
+X geta opna og lokað sign in glugga
 - css a my cart
 - implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
-- skilaboð þegar register virkar
-- athuga hvort notendanafn sé frátekið í registration validationinu
-- logga sjálfkrafa inn ef registration tekst og redirecta á index.php (5 sek)
+X skilaboð þegar register virkar
+X athuga hvort notendanafn sé frátekið í registration validationinu
+X logga sjálfkrafa inn ef registration tekst og redirecta á index.php (5 sek)
 
 
 X myndayfirlit fyrir spil
