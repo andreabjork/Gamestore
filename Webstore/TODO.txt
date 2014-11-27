@@ -8,6 +8,17 @@ núna þegar teljarinn er kominn...asnalegt að geta ýtt á add to cart og sjá
 - taka út allar console.log skipanir
 - skrifa skýrslu
 - Það vantar fót á síðuna í körfunni?
+
+
+Úr verkefnalýsingu: 
+"Skila skal útfærslu á vef sem hefur útfærða bakenda- og framendavirkni. Nota
+skal þá hluti sem útfærðir hafa verið í öðrum verkefnum saman."
+Ég er afar stress yfir að fá mínus fyrir enga cache virkni. Mér finnst við ættum að henda upp
+einföldu módeli fyrir cache enda höfum við gert það áður svo það ætti ekki að taka stórkostlegan tíma?
+það meikar eiginlega bara sens að hafa cache á ´siðu sem er aðallega að sækja hluti í gagnagrunn.
+
+
+
 Fleira????
 
 
