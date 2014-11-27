@@ -1,34 +1,47 @@
 ﻿TÉKKLISTI FYRIR LOKAVERKEFNI
 
+MIÐVIKUDAGUR: LEÓ REYNA AÐ GERA ÞETTA
+		- Láta mús verða að stækkunargleri yfir aðalmynd
+		- setja takka við search bar sem virkar
+		- láta search virka á hvaða undirsíðu sem er
+		- geta opnað og lokað sign inn glugga
+		- skilaboð þegar register virkar
+		- athuga hvort notendanafn sé frátekið í registration validationinu
+		- logga sjálfkrafa inn ef registration tekst og redirecta á index.php (5 sek)
+
 - Velja fonta og setja þá inn
+- CSS-a about product síðu
+- Eitthvað bug með flettingar þegar fyrsta mynd er ekki valin til að stækkæa? laga!
+- Láta mús verða að stækkunarglasi þegar hoverað er yfir aðalmynd??
+- setja takka við search bar
+- láta search bar virka á hvaða undirsíðu sem er
+- klára about-product síðu -> css a myndir, texta, boardg geek link
+- geta opna og lokað sign in glugga
+- css a my cart
+- implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
+- skilaboð þegar register virkar
+- athuga hvort notendanafn sé frátekið í registration validationinu
+- logga sjálfkrafa inn ef registration tekst og redirecta á index.php (5 sek)
+
+
+X myndayfirlit fyrir spil
+X laga css á my cart takka
+X laga kommustafi í about_product.php
 X CSS-a register síðu
 X Setja inn content í About US síðu
-- CSS-a about product síðu
 X láta my cart aðeins birtast þegar einhver er loggaður inn
 X láta sign in aðeins birtast þegar enginn er loggaður inn
 X láta enter virka til þess að logga sig inn
 X fá logout takka til að virka
 X fylla inn í gagnagrunn
-- klára about-product síðu -> css a myndir, texta, boardg geek link
 X passa að verð sé alltaf með 2 aukastafi á aðalsíðu
 X láta add to cart ekki verða appelsínugult við klikk
-- setja takka við search bar
-- láta search bar virka á hvaða undirsíðu sem er
 X fylla út gagnagrunn
-- geta opna og lokað sign in glugga
-- myndayfirlit fyrir spil
 X fá "my cart" til að birtast um leið og maður er loggaður inn
 X setja Cart icon í headerinn
 X í my cart: passa að dec takkki sjáist ekki þegar vara er í 1
 X tvo aukastafi á öll verð í my cart!!
-- css a my cart
-- implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
 X fá myndir til að birtast í cart
-- skilaboð þegar register virkar
-- athuga hvort notendanafn sé frátekið í registration validationinu
-- logga sjálfkrafa inn ef registration tekst og redirecta á index.php (5 sek)
-- laga css á my cart takka
-- laga kommustafi í about_product.php
 
 * animation á our products dropdown og sign in glugga? (mjög óþarfi samt)
 
