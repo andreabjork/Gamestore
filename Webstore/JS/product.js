@@ -2,7 +2,8 @@ console.log('running product.js');
 var id = getID();
 console.log('our id:');
 console.log(id);
-//getImages(id);
+var urls = getImages(id);
+var current = 0;
 
 
 $('.addBtn').click(function() {
@@ -34,6 +35,34 @@ $('.subimg').click(function() {
 	
 });
 
+$('.mainImg').click(function() {
+	$('.overlay').show();
+});
+
+$('.close').click(function() {
+	$('.overlay').hide();
+});
+
+$('.next').click(function() {
+	if(current < urls.length-1) {
+		current++;
+	}else{
+		current = 0;
+	}
+	$('.bigImg').attr('src', urls[current]);
+});
+
+$('.prev').click(function() {
+	if(current > 0) {
+		current--;
+	}else{
+		current = urls.length-1;
+	}
+	
+	console.log(urls[current]);
+	$('.bigImg').attr('src', urls[current]);
+});
+
 function getID() {
 	var url = window.location.href;
 	var params = ((url.split("?"))[1]).split("&");
@@ -54,19 +83,6 @@ function updateButton(btn) {
 	btn.css("width", "250px");
 }
 
-function setImages(urls) {
-	var mainImage = urls[0];
-	console.log('setting images...');
-	console.log('this will be the image url: ');
-	console.log(mainImage);
-	console.log('current source');
-	console.log($('.mainImg').attr('src'));
-	$('.mainImg').attr('src', mainImage);
-	console.log('new source');
-	console.log($('.mainImg').attr('src'));
-	
-}
-
 
 // Use: elem = getImgElements(subfolder)
 // Pre: subfolder is a string corresponding to a folder name in location data/images/
@@ -82,25 +98,24 @@ function getImages(id) {
 	    url: dir,
 	    success: function (data) {
 	        $images = $(data).find("a:contains(.jpg)");
+	        console.log(data);
 	        $images.each(function () {
-	            var filename = this.href.replace("https://notendur.hi.is/abb27/Lokaverkefni/", "");
-	            console.log('this is the files name:');
-	            console.log(filename);
+	            var hrefparts = this.href.split("/");
+	            var n = hrefparts.length;
+	            var filename = hrefparts[n-1];
 	            var imgUrl = dir+'/'+filename;
-	            console.log('this is the file url');
-	            console.log(imgUrl);
 	           	urls.push(imgUrl);	 
 	        });
 
 	        if(urls.length === 0) {
 	        	urls = ['#'];
 	        }
-	    	setImages(urls);
 	    },
 	    error: function() {
 	    	console.log('error retrieving images');
 	    }
 	});
+	return urls;
 }
 
 

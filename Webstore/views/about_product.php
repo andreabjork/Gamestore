@@ -39,6 +39,15 @@ foreach($data as $product) {
 		echo '<input type="button" alt="Add to cart" class="addBtn" value="Add to cart" name='.$product["id"].' />';
 		echo '<input type="button" alt="Add to cart" class="addBtn'.(($user==='guest')?' hidden':'').'" value="Add to cart" name='.$product["id"].' />';
 	echo '</div>';
+	echo '<div class="overlay">';
+		echo '<div class="imgFrame">';
+			echo '<span class="helper"></span>';
+			echo '<input type="image" class="prev" src="data/decrement.ico">';
+			echo '<img class="bigImg" src='.$mainImage.' \>';
+			echo '<input type="image" class="next" src="data/increment.ico">';
+			echo '<input type="image" class="close" src="data/remove.ico">';
+		echo '</div>';
+	echo '</div>';
 }
  
 ?>
