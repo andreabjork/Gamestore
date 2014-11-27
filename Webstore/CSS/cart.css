@@ -35,14 +35,14 @@
 	}
 		.prodInfo h2{
 			position: absolute;
-			left: 200px;
+			left: 210px;
 			font-size: 2em;
 			padding: 2px;
 		}
 		
 		.prodInfo p{
 			position: absolute;
-			left: 200px;
+			left: 210px;
 			bottom: 20px; 
 			font-size: 1em;
 		}
@@ -106,14 +106,22 @@
 			height: 30px;
 		}
 		
-.checkout {
-	background-color: #d47619;
-    bottom: 0;
-    color: white;
-    font-size: 1em;
-    font-weight: bold;
-    height: 40px;
-    position: absolute;
-    right: 30px;
-    width: 180px;
+
+#checkoutArea{
+	width: 90%;
+	position: relative;
+	height: 60px;
 }
+	.checkout {
+		background-color: #d47619;
+		bottom: 0;
+		color: white;
+		font-size: 1em;
+		font-weight: bold;
+		height: 40px;
+		position: absolute;
+		right: 0;
+		width: 180px;
+		margin: 10px;
+		margin-right: 0;
+	}
