@@ -1,30 +1,30 @@
-TÉKKLISTI FYRIR LOKAVERKEFNI
+ï»¿TÃ‰KKLISTI FYRIR LOKAVERKEFNI
 
-- Velja fonta og setja şá inn
-- CSS-a register síğu
-X Setja inn content í About US síğu
-- CSS-a about product síğu
-X láta my cart ağeins birtast şegar einhver er loggağur inn
-X láta sign in ağeins birtast şegar enginn er loggağur inn
-X láta enter virka til şess ağ logga sig inn
-X fá logout takka til ağ virka
-X fylla inn í gagnagrunn
-- klára about-product síğu -> css a myndir, texta, boardg geek link
-X passa ağ verğ sé alltaf meğ 2 aukastafi á ağalsíğu
-X láta add to cart ekki verğa appelsínugult viğ klikk
-- setja takka viğ search bar
-- láta search bar virka á hvağa undirsíğu sem er
-- fylla út gagnagrunn
-- geta opna og lokağ sign in glugga
+- Velja fonta og setja Ã¾Ã¡ inn
+- CSS-a register sÃ­Ã°u
+X Setja inn content Ã­ About US sÃ­Ã°u
+- CSS-a about product sÃ­Ã°u
+X lÃ¡ta my cart aÃ°eins birtast Ã¾egar einhver er loggaÃ°ur inn
+X lÃ¡ta sign in aÃ°eins birtast Ã¾egar enginn er loggaÃ°ur inn
+X lÃ¡ta enter virka til Ã¾ess aÃ° logga sig inn
+X fÃ¡ logout takka til aÃ° virka
+X fylla inn Ã­ gagnagrunn
+- klÃ¡ra about-product sÃ­Ã°u -> css a myndir, texta, boardg geek link
+X passa aÃ° verÃ° sÃ© alltaf meÃ° 2 aukastafi Ã¡ aÃ°alsÃ­Ã°u
+X lÃ¡ta add to cart ekki verÃ°a appelsÃ­nugult viÃ° klikk
+- setja takka viÃ° search bar
+- lÃ¡ta search bar virka Ã¡ hvaÃ°a undirsÃ­Ã°u sem er
+X fylla Ãºt gagnagrunn
+- geta opna og lokaÃ° sign in glugga
 - myndayfirlit fyrir spil
-X fá "my cart" til ağ birtast um leiğ og mağur er loggağur inn
-- setja Cart icon í headerinn
-- í my cart: passa ağ dec takkki sjáist ekki şegar vara er í 1
-X tvo aukastafi á öll verğ í my cart!!
+X fÃ¡ "my cart" til aÃ° birtast um leiÃ° og maÃ°ur er loggaÃ°ur inn
+- setja Cart icon Ã­ headerinn
+X Ã­ my cart: passa aÃ° dec takkki sjÃ¡ist ekki Ã¾egar vara er Ã­ 1
+X tvo aukastafi Ã¡ Ã¶ll verÃ° Ã­ my cart!!
 - css a my cart
-- implementa einhvers konar in stock dæmi í cart og jafnvel á about síğu
-X fá myndir til ağ birtast í cart
+- implementa einhvers konar in stock dÃ¦mi Ã­ cart og jafnvel Ã¡ about sÃ­Ã°u
+X fÃ¡ myndir til aÃ° birtast Ã­ cart
 
-* animation á our products dropdown og sign in glugga? (mjög óşarfi samt)
+* animation Ã¡ our products dropdown og sign in glugga? (mjÃ¶g Ã³Ã¾arfi samt)
 
 
