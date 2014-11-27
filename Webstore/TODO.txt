@@ -46,3 +46,6 @@ X láta search bar virka á hvaða undirsíðu sem er
 *- Láta mús verða að stækkunarglasi þegar hoverað er yfir aðalmynd??s
 
 
+
+
+
