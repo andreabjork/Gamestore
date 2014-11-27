@@ -13,8 +13,8 @@ foreach($data as $product) {
 		$image3 = $filenames[2];
 		
 		if(!isset($mainImage)) {$mainImage="data/notfound.jpg";}
-		if(!isset($image2)) {$mainImage="data/notfound.jpg";}
-		if(!isset($image3)) {$mainImage="data/notfound.jpg";}
+		if(!isset($image2)) {$image2="data/notfound.jpg";}
+		if(!isset($image3)) {$image3="data/notfound.jpg";}
 	
 	echo '<div class="containerB">';
 		echo '<div class="imgViewer">';
@@ -34,7 +34,8 @@ foreach($data as $product) {
 			echo '<h1>'.$product["name"].'</h1>';
 			echo '<p>'.$product["description"].'</p>';
 		echo '</div>';
-		echo '<span class="prodPrice">$ '.$product["price"].'</span>';
+		$price = number_format($product['price'], 2, '.', '');
+		echo '<span class="prodPrice">$ '.$price.'</span>';
 		echo '<a href='.$product["bgg_url"].'><div class="BBG">View item on BoardGameGeek.com!</div></a>';
 		echo '<input type="button" alt="Add to cart" class="addBtn" value="Add to cart" name='.$product["id"].' />';
 		echo '<input type="button" alt="Add to cart" class="addBtn'.(($user==='guest')?' hidden':'').'" value="Add to cart" name='.$product["id"].' />';
