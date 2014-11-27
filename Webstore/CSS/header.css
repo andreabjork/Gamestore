@@ -141,6 +141,7 @@ header {
 	        
 	        .actions li {
 	        	position: relative;
+	        	right: 25px;
 	        	width: 80px;
 	        	height: 20px;
 	            float: right;
