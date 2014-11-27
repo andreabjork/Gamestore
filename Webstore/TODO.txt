@@ -1,15 +1,15 @@
 ﻿TÉKKLISTI FYRIR LOKAVERKEFNI
 
-- Velja fonta og setja þá inn
-- CSS-a about product síðu
+
+
 - Eitthvað bug með flettingar þegar fyrsta mynd er ekki valin til að stækka? laga!
-- Láta mús verða að stækkunarglasi þegar hoverað er yfir aðalmynd??
-- klára about-product síðu -> css a myndir, texta, boardg geek link
-- css a my cart
 - implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
 - Láta add to cart takkann segja "already in your cart" (eða þannig) ef við á.
 
-
+X klára about-product síðu -> css a myndir, texta, boardg geek link
+X CSS-a about product síðu
+X Velja fonta og setja þá inn
+X css a my cart
 X myndayfirlit fyrir spil
 X laga css á my cart takka
 X laga kommustafi í about_product.php
@@ -36,5 +36,6 @@ X setja takka við search bar
 X láta search bar virka á hvaða undirsíðu sem er
 
 * animation á our products dropdown og sign in glugga? (mjög óþarfi samt)
+*- Láta mús verða að stækkunarglasi þegar hoverað er yfir aðalmynd??s
 
 
