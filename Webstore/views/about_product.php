@@ -36,6 +36,14 @@ foreach($data as $product) {
 			echo '<h1>'.$product["name"].'</h1>';
 			echo '<p>'.$product["description"].'</p>';
 		echo '</div>';
+		
+		$stock = $product['stock'];
+		if($stock == 0) {
+			$stockMsg = '<span class="stock out">Out of stock!</span>';
+		} else {
+			$stockMsg = '<span class="stock"> In stock: '.$stock.'</span>';
+		}
+		echo $stockMsg;
 		$price = number_format($product['price'], 2, '.', '');
 		echo '<span class="prodPrice">$ '.$price.'</span>';
 		echo '<a href='.$product["bgg_url"].'><div class="BBG">View item on BoardGameGeek.com!</div></a>';

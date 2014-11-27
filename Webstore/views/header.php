@@ -43,7 +43,7 @@
 				</div>
 				<ul class="actions">
 					<li id="signin" <?php echo ($user == 'guest') ? '' : 'class="hidden"' ; ?>>Sign in</li>
-					<a href="cart.php"><li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><p id="cartText">My cart</p><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /></li></a>
+					<a href="cart.php"><li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><p id="cartText">My cart</p><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /> <span class="incart"></span></li></a>
 				</ul>
 			</div>
 			<div class="navigation">

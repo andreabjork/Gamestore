@@ -86,6 +86,19 @@
         line-height: 1.4;
     }
 
+.stock {	
+	position: absolute;
+	font-family: 'Lato', sans-serif;
+	right: 720px;
+	bottom: 160px;
+	font-size: 1.3em;
+	color: #4FCA35;
+}
+
+.out {
+	color: #FF0F0F;
+}
+
 .addBtn {
 	position: absolute;
 	right: 30px;

@@ -2,7 +2,7 @@ var id = getID();
 console.log('our id:');
 console.log(id);
 var urls = getImages(id);
-
+if($('.stock').hasClass('out')) { $('.addBtn').hide();}
 
 $('.addBtn').click(function() {
 	var id = $(this).attr('name');
@@ -15,6 +15,7 @@ $('.addBtn').click(function() {
 			console.log(output);
 			console.log('did we get in here?');
 			updateButton(btn);
+			updateCart();
 		}
 	});
 	
@@ -32,6 +33,13 @@ $('.subimg').click(function() {
 	$('.mainImg').attr('src', src);
 	
 });
+
+function updateCart() {
+	var prevAmount = $('.incart')[0].innerHTML;
+	console.log('UPDATING CART.............');
+	console.log(prevAmount);
+	$('.incart')[0].innerHTML = parseInt(prevAmount)+1;
+}
 
 $('.mainImg').click(function() {
 	var src = $('.mainImg').attr('src');

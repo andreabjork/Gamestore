@@ -34,6 +34,7 @@
 						echo "</div>";
 						echo "<input type='image' src='data/remove.ico' alt='remove' class='cartBtn remove' prod_id=$id user='$user'>";
 					echo "</div>";
+										
 				}
 				echo "<p id=subtotal>Subtotal: $<span id='subTot'>$subtotal</span></p>"
 			?>

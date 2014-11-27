@@ -99,6 +99,10 @@ function remove(btn){
 	subtotal.innerHTML = (parseFloat(oldSubtotal)-parseFloat(oldTotPrice)).toFixed(2);
 	
 	btn.parent().remove();
+	
+	var prevAmount = $('.incart')[0].innerHTML;
+	$('.incart')[0].innerHTML = parseInt(prevAmount)-1;
+
 }
 
 function updateDecButton() {
