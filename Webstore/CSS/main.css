@@ -75,6 +75,8 @@
     .productPrice p{
         text-align: right;
         margin-right: 5px;
+        font-weight: bold;
+		line-height: 0.4;
     }
     
     .productPage {

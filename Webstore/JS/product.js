@@ -93,8 +93,7 @@ function updateImgpanel(urls) {
 function updateButton(btn) {
 	console.log('current value');
 	btn.val("Item added to cart!");
-	btn.css("background-color", "#D47619");
-	btn.css("width", "250px");
+	btn.addClass('added');
 }
 
 

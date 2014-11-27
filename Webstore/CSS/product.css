@@ -91,7 +91,7 @@
 	right: 30px;
 	bottom: 30px;
 	background-color: #333333;
-	width: 150px;
+	width: 170px;
 	height: 50px;
 	font-size: 1.5em;
 	color: white;
@@ -104,9 +104,15 @@
 	cursor: pointer;
 }
 
+.added {
+	background-color: #CA7E35;
+	width: 250px;
+}
+
+
 .prodPrice {
 	position: absolute;
-	right: 60px;
+	right: 70px;
 	bottom: 160px;
 	font-size: 2em;
 	font-weight: bold;
@@ -118,7 +124,7 @@
 	right: 30px;
 	bottom: 110px;
 	background-color: #CA7E35;
-	width: 150px;
+	width: 170px;
 	height: 40px;
 	font-size: 1.05em;
 	color: white;
@@ -162,17 +168,21 @@
 }
 
 .prev {
-	margin-top: 100px;
 	width: 30px;
 	height: 30px;
-	margin-right: 200px;
+	position: absolute;
+	top: 250px;
+	left: 0px;
+
 }
 
 .next {
-	margin-top: 100px;
 	width: 30px;
 	height: 30px;
-	margin-left: 200px;
+	position: absolute;
+	top: 250px;
+	right: 0px;
+
 }
 
 .close {
