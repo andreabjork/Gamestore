@@ -1,4 +1,4 @@
-updateDecButton();
+$(window).load(updateDecButton());
 
 $('.cartBtn').click(function(e){
 	var id = $(e.target).attr('prod_id');

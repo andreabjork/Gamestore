@@ -249,10 +249,10 @@ header {
 	
 	.dropDown {
 	    display: none;
-	    position: absolute;
+	    position: relative;
 	    z-index: 1; 
 		left: 30px;
-		top: 177px;
+		bottom: 4px;
 		font-family: 'Lato', sans-serif;
 	}
 	

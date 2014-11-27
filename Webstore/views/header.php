@@ -1,3 +1,17 @@
+<?php
+if(!isset($user)){
+	session_start();
+	$user = "guest";
+	if (isset($_SESSION['user']) && !empty($_SESSION['user'])){
+		$user = $_SESSION['user'];
+	}
+}
+$cur = new PDO("sqlite:SQL/gamestore.db");
+$raw = $cur->query("SELECT COUNT(*) FROM ShoppingCarts WHERE user='$user'");
+$raw_dat = $raw->fetch();
+$quantity = $raw_dat[0];
+
+?>
 <!doctype html>
 <html lang="is">
 	<head>
@@ -43,7 +57,7 @@
 				</div>
 				<ul class="actions">
 					<li id="signin" <?php echo ($user == 'guest') ? '' : 'class="hidden"' ; ?>>Sign in</li>
-					<a href="cart.php"><li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><p id="cartText">My cart</p><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /> <span class="incart"></span></li></a>
+					<a href="cart.php"><li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><p id="cartText">My cart</p><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /> <span class="incart"><?php echo $quantity ?></span></li></a>
 				</ul>
 			</div>
 			<div class="navigation">
