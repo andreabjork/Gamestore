@@ -26,6 +26,9 @@ $('.cartBtn').click(function(e){
 	
 });
 
+$('.checkout').click(function() {
+	alert('We regret to inform you that the site you are on is a dummy site! We will not sell you any of these boardgames');
+});
 
 
 function updateCart(type, btn){

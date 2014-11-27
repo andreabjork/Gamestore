@@ -7,6 +7,7 @@ núna þegar teljarinn er kominn...asnalegt að geta ýtt á add to cart og sjá
 - kommenta kóða
 - taka út allar console.log skipanir
 - skrifa skýrslu
+- Það vantar fót á síðuna í körfunni?
 Fleira????
 
 

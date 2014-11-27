@@ -105,3 +105,15 @@
 			width: 30px;
 			height: 30px;
 		}
+		
+.checkout {
+	background-color: #d47619;
+    bottom: 0;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    height: 40px;
+    position: absolute;
+    right: 30px;
+    width: 180px;
+}

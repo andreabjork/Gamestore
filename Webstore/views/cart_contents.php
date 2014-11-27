@@ -36,7 +36,8 @@
 					echo "</div>";
 										
 				}
-				echo "<p id=subtotal>Subtotal: $<span id='subTot'>$subtotal</span></p>"
+				echo "<p id=subtotal>Subtotal: $<span id='subTot'>$subtotal</span></p>";
+				echo "<input type='button' class='checkout' value='Proceed to checkout!' />";
 			?>
 		</div>
 		
