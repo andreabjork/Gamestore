@@ -10,7 +10,12 @@ body{
 
 body p {
     color: #262525;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+body h1, h2 {
+	font-family: 'Gentium Book Basic', serif;
 }
 
 a {
@@ -53,7 +58,7 @@ header {
 		
 		.currentUser li {
 			float: right;
-			font-size: 1em;
+			font-size: 1.1em;
 			color: #cacaca;
 			padding: 8px;
 		}
@@ -130,7 +135,7 @@ header {
 				
 			.actions {
 				position: relative;
-				bottom: 25px;
+				bottom: 30px;
 				right: 15px;
 	            list-style: none;
 	            font-family: 'Roboto', sans-serif;
@@ -145,14 +150,14 @@ header {
 	        	width: 80px;
 	        	height: 20px;
 	            float: right;
-	            padding: 5px 5px 5px;
+	            padding: 9px 8px 4px;
 	            color: white;
 	            text-align: center;
 	        }
 	        
 	        .actions li:hover {
 	            background-color: #D47619;
-	            padding: 5px 5px 5px;
+	            padding: 9px 8px 4px;
 	            cursor: pointer;
 	        }
 	        
@@ -224,22 +229,24 @@ header {
         }
         
         .buttons li {
+        	font-size: 1.1em;
             float: left;
-            padding: 4px 5px 4px;
+            padding: 3px 10px 5px;
             color: white;
         }
         
         .buttons li:hover {
             background-color: #D47619;
-            padding: 4px 6px 4px;
+            padding: 3px 10px 5px;
         }
 	
 	.dropDown {
 	    display: none;
 	    position: absolute;
-	    z-index: 1;
-	    left: 0;
-	    top: 177px;
+	    z-index: 1; 
+		left: 30px;
+		top: 177px;
+		font-family: 'Lato', sans-serif;
 	}
 	
 	   .dropButtons {
@@ -247,10 +254,10 @@ header {
 	       top: 3px;
 	       display: block;
 	       width: 200px;
-	       height: 210px;
 	       list-style: none;
-	       padding: 2px;
-	       background-color: #333333;
+	       background-color: #333333;	       
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
 	   }
 	   
 	   .dropButtons li {

@@ -1,5 +1,5 @@
 		<div class='container flex'>	
-			<h1 class='yourCart'>Your cart:</h1>
+			<h2 class='yourCart'>Your cart</h2>
 			<?php
 				$subtotal = 0;
 				foreach ($data as $row) {

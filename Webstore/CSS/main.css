@@ -19,8 +19,7 @@
     width: 15%;
     min-width: 220px;
     background-color: #fff;
-    border: 1px solid #cacaca;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 10px;
     overflow: hidden;
 }
@@ -33,10 +32,11 @@
     .productName h2 {
         color: #fff;
         background-color: #333333;
-        font-size: 1.75em;
+        font-size: 1.7em;
         padding-left: 0.25em;
         display: block;
         height: 100%;
+        text-align: center;
     }
     
     .productImage {

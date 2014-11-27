@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="CSS/footer.css">
 		<link rel="stylesheet" href="CSS/product.css">
 		<link rel="stylesheet" href="CSS/aboutsite.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato|Gentium+Book+Basic:400italic,400' rel='stylesheet' type='text/css'>
 		<script src="libraries/jquery.js"></script>	
 		<script src="libraries/jquery.md5.js"></script>	
 	</head>
