@@ -3,7 +3,7 @@
 
 
 - implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
-- Láta add to cart takkann segja "already in your cart" (eða þannig) ef við á.
+? Láta add to cart takkann segja "already in your cart" (eða þannig) ef við á.
 
 
 

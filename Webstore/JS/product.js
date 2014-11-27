@@ -15,7 +15,12 @@ $('.addBtn').click(function() {
 			console.log(output);
 			console.log('did we get in here?');
 			updateButton(btn);
-			updateCart();
+			if(output==="success"){
+				console.log("item successfully added to cart, updating cartnumber");
+				updateCart();
+			} else {
+				console.log("item was already in cart, not updating cartnumber");
+			}
 		}
 	});
 	

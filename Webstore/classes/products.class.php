@@ -92,21 +92,18 @@ class Products extends Product
 	}
 	
 	public function Add($user, $id) {
-		echo "lets add this shit!";
 		$db = $this->pdo;
 		$q = "SELECT COUNT(*) FROM ShoppingCarts WHERE user='$user' AND prod_id=$id";
 		$res = $db->query($q);
 		$data = $res->fetchAll();
 		$rows = $data[0][0];
-		echo "number of rows";
-		echo $rows;
 
 		if($rows < 1) {
 			$q2 = "INSERT INTO ShoppingCarts (user,prod_id,quantity) VALUES ('$user',$id,1)";
 			$success = $db->exec($q2);
-			echo "item successfully added to cart!";
+			echo "success";
 		} else {
-			echo "item already in cart, dumbass";
+			echo "failure";
 		}
 	}
 
