@@ -26,7 +26,13 @@
 							echo '<img src="'.$mainImage.'">';
 						echo '</div>';
 						echo '<div class="productText">';
-							echo '<p>'.$product["description"].'</p>';
+							$description = $product["description"];
+							if(strlen($description)< 135) {
+								$descr = $description;
+							} else {
+								$descr = substr($description, 0, 130)."...";
+							}
+							echo '<p>'.$descr.'</p>';
 						echo '</div>';
 						echo '<div class="productPrice">';
 							echo "<p>$".$formattedPrice."</p>";

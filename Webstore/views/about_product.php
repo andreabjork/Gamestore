@@ -13,22 +13,24 @@ foreach($data as $product) {
 		$image3 = $filenames[2];
 		
 		if(!isset($mainImage)) {$mainImage="data/notfound.jpg";}
-		if(!isset($image2)) {$image2="data/notfound.jpg";}
-		if(!isset($image3)) {$image3="data/notfound.jpg";}
 	
-	echo '<div class="containerB">';
+	echo '<div class="container">';
 		echo '<div class="imgViewer">';
 			echo '<div class="imgBox">';
 				echo '<span class="helper"></span>';
 				echo '<img class="mainImg" src="'.$mainImage.'">';
 			echo '</div>';
-			echo '<div class="subImgBoxes">';
-				echo '<ul>';
-					echo '<li class="subBox1"><img class="subimg img1" src="'.$mainImage.'"></li>';
-					echo '<li class="subBox2"><img class="subimg img2" src="'.$image2.'"></li>';
-					echo '<li class="subBox3"><img class="subimg img3" src="'.$image3.'"></li>';
+			if(isset($image2)) {
+				echo '<div class="subImgBoxes">';
+					echo '<ul>';
+						echo '<li class="subBox1"><img class="subimg img1" src="'.$mainImage.'"></li>';
+						echo '<li class="subBox2"><img class="subimg img2" src="'.$image2.'"></li>';
+						if(isset($image3)) {
+							echo '<li class="subBox3"><img class="subimg img3" src="'.$image3.'"></li>';
+						}
 				echo '</ul>';
 			echo '</div>';
+			}
 		echo '</div>';
 		echo '<div class="textBox">';
 			echo '<h1>'.$product["name"].'</h1>';

@@ -2,7 +2,7 @@ var id = getID();
 console.log('our id:');
 console.log(id);
 var urls = getImages(id);
-var current = 0;
+
 
 $('.addBtn').click(function() {
 	var id = $(this).attr('name');
@@ -34,6 +34,11 @@ $('.subimg').click(function() {
 });
 
 $('.mainImg').click(function() {
+	var src = $('.mainImg').attr('src');
+	$('.bigImg').attr('src', src);
+	if(src.indexOf('1')) { current = 0;}
+	else if(src.indexOf('2')) { current = 1;}
+	else if(src.indexOf('3')) { current = 2;}
 	$('.overlay').show();
 });
 
@@ -115,7 +120,6 @@ function getImages(id) {
 	            var imgUrl = dir+'/'+filename;
 	           	urls.push(imgUrl);	 
 	        });
-	        updateImgpanel(urls);
 	    },
 	    error: function() {
 	    	console.log('error retrieving images');
