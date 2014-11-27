@@ -1,12 +1,17 @@
 ﻿TÉKKLISTI FYRIR LOKAVERKEFNI
 
+- Láta add to cart takkann segja "already in your cart" (eða þannig) ef við á. (verður semí að gera þetta
+núna þegar teljarinn er kominn...asnalegt að geta ýtt á add to cart og sjá töluna ekki hreyfast)
+- Passa að allt resisist rétt (texti fer til dæmis yfir mynd í about-product)
+- samræma liti! eins og er eru 2-3 svipaðir appelsínugulir litir í gangi. Velja lit and stick with it.
+- kommenta kóða
+- taka út allar console.log skipanir
+- skrifa skýrslu
+Fleira????
 
 
-- implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
-- Láta add to cart takkann segja "already in your cart" (eða þannig) ef við á.
 
-
-
+X implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
 X Eitthvað bug með flettingar þegar fyrsta mynd er ekki valin til að stækka? laga!
 X klára about-product síðu -> css a myndir, texta, boardg geek link
 X CSS-a about product síðu
