@@ -1,10 +1,8 @@
-console.log('running product.js');
 var id = getID();
 console.log('our id:');
 console.log(id);
 var urls = getImages(id);
 var current = 0;
-
 
 $('.addBtn').click(function() {
 	var id = $(this).attr('name');
@@ -76,6 +74,17 @@ function getID() {
 	return id;
 }
 
+
+function updateImgpanel(urls) {
+	console.log('length of urls!');
+	console.log(urls.length);
+	if(urls.length <= 1) {
+		$('.subImgBoxes').hide();
+	} else if(urls.length === 2) {
+		$('.img3').hide();
+	}
+}
+
 function updateButton(btn) {
 	console.log('current value');
 	btn.val("Item added to cart!");
@@ -106,10 +115,7 @@ function getImages(id) {
 	            var imgUrl = dir+'/'+filename;
 	           	urls.push(imgUrl);	 
 	        });
-
-	        if(urls.length === 0) {
-	        	urls = ['#'];
-	        }
+	        updateImgpanel(urls);
 	    },
 	    error: function() {
 	    	console.log('error retrieving images');

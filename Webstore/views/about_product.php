@@ -43,9 +43,9 @@ foreach($data as $product) {
 	echo '<div class="overlay">';
 		echo '<div class="imgFrame">';
 			echo '<span class="helper"></span>';
-			echo '<input type="image" class="prev" src="data/decrement.ico">';
+			echo '<input type="image" class="prev" src="data/left.ico">';
 			echo '<img class="bigImg" src='.$mainImage.' \>';
-			echo '<input type="image" class="next" src="data/increment.ico">';
+			echo '<input type="image" class="next" src="data/right.ico">';
 			echo '<input type="image" class="close" src="data/remove.ico">';
 		echo '</div>';
 	echo '</div>';
