@@ -5,14 +5,22 @@ $data = $results->fetchAll();
 foreach($data as $product) {
 	
 	$id = $product["id"];
-		$directory = "data/images/$id";
-		$filenames = glob('./data/images/'.$id.'/*.*', GLOB_BRACE);
-			
-		$mainImage = $filenames[0];
-		$image2 = $filenames[1];
-		$image3 = $filenames[2];
+	$directory = "data/images/$id";
+	$filenames = glob('./data/images/'.$id.'/*.*', GLOB_BRACE);
 		
-		if(!isset($mainImage)) {$mainImage="data/notfound.jpg";}
+	$mainImage = $filenames[0];
+	$image2 = $filenames[1];
+	$image3 = $filenames[2];
+	
+	if(!isset($mainImage)) {$mainImage="data/notfound.jpg";}
+	
+	$stock = $product['stock'];
+	if($stock == 0) {
+		$stockMsg = '<span class="stock out">Out of stock!</span>';
+	} else {
+		$stockMsg = '<span class="stock"> In stock: '.$stock.'</span>';
+	}
+	$price = number_format($product['price'], 2, '.', '');
 	
 	echo '<div class="container flex">';
 		echo '<div class="imgViewer">';
@@ -35,21 +43,14 @@ foreach($data as $product) {
 		echo '<div class="textBox">';
 			echo '<h1>'.$product["name"].'</h1>';
 			echo '<p>'.$product["description"].'</p>';
+			echo $stockMsg;
 		echo '</div>';
-		echo '<div class="prodActions">';
-		$stock = $product['stock'];
-		if($stock == 0) {
-			$stockMsg = '<span class="stock out">Out of stock!</span>';
-		} else {
-			$stockMsg = '<span class="stock"> In stock: '.$stock.'</span>';
-		}
-		echo $stockMsg;
-		$price = number_format($product['price'], 2, '.', '');
-		echo '<span class="prodPrice">$ '.$price.'</span>';
-		echo '<a href='.$product["bgg_url"].'><div class="BBG">View item on BoardGameGeek.com!</div></a>';
-		echo '<input type="button" alt="Add to cart" class="addBtn" value="Add to cart" name='.$product["id"].' />';
-		echo '<input type="button" alt="Add to cart" class="addBtn'.(($user==='guest')?' hidden':'').'" value="Add to cart" name='.$product["id"].' />';
-		echo '</div>';
+		echo '<div class="prodActionArea"><div class="prodActions">';
+			echo '<span class="prodPrice">$ '.$price.'</span>';
+			echo '<a href='.$product["bgg_url"].'><div class="BBG">View item on BoardGameGeek.com!</div></a>';
+			echo '<input type="button" alt="Add to cart" class="addBtn" value="Add to cart" name='.$product["id"].' />';
+			echo '<input type="button" alt="Add to cart" class="addBtn'.(($user==='guest')?' hidden':'').'" value="Add to cart" name='.$product["id"].' />';
+		echo '</div></div>';
 	echo '</div>';
 	echo '<div class="overlay">';
 		echo '<div class="imgFrame">';
