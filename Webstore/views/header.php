@@ -33,11 +33,11 @@ $quantity = $raw_dat[0];
 		<header>
 			<div class="main">
 				<div class="logo">
-					<a href="index.php"><img id="logoImg" src="data/logo.png"/></a>
+					<a href="index.php"><img id="logoImg" src="data/logo.png" alt="BoardGamer"/></a>
 				</div>
 				<div <?php echo ($user == 'guest') ?  'class="hidden currentUser"' : 'class=currentUser' ; ?>>
 					<ul>
-						<li><input type="button" alt="logout" class="logout" value="Logout" /></li>
+						<li><input type="button" class="logout" value="Logout" /></li>
 						<li>User: <span class="userName"><?php echo $user; ?></span></li>
 					</ul>
 				</div>
@@ -66,7 +66,7 @@ $quantity = $raw_dat[0];
 					<a href="about.php"><li id="about">About us</li></a>
 				</ul>
 				<form id="searchArea" action="index.php" method="GET">
-					<label for="searchField"><input id="searchBtn" type="submit" value="" ></label>
+					<input id="searchBtn" type="submit" value="" >
 					<input id="search" name="searchField" placeholder="Search"/>
 				</form>
 			</div>

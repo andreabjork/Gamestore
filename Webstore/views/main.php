@@ -1,13 +1,10 @@
-
-
-
-
 		<div class="container flex">
 			<?php
 				$data = $results->fetchAll();
 				foreach($data as $product) {
 					
 					$id = $product["id"];
+					$productName = $product["name"];
 					$directory = "data/images/$id";
 					$filenames = glob('./data/images/'.$id.'/*.*', GLOB_BRACE);
 					$mainImage = $filenames[0];
@@ -20,10 +17,10 @@
 	
 					echo '<div class="product">';
 						echo '<div class="productName">';
-							echo '<h2>'.$product["name"].'</h2>';
+							echo '<h2>'.$productName.'</h2>';
 						echo '</div>';
 						echo '<div class="productImage">';
-							echo '<img src="'.$mainImage.'">';
+							echo '<img src="'.$mainImage.'" alt="'.$productName.'">';
 						echo '</div>';
 						echo '<div class="productText">';
 							$description = $product["description"];
@@ -38,7 +35,7 @@
 							echo "<p>$".$formattedPrice."</p>";
 						echo '</div>';
 						echo '<div class="productPage">';
-							echo '<a href=product.php?id='.$product["id"].'><p>Click here to know more!</p></a>';
+							echo '<a href="product.php?id='.$product["id"].'"><p>Click here to know more!</p></a>';
 						echo '</div>';
 					echo '</div>';
 				}
