@@ -1,10 +1,7 @@
 <?php
-
-/**
- * Hlutur sem heldur utan um skráningu, kann að búa sig til útfrá gögnum í formi og validate'a
- */
-class Registration
-{
+// Object for registering as a new member on the site. 
+// Creates itself with information from a form and validates the information.
+class Registration {
 	public $username;
 	public $password;
 	public $re_password;
@@ -20,8 +17,10 @@ class Registration
 	 * Forskilyrði: $data er fylki með lykill => gögn úr formi
 	 * Eftirskilyrði: Registration hlutur er útfylltur með gögnum úr $data
 	 */
-	public function Populate($data)
-	{
+	// Use: registration = new Populate($data)
+	// Pre: $data is the form submission array from form.php
+	// Post: registration is a Registration object holding all the information from $data.
+	public function Populate($data) {
 		$this->username = $data["username"];
 		$this->password = $data["password"];
 		$this->re_password = $data["re_password"];
@@ -34,12 +33,10 @@ class Registration
 		$this->zip = $data["zip"];
 	}
 
-	/**
-	 * Forskilyrði: Registration hlutur er útfylltur með gögnum
-	 * Eftirskilyrði: Aðferð skilar true ef registration hlutur uppfyllir kröfur, false ef ekki
-	 */
-	public function Valid($cur)
-	{
+	// Use: valid = registration->valid($cur)
+	// Pre: registration has been populated.
+	// Post: valid = true if there were no errors in the registration, false otherwise.
+	public function Valid($cur) {
 		$this->errors = array();
 		$validity = TRUE;
 		$password_valid = TRUE;
@@ -87,27 +84,34 @@ class Registration
 		return $validity;
 	}
 
-	/**
-	 * Forskilyrði: Búið er að keyra Validate() aðferð
-	 * Eftirskilyrði: Skilar fylki af villum sem komu upp ef einhverjar, annars tóma fylkinu
-	 */
-	public function Errors()
-	{
+	// Use: err = registration->Errors()
+	// Pre: registration has been populated and validated. $errors is therefore initalized.
+	// Post: err is the $errors array
+	public function Errors() {
 		return $this->errors;
 	}
 	
-	public function info(){
+	// Use: info = registration->Info()
+	// Pre: registration is populated
+	// Post: info is an an array with all the class variables of registration relating to the registration form.
+	public function info() {
 		return array($this->username,$this->password,$this->email,$this->country,$this->name,$this->addr1,$this->addr2,$this->city,$this->zip);
 	}
 	
-	public function write($cur){
+	// Use: aff = registration->write($cur)
+	// Pre: $cur is a PDO object for a nonempty database, the registration object has been validated
+	// Post: the valid registration information has been added to the table Customers.
+	public function write($cur) {
 		$password = md5($this->password);
 		$statement = "INSERT INTO CUSTOMERS (username,password,email,country,name,addr_line1,addr_line2,city,zip) VALUES ('$this->username','$password','$this->email','$this->country','$this->name','$this->addr1','$this->addr2','$this->city','$this->zip')";
 		$affected = $cur->exec($statement);
 		return $affected;
 	}
 	
-	public function available($user,$cur){
+	// Use: isAvailable = available($user, $cur)
+	// Pre: $user is a user from Customers, $cur is a PDO objcet
+	// Post: isAvailable=true if the username $user is "available"(not already in the table Customers from the database of $cur), isAvailable=false otherwise.
+	public function available($user,$cur) {
 		$exists = $cur->query("SELECT COUNT(*) FROM Customers WHERE username='$user'");
 		if($exists){
 			$data = $exists->fetchAll();

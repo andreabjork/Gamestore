@@ -89,17 +89,6 @@ function getID() {
 	return id;
 }
 
-
-function updateImgpanel(urls) {
-	console.log('length of urls!');
-	console.log(urls.length);
-	if(urls.length <= 1) {
-		$('.subImgBoxes').hide();
-	} else if(urls.length === 2) {
-		$('.img3').hide();
-	}
-}
-
 function updateButton(btn, add) {
 	console.log('current value');
 	if (add === "success"){
