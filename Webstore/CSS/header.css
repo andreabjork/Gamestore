@@ -146,24 +146,33 @@ header {
         }
 	        
 	        .actions li {
-	        	position: relative;
-	        	right: 25px;
-	        	width: 80px;
-	        	height: 20px;
-	            float: right;
-	            padding: 9px 8px 4px;
-	            color: white;
-	            text-align: center;
+				position: relative;
+				right: 10px;
+				height: 33px;
+				float: right;
+				color: white;
+				text-align: center;
 	        }
 	        
 	        .actions li:hover {
 	            background-color: #D47619;
-	            padding: 9px 8px 4px;
 	            cursor: pointer;
 	        }
 	        
+	        #signin{
+				position: relative;
+				width: 80px;
+				height: 20px;
+				padding: 9px 8px 4px;
+	        }
+	        
+	        
 	        .actions a {
-	        	display: block;
+				position: relative;
+				width: 80px;
+				height: 20px;
+				padding: 9px 8px 4px;
+				display: block;
 	        }
 	        
 	        #cartIcon{
@@ -180,8 +189,9 @@ header {
 			}	
 			
 			.incart {
-				position: relative;
-				left: 40px;
+				position: absolute;
+				right: -15px;
+				bottom: 4px;
 				font-weight: bold;
 				color: white;
 			}
@@ -233,6 +243,7 @@ header {
     }
     
     	.navigation a {
+            padding: 3px 5px 5px;
     		display: block;
     	}
 	
@@ -249,7 +260,6 @@ header {
         .buttons li {
         	font-size: 1.1em;
             float: left;
-            padding: 3px 5px 5px;
             color: white;
         }
         
