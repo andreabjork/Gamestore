@@ -1,16 +1,12 @@
 $("#products").hover(function()  {
-	console.log("hovering on it!");
 	$(".dropDown").css("display", "block");
 }, function() {
-	console.log('stopped hovering');
 	$(".dropDown").css("display", "none");
 });
 
 $(".dropDown").hover(function()  {
-	console.log("hovering on it!");
 	$(".dropDown").css("display", "block");
 }, function() {
-	console.log('stopped hovering');
 	$(".dropDown").css("display", "none");
 });
 
@@ -28,10 +24,8 @@ $('.logout').click(function() {
 		type: 'post',
 		success: function(output) {
 			if(output === "success"){
-				console.log("Útskráning tókst!");
 				signOut();
-			}else{
-				console.log("Eitthvað fór úrskeiðis :C");				
+			}else{			
 			}
 		}
 	});

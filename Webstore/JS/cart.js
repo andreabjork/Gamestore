@@ -1,5 +1,7 @@
+// make sure not to display decrement button if quantity is 0.
 $(window).load(updateDecButton());
 
+// Handle any button click, except proceed to checkout.
 $('.cartBtn').click(function(e){
 	var id = $(e.target).attr('prod_id');
 	var type = $(e.target).attr('class').split(" ");
@@ -17,11 +19,15 @@ $('.cartBtn').click(function(e){
 	
 });
 
+// Handle proceed to checkout
 $('.checkout').click(function() {
 	alert('We regret to inform you that the site you are on is a dummy site! We will not sell you any of these boardgames');
 });
 
-
+// Usage: updateCart(type, btn)
+// Pre:   type is one of: 'increment', 'decrement' or 'remove'.
+//		  btn is the pressed button, and corresponds to the type.
+// Post:  the appropriate function has been called.
 function updateCart(type, btn){
 	switch(type){
 		case 'increment':
@@ -38,6 +44,10 @@ function updateCart(type, btn){
 	}
 }
 
+// Usage: increment(btn)
+// Pre:   btn is an increment button
+// Post:  the quantity of the cartItem which btn belongs to has
+//		  been increased by 1. Price and Subtotal have been adjusted
 function increment(btn) {
 	var spanEle = btn.parent().children();
 	var quantity = spanEle[1].innerHTML;
@@ -58,6 +68,10 @@ function increment(btn) {
 	}
 }
 
+// Usage: increment(btn)
+// Pre:   btn is a decrement button
+// Post:  the quantity of the cartItem which btn belongs to has
+//		  been decreased by 1. Price and Subtotal have been adjusted
 function decrement(btn){
 	var spanEle = btn.parent().children();
 	var quantity = spanEle[1].innerHTML;
@@ -80,6 +94,9 @@ function decrement(btn){
 
 }
 
+// Usage: increment(btn)
+// Pre:   btn is a remove button
+// Post:  the cartItem which btn belongs to has been removed. Subtotal has been adjusted.
 function remove(btn){
 	var cartItem = btn.parent().children();
 	var itemTotPrice = ($(($(($(cartItem[0]).children())[1]).children())[2]).children())[0];
@@ -95,6 +112,8 @@ function remove(btn){
 
 }
 
+// Usage: updateDecButton()
+// Post:  all cartItems with quantity 0 now have their decrement button hidden.
 function updateDecButton() {
 	var decbuttons = $('.decrement');
 	var quant = $('.quantity');

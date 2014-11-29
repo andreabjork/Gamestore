@@ -1,6 +1,4 @@
 var id = getID();
-console.log('our id:');
-console.log(id);
 var urls = getImages(id);
 if($('.stock').hasClass('out')) { $('.addBtn').hide();}
 
@@ -24,24 +22,12 @@ $('.addBtn').click(function() {
 });
 
 $('.subimg').click(function() {
-	console.log('detecting click!');
 	var buttonClass = $(this).attr('class');
-	console.log(buttonClass);
-	console.log(buttonClass[1]);
 	var imgClass = '.'+(buttonClass.split(" "))[1];
-	console.log(imgClass);
 	var src = $(imgClass).attr('src');
-	console.log(src);
 	$('.mainImg').attr('src', src);
 	
 });
-
-function updateCart() {
-	var prevAmount = $('.incart')[0].innerHTML;
-	console.log('UPDATING CART.............');
-	console.log(prevAmount);
-	$('.incart')[0].innerHTML = parseInt(prevAmount)+1;
-}
 
 $('.mainImg').click(function() {
 	var src = $('.mainImg').attr('src');
@@ -71,11 +57,33 @@ $('.prev').click(function() {
 	}else{
 		current = urls.length-1;
 	}
-	
-	console.log(urls[current]);
 	$('.bigImg').attr('src', urls[current]);
 });
 
+// Usage: updateButton(btn, result)
+// Pre:   btn is a button on a single product page.
+// Post:  if the item was not in the current users cart, it has now been added. A message describing
+//        the action that has been taken has been put on the button.
+function updateButton(btn, result) {
+	if (result === "success"){
+		btn.val("Item added to cart!");
+		btn.addClass("added");
+	}
+	if (result === "existed"){
+		btn.val("Item already in cart!");
+		btn.addClass("exists");
+	}
+}
+
+// Usage: updateCart()
+// Post:  the items-in-cart number has been increased by 1.
+function updateCart() {
+	var prevAmount = $('.incart')[0].innerHTML;
+	$('.incart')[0].innerHTML = parseInt(prevAmount)+1;
+}
+
+// Usage: var Id = getID()
+// Post:  Id is the id of the product displayed. 
 function getID() {
 	var url = window.location.href;
 	var params = ((url.split("?"))[1]).split("&");
@@ -89,30 +97,6 @@ function getID() {
 	return id;
 }
 
-
-function updateImgpanel(urls) {
-	console.log('length of urls!');
-	console.log(urls.length);
-	if(urls.length <= 1) {
-		$('.subImgBoxes').hide();
-	} else if(urls.length === 2) {
-		$('.img3').hide();
-	}
-}
-
-function updateButton(btn, add) {
-	console.log('current value');
-	if (add === "success"){
-		btn.val("Item added to cart!");
-		btn.addClass("added");
-	}
-	if (add === "existed"){
-		btn.val("Item already in cart!");
-		btn.addClass("exists");
-	}
-}
-
-
 // Use: elem = getImgElements(subfolder)
 // Pre: subfolder is a string corresponding to a folder name in location data/images/
 // Post: elem is an object with attributes that are relevant to the content of tab 3 of the popup.
@@ -120,14 +104,11 @@ function updateButton(btn, add) {
 function getImages(id) {
 	var urls = [];
 	var dir = "data/images/"+id;
-	console.log('dir');
-	console.log(dir);
 	$.ajax({
 	    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
 	    url: dir,
 	    success: function (data) {
 	        $images = $(data).find("a:contains(.jpg)");
-	        console.log(data);
 	        $images.each(function () {
 	            var hrefparts = this.href.split("/");
 	            var n = hrefparts.length;
@@ -142,6 +123,3 @@ function getImages(id) {
 	});
 	return urls;
 }
-
-
-
