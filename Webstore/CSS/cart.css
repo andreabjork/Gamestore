@@ -16,7 +16,7 @@
 .cartItem{
 	position: relative;
 	width: 90%;
-	height: 140px;
+	min-width: 350px;
 	margin: 10px;
 	padding: 5px;
 	box-sizing: border-box;
@@ -26,40 +26,42 @@
 	box-shadow: -2px 2px 5px;
 }
 	.prodInfo{
-		position: relative;
-		left: 5px;
-		top: 5px;
-		height: 100px;
-		margin: 10px;
-		overflow: none;
+		width: 90%;
+		min-width: 310px;
+		margin: 10px 40px 10px 10px;
+		display: flex;
+		flex-flow: row wrap;
 	}
-		.prodInfo h2{
-			position: absolute;
-			left: 210px;
-			font-size: 2em;
-			padding: 2px;
+		.cartImg{
+			height: 100px;
+			width: 124px;
 		}
-		
-		.prodInfo p{
-			position: absolute;
-			left: 210px;
-			bottom: 20px; 
-			font-size: 1em;
-		}
-		
-		.prodInfo img{
+			.cartImg img{
+				height: 100%;
+				max-width: 100%;
+			}
+			
+		.cartText{
+			width: 80%;
 			height: 100%;
-			margin-bottom: 0px;
+			padding-left: 5px;
 		}
-	
-	.price{
-		position: absolute;
-		bottom: 20px;
-		right: 100px;
-		font-size: 1.5em;
-		font-weight: bold;
-		color: #D47619;
-	}
+			.cartText h2{
+				font-size: 2em;
+				padding: 2px;
+			}
+			
+			.cartText .unitPrice{
+				font-size: 1em;
+				padding: 10px 0;
+			}
+			
+			
+			.cartText .price{
+				font-size: 1.5em;
+				font-weight: bold;
+				color: #D47619;
+			}
 	
 	.cartBtn{
 		display: block;
