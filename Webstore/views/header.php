@@ -67,7 +67,7 @@ $quantity = $raw_dat[0];
 				</ul>
 				<form id="searchArea" action="index.php" method="GET">
 					<label for="searchField"><input id="searchBtn" type="submit" value="" ></label>
-					<input id="search" name="searchField" placeholder="Search for a boardgame..."/>
+					<input id="search" name="searchField" placeholder="Search"/>
 				</form>
 			</div>
 			<div class="dropDown">

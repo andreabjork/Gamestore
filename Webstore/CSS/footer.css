@@ -14,20 +14,15 @@ footer {
 	float: left;
 }
 
-	#info {
-		list-style: none;
-		color: white;
-		margin-left: 20px;
-		margin-top: 20px;
-	}	
-
 .right {
 	float: right;
 }
 
-	#hours {
+	#hours, #info{
 		list-style: none;
 		color: white;
-		margin-right: 20px;
+		margin-left: 8px;
+		margin-right: 8px;
 		margin-top: 20px;
+		font-size: 0.75em;
 	}	

@@ -14,7 +14,7 @@ foreach($data as $product) {
 		
 		if(!isset($mainImage)) {$mainImage="data/notfound.jpg";}
 	
-	echo '<div class="container">';
+	echo '<div class="container flex">';
 		echo '<div class="imgViewer">';
 			echo '<div class="imgBox">';
 				echo '<span class="helper"></span>';
@@ -36,7 +36,7 @@ foreach($data as $product) {
 			echo '<h1>'.$product["name"].'</h1>';
 			echo '<p>'.$product["description"].'</p>';
 		echo '</div>';
-		
+		echo '<div class="prodActions">';
 		$stock = $product['stock'];
 		if($stock == 0) {
 			$stockMsg = '<span class="stock out">Out of stock!</span>';
@@ -49,6 +49,7 @@ foreach($data as $product) {
 		echo '<a href='.$product["bgg_url"].'><div class="BBG">View item on BoardGameGeek.com!</div></a>';
 		echo '<input type="button" alt="Add to cart" class="addBtn" value="Add to cart" name='.$product["id"].' />';
 		echo '<input type="button" alt="Add to cart" class="addBtn'.(($user==='guest')?' hidden':'').'" value="Add to cart" name='.$product["id"].' />';
+		echo '</div>';
 	echo '</div>';
 	echo '<div class="overlay">';
 		echo '<div class="imgFrame">';

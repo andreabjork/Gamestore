@@ -101,6 +101,7 @@ header {
 			    top: 0px;
 			    right: 0px;
 			    width: 30%;
+			    min-width: 330px;
 			    border-radius: 6px;
 				background-color: #797979;
 				box-shadow: -3px 3px 8px #FFFFFF;
@@ -134,8 +135,8 @@ header {
 			     }
 				
 			.actions {
-				position: relative;
-				bottom: 30px;
+				position: absolute;
+				bottom: 0px;
 				right: 15px;
 	            list-style: none;
 	            font-family: 'Roboto', sans-serif;
@@ -228,6 +229,8 @@ header {
     }
 	
         .buttons {
+        	position: relative;
+        	left: -20px;
             list-style: none;
             font-family: 'Roboto', sans-serif;
             color: white;
@@ -238,20 +241,19 @@ header {
         .buttons li {
         	font-size: 1.1em;
             float: left;
-            padding: 3px 10px 5px;
+            padding: 3px 5px 5px;
             color: white;
         }
         
         .buttons li:hover {
             background-color: #D47619;
-            padding: 3px 10px 5px;
         }
 	
 	.dropDown {
 	    display: none;
 	    position: relative;
 	    z-index: 1; 
-		left: 30px;
+		left: 10px;
 		bottom: 4px;
 		font-family: 'Lato', sans-serif;
 	}

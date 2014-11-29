@@ -26,11 +26,7 @@
 
 .imgViewer {
 	width: 30%;
-	position: absolute;
-	bottom: 100px;
-	left: 10px;
-	top: 5px;
-
+	min-width: 340px;
 }
 
 .subImgBoxes {
@@ -64,10 +60,8 @@
 }
 
 .textBox {
-    width: 60%;
-    min-width: 500px;
-    margin: 10px;
-    position: absolute;
+    width: 65%;
+    min-width: 310px;
     right: 0px;
     top: 0px;
     padding: 20px;
@@ -78,74 +72,76 @@
         padding: 5px;
         font-weight: bold;
         line-height: 2;
-        position: relative;
-        left: -50px;
     }
     
     .textBox p {
         line-height: 1.4;
     }
 
-.stock {	
-	position: absolute;
-	font-family: 'Lato', sans-serif;
-	right: 720px;
-	bottom: 160px;
-	font-size: 1.3em;
-	color: #4FCA35;
+.prodActions{
+	position: relative;
+	width: 300px;
+	height: 100px;
+	margin: 15px;	
 }
-
-.out {
-	color: #FF0F0F;
-}
-
-.addBtn {
-	position: absolute;
-	right: 30px;
-	bottom: 30px;
-	background-color: #333333;
-	width: 170px;
-	height: 50px;
-	font-size: 1.5em;
-	color: white;
-	border: 2px;
-	border-radius: 5px;
-	text-align: center;
-	line-height: 2;
-}
-.addBtn:hover{
-	cursor: pointer;
-}
-
-.added {
-	background-color: #CA7E35;
-	width: 250px;
-}
-
-
-.prodPrice {
-	position: absolute;
-	right: 70px;
-	bottom: 160px;
-	font-size: 2em;
-	font-weight: bold;
-	color: #CA7E35;
-}
-
-.BBG {
-	position: absolute;
-	right: 30px;
-	bottom: 110px;
-	background-color: #CA7E35;
-	width: 170px;
-	height: 40px;
-	font-size: 1.05em;
-	color: white;
-	border: 2px;
-	border-radius: 5px;
-	text-align: center;
-	line-height: 1.2;
-}
+	.stock {	
+		position: absolute;
+		font-family: 'Lato', sans-serif;
+		left:  0;
+		bottom: 1em;
+		font-size: 1.3em;
+		color: #4FCA35;
+	}
+	
+	.out {
+		color: #FF0F0F;
+	}
+	
+	.addBtn {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background-color: #333333;
+		width: 170px;
+		height: 50px;
+		font-size: 1.5em;
+		color: white;
+		border: 2px;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 2;
+		cursor: pointer;
+	}
+	
+	.added {
+		background-color: #CA7E35;
+		width: 250px;
+	}
+	
+	
+	.prodPrice {
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 2em;
+		font-weight: bold;
+		color: #CA7E35;
+	}
+	
+	.BBG {
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: #CA7E35;
+		width: 170px;
+		height: 40px;
+		font-size: 1.05em;
+		color: white;
+		border: 2px;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 1.2;
+	}
 
 .overlay {
 	position: absolute;
