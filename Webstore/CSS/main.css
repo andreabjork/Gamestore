@@ -10,7 +10,7 @@
 .container {
 	position: relative;
     width: 100%;
-    background-color: #f2f2f2;
+    background-color: #d3d3d3;
 	min-height: 500px;
 }
 
@@ -22,6 +22,7 @@
     border-radius: 5px;
     margin: 10px;
     overflow: hidden;
+    box-shadow: -5px 5px 5px;
 }
 
     .productName {

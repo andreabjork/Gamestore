@@ -12,14 +12,11 @@ $('.addBtn').click(function() {
 		data: {action: 'add', prod_id: id},
 		type: 'post',
 		success: function(output) {
-			console.log(output);
-			console.log('did we get in here?');
-			updateButton(btn);
 			if(output==="success"){
-				console.log("item successfully added to cart, updating cartnumber");
+				updateButton(btn,"success");
 				updateCart();
 			} else {
-				console.log("item was already in cart, not updating cartnumber");
+				
 			}
 		}
 	});
