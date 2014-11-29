@@ -57,13 +57,13 @@ $quantity = $raw_dat[0];
 				</div>
 				<ul class="actions">
 					<li id="signin" <?php echo ($user == 'guest') ? '' : 'class="hidden"' ; ?>>Sign in</li>
-					<a href="cart.php"><li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><p id="cartText">My cart</p><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /> <span class="incart"><?php echo $quantity ?></span></li></a>
+					<li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><a href="cart.php"><p id="cartText">My cart</p></a><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /> <span class="incart"><?php echo $quantity ?></span></li>
 				</ul>
 			</div>
 			<div class="navigation">
 				<ul class="buttons">
-					<a href="index.php"><li id="products">Our products</li></a>
-					<a href="about.php"><li id="about">About us</li></a>
+					<li id="products"><a href="index.php">Our products</a></li>
+					<li id="about"><a href="about.php">About us</a></li>
 				</ul>
 				<form id="searchArea" action="index.php" method="GET">
 					<input id="searchBtn" type="submit" value="" >
@@ -72,13 +72,13 @@ $quantity = $raw_dat[0];
 			</div>
 			<div class="dropDown">
 				<ul class="dropButtons">
-					<a href="index.php?genre=trading"><li id="trading">Trading Card Games</li></a>
-					<a href="index.php?genre=family"><li id="family">Family Games</li></a>
-					<a href="index.php?genre=boardgame"><li id="boardgames">Boardgames</li></a>
-					<a href="index.php?genre=cardgame"><li id="cardgames">Cardgames</li></a>
-					<a href="index.php?genre=strategy"><li id="strategy">Strategy games</li></a>
-					<a href="index.php?genre=conquering"><li id="conquer">Conquering games</li></a>
-					<a href="index.php?genre=coop"><li id="coop">Cooperative games</li></a>
+					<li id="trading"><a href="index.php?genre=trading">Trading Card Games</a></li>
+					<li id="family"><a href="index.php?genre=family">Family Games</a></li>
+					<li id="boardgames"><a href="index.php?genre=boardgame">Boardgames</a></li>
+					<li id="cardgames"><a href="index.php?genre=cardgame">Cardgames</a></li>
+					<li id="strategy"><a href="index.php?genre=strategy">Strategy games</a></li>
+					<li id="conquer"><a href="index.php?genre=conquering">Conquering games</a></li>
+					<li id="coop"><a href="index.php?genre=coop">Cooperative games</a></li>
 				</ul>
 			</div>
 		</header>
