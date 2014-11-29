@@ -16,7 +16,7 @@ $('.addBtn').click(function() {
 				updateButton(btn,"success");
 				updateCart();
 			} else {
-				
+				updateButton(btn,"existed");
 			}
 		}
 	});
@@ -100,10 +100,16 @@ function updateImgpanel(urls) {
 	}
 }
 
-function updateButton(btn) {
+function updateButton(btn, add) {
 	console.log('current value');
-	btn.val("Item added to cart!");
-	btn.addClass('added');
+	if (add === "success"){
+		btn.val("Item added to cart!");
+		btn.addClass("added");
+	}
+	if (add === "existed"){
+		btn.val("Item already in cart!");
+		btn.addClass("exists");
+	}
 }
 
 
