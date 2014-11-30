@@ -1,28 +1,20 @@
 ﻿TÉKKLISTI FYRIR LOKAVERKEFNI
 
-- Láta add to cart takkann segja "already in your cart" (eða þannig) ef við á. (verður semí að gera þetta
+
+- <main> <section> ?????
+- error message þegar innskráning mistekst
+
+
+
+X Passa að allt resisist rétt (texti fer til dæmis yfir mynd í about-product)
+X kommenta kóða
+X taka út allar console.log skipanir
+X Láta add to cart takkann segja "already in your cart" (eða þannig) ef við á. (verður semí að gera þetta
 núna þegar teljarinn er kominn...asnalegt að geta ýtt á add to cart og sjá töluna ekki hreyfast)
-- Passa að allt resisist rétt (texti fer til dæmis yfir mynd í about-product)
-- samræma liti! eins og er eru 2-3 svipaðir appelsínugulir litir í gangi. Velja lit and stick with it.
-- kommenta kóða
-- taka út allar console.log skipanir
-- skrifa skýrslu
-- Það vantar fót á síðuna í körfunni?
-
-
-Úr verkefnalýsingu: 
-"Skila skal útfærslu á vef sem hefur útfærða bakenda- og framendavirkni. Nota
-skal þá hluti sem útfærðir hafa verið í öðrum verkefnum saman."
-Ég er afar stress yfir að fá mínus fyrir enga cache virkni. Mér finnst við ættum að henda upp
-einföldu módeli fyrir cache enda höfum við gert það áður svo það ætti ekki að taka stórkostlegan tíma?
-það meikar eiginlega bara sens að hafa cache á ´siðu sem er aðallega að sækja hluti í gagnagrunn.
-
-
-
 Fleira????
-
-
-
+X samræma liti! eins og er eru 2-3 svipaðir appelsínugulir litir í gangi. Velja lit and stick with it.
+X skrifa skýrslu
+X Það vantar fót á síðuna í körfunni?
 X implementa einhvers konar in stock dæmi í cart og jafnvel á about síðu
 X Eitthvað bug með flettingar þegar fyrsta mynd er ekki valin til að stækka? laga!
 X klára about-product síðu -> css a myndir, texta, boardg geek link

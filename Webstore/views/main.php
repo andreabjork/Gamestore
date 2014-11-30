@@ -1,6 +1,9 @@
 		<div class="container flex">
 			<?php
 				$data = $results->fetchAll();
+				if($data == FALSE) {
+					echo "<h2>No search results were found.</h2>";
+				}
 				foreach($data as $product) {
 					
 					$id = $product["id"];
