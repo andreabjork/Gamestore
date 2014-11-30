@@ -55,7 +55,7 @@ foreach($data as $product) {
 				echo '<input type="button" class="'.$addBtnClass.'" value="Add to cart" name='.$product["id"].' />';
 			echo '</div>';
 		echo '</section>';
-	echo '</div>';
+	echo '</main>';
 	echo '<div class="overlay">';
 		echo '<div class="imgFrame">';
 			echo '<span class="helper"></span>';
@@ -64,7 +64,7 @@ foreach($data as $product) {
 			echo '<input type="image" class="next" src="data/right.ico" alt="next image	">';
 			echo '<input type="image" class="close" src="data/remove.ico" alt="exit image viewer">';
 		echo '</div>';
-	echo '</main>';
+	echo '</div>';
 }
  
 ?>

@@ -1,4 +1,4 @@
-		<div id="registration" class="container">	
+		<main id="registration" class="container">	
 			<h1><?php echo $valid ? "Registration successful!" : "Register" ?></h1>
 			<?php echo $valid ? "<p>You will be redirected to our front page automatically. If you have not been redirected after 5 seconds <a href='index.php'>click here</a>.</p>" : "" ?>
 			
@@ -62,4 +62,4 @@
 					<input type="submit" value="Register">
 				</div>
 			</form>
-		</div>
+		</main>

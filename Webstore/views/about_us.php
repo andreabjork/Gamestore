@@ -1,5 +1,5 @@
-<div class="container">
-	<div class="textContent">
+<main class="container">
+	<section class="textContent">
 		<h1>About BoardGamer</h1>
 		<p>Our website is built and run by board game enthusiasts who wish to introduce the joy of board gaming to anyone interested!
 			This business started in 2004 at our local shop at 4 Privet Drive. It expanded to this webstore in 2008 and access to new
@@ -8,8 +8,8 @@
 			If you want to get involved with our great community of board-gamers and introduce yourself to new boardgames as well, game nights are hosted at our shop every
 			wednesday and saturday at 7PM. Everyone is welcome!
 			</p>
-			
-			
+	</section>
+	<section class="textContent">		
 			<h2>Here are our special opening hours over the holidays:</h2>
 			<ul>
 				<li>Dec 1st-22th:				10AM-9PM</li>
@@ -23,5 +23,5 @@
 			</ul>
 			
 			<p>If you wish to gift a boardgame to a friend this Christmas, please place your order before December the 15th.</p>
-	</div>
-</div>
+	</section>
+</main>

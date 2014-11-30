@@ -43,7 +43,7 @@ $quantity = $raw_dat[0];
 						<li>User: <span class="userName"><?php echo $user; ?></span></li>
 					</ul>
 				</div>
-				<div class="signBox">
+				<section class="signBox">
 					<form name="signin" onsubmit="return ">
 						<ul>
 							<li>
@@ -56,7 +56,7 @@ $quantity = $raw_dat[0];
 						</ul>
 						<input type="submit" id="signBtn" value="Sign in!"  onclick="return login()"/>
 					</form>
-				</div>
+				</section>
 				<ul class="actions">
 					<li id="signin" <?php echo ($user == 'guest') ? '' : 'class="hidden"' ; ?>>Sign in</li>
 					<li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><a href="cart.php"><p id="cartText">My cart</p></a><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /> <span class="incart"><?php echo $quantity ?></span></li>
@@ -72,7 +72,7 @@ $quantity = $raw_dat[0];
 					<input id="search" name="searchField" placeholder="Search"/>
 				</form>
 			</nav>
-			<div class="dropDown">
+			<nav class="dropDown">
 				<ul class="dropButtons">
 					<li id="trading"><a href="index.php?genre=trading">Trading Card Games</a></li>
 					<li id="family"><a href="index.php?genre=family">Family Games</a></li>
@@ -82,6 +82,6 @@ $quantity = $raw_dat[0];
 					<li id="conquer"><a href="index.php?genre=conquering">Conquering games</a></li>
 					<li id="coop"><a href="index.php?genre=coop">Cooperative games</a></li>
 				</ul>
-			</div>
+			</nav>
 		</header>
 		<script type="text/javascript" src="JS/nav.js"></script>
