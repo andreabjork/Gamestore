@@ -270,6 +270,7 @@ header {
 	.dropDown {
 	    display: none;
 	    position: relative;
+	    width: 200px;
 	    z-index: 1; 
 		left: 10px;
 		bottom: 4px;
