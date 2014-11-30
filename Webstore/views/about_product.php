@@ -25,8 +25,8 @@ foreach($data as $product) {
 	
 	$addBtnClass = ($user === 'guest') ? 'addBtn hidden' : 'addBtn' ;
 	
-	echo '<div class="container flex">';
-		echo '<div class="imgViewer">';
+	echo '<main class="container flex">';
+		echo '<section class="imgViewer">';
 			echo '<div class="imgBox">';
 				echo '<span class="helper"></span>';
 				echo '<img class="mainImg" src="'.$mainImage.'" alt="Image of product">';
@@ -42,17 +42,19 @@ foreach($data as $product) {
 				echo '</ul>';
 			echo '</div>';
 			}
-		echo '</div>';
-		echo '<div class="textBox">';
+		echo '</section>';
+		echo '<section class="textBox">';
 			echo '<h1>'.$product["name"].'</h1>';
 			echo '<p>'.$product["description"].'</p>';
 			echo $stockMsg;
-		echo '</div>';
-		echo '<div class="prodActionArea"><div class="prodActions">';
-			echo '<span class="prodPrice">$ '.$price.'</span>';
-			echo '<a href='.$product["bgg_url"].'><div class="BBG">View item on BoardGameGeek.com!</div></a>';
-			echo '<input type="button" class="'.$addBtnClass.'" value="Add to cart" name='.$product["id"].' />';
-		echo '</div></div>';
+		echo '</section>';
+		echo '<section class="prodActionArea">';
+			echo '<div class="prodActions">';
+				echo '<span class="prodPrice">$ '.$price.'</span>';
+				echo '<a href='.$product["bgg_url"].'><div class="BBG">View item on BoardGameGeek.com!</div></a>';
+				echo '<input type="button" class="'.$addBtnClass.'" value="Add to cart" name='.$product["id"].' />';
+			echo '</div>';
+		echo '</section>';
 	echo '</div>';
 	echo '<div class="overlay">';
 		echo '<div class="imgFrame">';
@@ -62,7 +64,7 @@ foreach($data as $product) {
 			echo '<input type="image" class="next" src="data/right.ico" alt="next image	">';
 			echo '<input type="image" class="close" src="data/remove.ico" alt="exit image viewer">';
 		echo '</div>';
-	echo '</div>';
+	echo '</main>';
 }
  
 ?>

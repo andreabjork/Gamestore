@@ -62,7 +62,7 @@ $quantity = $raw_dat[0];
 					<li id="cart" <?php echo ($user == 'guest') ?  'class="hidden"' : '' ; ?>><a href="cart.php"><p id="cartText">My cart</p></a><img src="data/cart.ico" alt="Cart icon" id="cartIcon" /> <span class="incart"><?php echo $quantity ?></span></li>
 				</ul>
 			</div>
-			<div class="navigation">
+			<nav class="navigation">
 				<ul class="buttons">
 					<li id="products"><a href="index.php">Our products</a></li>
 					<li id="about"><a href="about.php">About us</a></li>
@@ -71,7 +71,7 @@ $quantity = $raw_dat[0];
 					<input id="searchBtn" type="submit" value="" >
 					<input id="search" name="searchField" placeholder="Search"/>
 				</form>
-			</div>
+			</nav>
 			<div class="dropDown">
 				<ul class="dropButtons">
 					<li id="trading"><a href="index.php?genre=trading">Trading Card Games</a></li>

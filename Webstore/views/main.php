@@ -1,4 +1,4 @@
-		<div class="container flex">
+		<main class="container flex">
 			<?php
 				$data = $results->fetchAll();
 				if($data == FALSE) {
@@ -44,4 +44,4 @@
 					echo '</div>';
 				}
 			?>
-		</div>
+		</main>
