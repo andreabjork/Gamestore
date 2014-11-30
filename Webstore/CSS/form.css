@@ -21,8 +21,8 @@
 	#registration form .buttons input { padding: 4px; }
 	
 	#registration form .invalid input, form .invalid select, input.error, select.error { border: 1px solid #c66; background: #fee;}
-	#registration div#errors { margin-bottom: 1em; padding: 0.5em; border: 1px solid #c66; background: #fee; margin-left: 10%; margin-right: 10%;}
-	#registration div#errors ul { margin-left: 2em; }
-	#registration div#errors li { margin-bottom: 0.5em; }
+	#registration #errors { margin-bottom: 1em; padding: 0.5em; border: 1px solid #c66; background: #fee; margin-left: 10%; margin-right: 10%;}
+	#registration #errors ul { margin-left: 2em; }
+	#registration #errors li { margin-bottom: 0.5em; }
 
 .hidden { display: none; }
