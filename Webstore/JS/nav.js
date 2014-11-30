@@ -51,10 +51,13 @@ function login() {
 		success: function(output) {
 			if(output === "success"){
 				$(".signBox").hide();
+				$("#loginError").hide();
 				setUser(user);
 			}else if(output === "failure"){
+				$("#loginError").show();
 				console.log("Login failed.");
 			}else{
+				$("#loginError").show();
 				console.log("Something went wrong!");				
 			}
 		}

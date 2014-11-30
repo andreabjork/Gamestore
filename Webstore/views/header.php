@@ -52,7 +52,7 @@ $quantity = $raw_dat[0];
 							<li>
 								<label>Password: <input class="inputField" id="passwordField" type="password" /></label>
 							</li>
-							<li><span>Don't have an account? <a href="register.php">Click here to register!</a></span></li>
+							<li><p id="loginError">Incorrect username and/or password.</p><span>Don't have an account? <a href="register.php">Click here to register!</a></span></li>
 						</ul>
 						<input type="submit" id="signBtn" value="Sign in!"  onclick="return login()"/>
 					</form>

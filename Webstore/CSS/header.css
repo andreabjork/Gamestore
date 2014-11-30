@@ -106,6 +106,10 @@ header {
 				background-color: #797979;
 				box-shadow: -3px 3px 8px #FFFFFF;
 			}
+				#loginError{
+					color: #FF6666;
+					display: none;
+				}
 			
 			     .signBox ul {
 			         padding: 5px;
