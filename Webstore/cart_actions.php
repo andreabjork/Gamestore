@@ -4,19 +4,19 @@ $user = "guest";
 if (isset($_SESSION['user']) && !empty($_SESSION['user'])){
 	$user = $_SESSION['user'];
 }
-// Þurfum products.class hlutinn
+
 require("classes/products.class.php");
 
-//búum til tengingu við gagnagrunn
+//establish a database connection
 try {
 	$cur = new PDO("sqlite:SQL/gamestore.db");
 } catch(PDOException $e) {
 	echo $e->getMessage();
 }
 
-//búum til products hlut
 $cartProd = new Products($cur); 
 
+// identify the action to be taken and execute said action
 if(isset($_POST["action"]) && isset($_POST["prod_id"]) && $user!="guest") {
 	switch ($_POST["action"]) {
 		case 'remove':
