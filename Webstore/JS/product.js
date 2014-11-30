@@ -2,6 +2,7 @@ var id = getID();
 var urls = getImages(id);
 if($('.stock').hasClass('out')) { $('.addBtn').hide();}
 
+// add item to cart when the Add to Cart button is clicked:
 $('.addBtn').click(function() {
 	var id = $(this).attr('name');
 	var btn = $(this);
@@ -21,6 +22,7 @@ $('.addBtn').click(function() {
 	
 });
 
+// Set main image as the clicked image from the image panel below
 $('.subimg').click(function() {
 	var buttonClass = $(this).attr('class');
 	var imgClass = '.'+(buttonClass.split(" "))[1];
@@ -29,6 +31,7 @@ $('.subimg').click(function() {
 	
 });
 
+// Activate fullscreen view of images when clicked:
 $('.mainImg').click(function() {
 	var src = $('.mainImg').attr('src');
 	$('.bigImg').attr('src', src);
@@ -38,10 +41,12 @@ $('.mainImg').click(function() {
 	$('.overlay').show();
 });
 
+// Close the image overlay when the 'X' is clicked:
 $('.close').click(function() {
 	$('.overlay').hide();
 });
 
+// Show the next image in the image overlay:
 $('.next').click(function() {
 	if(current < urls.length-1) {
 		current++;
@@ -51,6 +56,7 @@ $('.next').click(function() {
 	$('.bigImg').attr('src', urls[current]);
 });
 
+// Show the previous image in the image overlay:
 $('.prev').click(function() {
 	if(current > 0) {
 		current--;
