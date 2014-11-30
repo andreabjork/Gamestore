@@ -126,4 +126,6 @@
 		width: 180px;
 		margin: 10px;
 		margin-right: 0;
+		border: none;
+		border-radius: 5px;
 	}
