@@ -23,7 +23,7 @@
 					echo "<div id=$id class='cartItem flex'>";
 						echo "<div class='prodInfo'>";
 							echo "<div class='cartImg'>";
-								echo "<img src='$img' />";
+								echo "<img src='$img' alt='$title'/>";
 							echo "</div>";
 							echo "<div class='cartText'>";
 								echo "<h2>$title</h2>";
@@ -32,11 +32,11 @@
 							echo "</div>";
 						echo "</div>";
 						echo "<div class='incdec'>";
-							echo"<input type='image' src='data/increment.ico' alt='increment' class='cartBtn increment' prod_id=$id user='$user'>";
+							echo"<input type='image' src='data/increment.ico' alt='increment' class='cartBtn increment' data-prod-id='$id' data-user='$user'>";
 							echo"<span class='quantity'>$qty</span>";
-							echo"<input type='image' src='data/decrement.ico' alt='decrement' class='cartBtn decrement' prod_id=$id user='$user'>";
+							echo"<input type='image' src='data/decrement.ico' alt='decrement' class='cartBtn decrement' data-prod-id='$id' data-user='$user'>";
 						echo "</div>";
-						echo "<input type='image' src='data/remove.ico' alt='remove' class='cartBtn remove' prod_id=$id user='$user'>";
+						echo "<input type='image' src='data/remove.ico' alt='remove' class='cartBtn remove' data-prod-id='$id' data-user='$user'>";
 					echo "</div>";
 										
 				}

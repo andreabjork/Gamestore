@@ -13,10 +13,8 @@ class Registration {
 	public $city;
 	public $zip;
 	public $errors;
-	/**
-	 * Forskilyrði: $data er fylki með lykill => gögn úr formi
-	 * Eftirskilyrði: Registration hlutur er útfylltur með gögnum úr $data
-	 */
+	
+	
 	// Use: registration = new Populate($data)
 	// Pre: $data is the form submission array from form.php
 	// Post: registration is a Registration object holding all the information from $data.

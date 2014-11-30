@@ -12,7 +12,7 @@ $raw_dat = $raw->fetch();
 $quantity = $raw_dat[0];
 
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="is">
 	<head>
 		<meta charset="utf-8">

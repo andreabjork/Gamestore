@@ -3,9 +3,9 @@ $(window).load(updateDecButton());
 
 // Handle any button click, except proceed to checkout.
 $('.cartBtn').click(function(e){
-	var id = $(e.target).attr('prod_id');
+	var id = $(e.target).attr('data-prod-id');
 	var type = $(e.target).attr('class').split(" ");
-	var username = $(e.target).attr('user');
+	var username = $(e.target).attr('data-user');
 	var $thisBtn = $(this);
 	
 	$.ajax({

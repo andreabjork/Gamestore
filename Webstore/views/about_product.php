@@ -22,19 +22,21 @@ foreach($data as $product) {
 	}
 	$price = number_format($product['price'], 2, '.', '');
 	
+	$addBtnClass = ($user === 'guest') ? 'addBtn hidden' : 'addBtn' ;
+	
 	echo '<div class="container flex">';
 		echo '<div class="imgViewer">';
 			echo '<div class="imgBox">';
 				echo '<span class="helper"></span>';
-				echo '<img class="mainImg" src="'.$mainImage.'">';
+				echo '<img class="mainImg" src="'.$mainImage.'" alt="Image of product">';
 			echo '</div>';
 			if(isset($image2)) {
 				echo '<div class="subImgBoxes">';
 					echo '<ul>';
-						echo '<li class="subBox1"><img class="subimg img1" src="'.$mainImage.'"></li>';
-						echo '<li class="subBox2"><img class="subimg img2" src="'.$image2.'"></li>';
+						echo '<li class="subBox1"><img class="subimg img1" src="'.$mainImage.'" alt="Image of product"></li>';
+						echo '<li class="subBox2"><img class="subimg img2" src="'.$image2.'" alt="Image of product"></li>';
 						if(isset($image3)) {
-							echo '<li class="subBox3"><img class="subimg img3" src="'.$image3.'"></li>';
+							echo '<li class="subBox3"><img class="subimg img3" src="'.$image3.'" alt="Image of product"></li>';
 						}
 				echo '</ul>';
 			echo '</div>';
@@ -48,17 +50,16 @@ foreach($data as $product) {
 		echo '<div class="prodActionArea"><div class="prodActions">';
 			echo '<span class="prodPrice">$ '.$price.'</span>';
 			echo '<a href='.$product["bgg_url"].'><div class="BBG">View item on BoardGameGeek.com!</div></a>';
-			echo '<input type="button" alt="Add to cart" class="addBtn" value="Add to cart" name='.$product["id"].' />';
-			echo '<input type="button" alt="Add to cart" class="addBtn'.(($user==='guest')?' hidden':'').'" value="Add to cart" name='.$product["id"].' />';
+			echo '<input type="button" class="'.$addBtnClass.'" value="Add to cart" name='.$product["id"].' />';
 		echo '</div></div>';
 	echo '</div>';
 	echo '<div class="overlay">';
 		echo '<div class="imgFrame">';
 			echo '<span class="helper"></span>';
-			echo '<input type="image" class="prev" src="data/left.ico">';
-			echo '<img class="bigImg" src='.$mainImage.' \>';
-			echo '<input type="image" class="next" src="data/right.ico">';
-			echo '<input type="image" class="close" src="data/remove.ico">';
+			echo '<input type="image" class="prev" src="data/left.ico" alt="previous image">';
+			echo '<img class="bigImg" src='.$mainImage.'  alt="Image of product" />';
+			echo '<input type="image" class="next" src="data/right.ico" alt="next image	">';
+			echo '<input type="image" class="close" src="data/remove.ico" alt="exit image viewer">';
 		echo '</div>';
 	echo '</div>';
 }
