@@ -3,8 +3,9 @@
 			<?php echo $valid ? "<p>You will be redirected to our front page automatically. If you have not been redirected after 5 seconds <a href='index.php'>click here</a>.</p>" : "" ?>
 			
 			<?php
+			// list all the errors
 			if (count($errors) > 0){
-				echo "<div id=\"errors\">Errors during registration:<ul>";
+				echo "<div id=\"errors\"><h2>Errors during registration:</h2><ul>";
 				foreach ($errors as $id => $error) {
 					echo "<li>$error</li>";
 				}
@@ -46,7 +47,7 @@
 				</div>
 				<div class="field">
 					<label for="country">Country: *</label>
-					<?php include("views/country_selection.php") ?>
+					<?php include("views/country_selection.php") //source: http://www.dzone.com/snippets/html-select-list-countries ?>
 				</div>
 				<div class="field">
 					<label for="city">City: *</label>

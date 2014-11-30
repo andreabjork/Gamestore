@@ -6,6 +6,7 @@ foreach($data as $product) {
 	
 	$id = $product["id"];
 	$directory = "data/images/$id";
+	//getting images
 	$filenames = glob('./data/images/'.$id.'/*.*', GLOB_BRACE);
 		
 	$mainImage = $filenames[0];

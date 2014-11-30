@@ -6,6 +6,7 @@
 					$id = $product["id"];
 					$productName = $product["name"];
 					$directory = "data/images/$id";
+					// getting images
 					$filenames = glob('./data/images/'.$id.'/*.*', GLOB_BRACE);
 					$mainImage = $filenames[0];
 					if($mainImage == "") {

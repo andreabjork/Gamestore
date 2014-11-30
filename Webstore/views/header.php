@@ -6,6 +6,8 @@ if(!isset($user)){
 		$user = $_SESSION['user'];
 	}
 }
+
+// get the number of items in the users shopping cart.
 $cur = new PDO("sqlite:SQL/gamestore.db");
 $raw = $cur->query("SELECT COUNT(*) FROM ShoppingCarts WHERE user='$user'");
 $raw_dat = $raw->fetch();

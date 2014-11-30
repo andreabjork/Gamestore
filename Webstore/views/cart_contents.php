@@ -16,9 +16,11 @@
 					if($img == "") {
 						$img = "data/notfound.jpg";
 					}
-					
+					//price of a single item:
 					$price = number_format($info['price'], 2, '.', '');
+					//total price of given quantity of the item:
 					$totPrice = number_format($price*$qty, 2, '.', '');
+					//total price of all items in cart:
 					$subtotal = number_format($subtotal+$totPrice, 2, '.', '');
 					echo "<div id=$id class='cartItem flex'>";
 						echo "<div class='prodInfo'>";
